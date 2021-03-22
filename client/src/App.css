@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Skia";
+  src: local("Skia"), url(./assets/fonts/Skia\ Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"), url(./assets/fonts/Gilroy-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: local("Gilroy-Heavy"), url(./assets/fonts/Gilroy-Heavy.woff) format("woff");
+}
+@font-face {
+  font-family: "Gilroy-Light";
+  src: local("Gilroy-Light"), url(./assets/fonts/Gilroy-Light.woff) format("woff");
+}
+
+.App {
+  font-family: "Skia";
+}
