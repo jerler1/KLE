@@ -1,0 +1,16 @@
+.footerContainer {
+    width: 100%;
+    background-color: rgba(var(--mainBackgroundColor), 1);
+    padding-top: 128px;
+    padding-bottom: 184px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.businessInformation {
+    margin-left: 48px;
+    width: 240px;
+    color: var(--secondaryText)
+}
