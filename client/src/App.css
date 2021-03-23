@@ -69,19 +69,20 @@ body {
   font-size: 18px;
   line-height: 125%;
 }
+ul {
+  list-style-type: none;
+}
 
 body,
 #root,
 #root > div,
 div[data-reactroot] {
   height: 100%;
-  padding: 0;
-  margin: 0;
-
 }
 
 html {
   height: 100%;
+  width: 1440px;
   box-sizing: border-box;
 }
 
@@ -90,3 +91,9 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+

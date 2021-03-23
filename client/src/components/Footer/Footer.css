@@ -1,16 +1,107 @@
 .footerContainer {
-    width: 100%;
-    background-color: rgba(var(--mainBackgroundColor), 1);
-    padding-top: 128px;
-    padding-bottom: 184px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+  width: 1440px;
+  background-color: rgba(var(--mainBackgroundColor), 1);
+  padding-top: 128px;
+  padding-bottom: 184px;
+  display: flex;
+  gap: 533px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
+/* Business Information CSS */
 .businessInformation {
-    margin-left: 48px;
-    width: 240px;
-    color: var(--secondaryText)
+  display: flex;
+  flex-direction: column;
+  margin-left: 48px;
+  width: 240px;
+  color: var(--secondaryText);
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.34px;
+}
+
+.businessInformation ul .servingMarin {
+  width: 300px;
+  margin-bottom: 28px;
+}
+.businessInformation ul .basedIn {
+  margin-top: 24px;
+}
+
+.businessInformation ul .image {
+  height: 31px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+.phoneImage,
+.emailImage {
+  width: 18.4px;
+  height: 20.1px;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-grow: 0;
+}
+.imageMargin {
+    margin-top: 24px;
+}
+/* =========================== */
+
+/* Links */
+
+.footerLinks {
+  color: var(--secondaryText);
+  width: 471px;
+  height: 199px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.footerNav {
+  width: 79px;
+  height: 140px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+.footerInteract {
+  width: 125px;
+  height: 140px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0;
+}
+.footerSocials{
+    width: 155px;
+    height: 199px;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+}
+.socialImage {
+    width: 44px;
+    height: 44px;
+    flex-grow: 0;
 }
