@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./views/Home/Home";
@@ -7,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import MobileFooter from "./components/MobileFooter/MobileFooter";
 
 function App() {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1023px)" });
   return (
     <Router>
       <div>
@@ -16,7 +18,7 @@ function App() {
             <Route exact path="/" component={Home} />
           </Switch>
         </main>
-        <MobileFooter />
+        {isTabletOrMobile ? <MobileFooter /> : <Footer />}
       </div>
     </Router>
   );
