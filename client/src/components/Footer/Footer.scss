@@ -1,0 +1,96 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+.footerContainer {
+  @include flex(column, space-between, flex-end);
+  @include dimensions(100%, 538px);
+  color: var(--secondaryText);
+  background-color: rgba(var(--mainBackgroundColor), 1);
+  gap: 153px;
+  padding: 128px 0 16px;
+}
+
+.footerContent {
+  @include flex(row, space-between, flex-start);
+  @include dimensions(100%, 226px);
+  padding: 0 48px;
+}
+.subFooter {
+  width: 444px;
+  height: 17px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.34px;
+}
+
+/* Business Information CSS */
+.businessInformation {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  font-weight: 300;
+  letter-spacing: 0.34px;
+  ul .servingMarin {
+    width: 300px;
+    margin-bottom: 28px;
+  }
+  ul .basedIn {
+    margin-top: 24px;
+  }
+  ul .image {
+    @include dimensions(300px,31px);
+    @include flex(row, flex-start, center);
+    gap: 8px;
+    padding: 4px 0;
+  }
+  .phoneImage,
+  .emailImage {
+    @include dimensions(18.4px,20.1px);
+  }
+  .imageMargin {
+    margin-top: 24px;
+  }
+}
+
+/* =========================== */
+
+/* Links */
+
+.footerLinks {
+  @include dimensions(471px,199px);
+  @include flex(row, flex-start, flex-start);
+  gap: 56px;
+}
+
+.footerNav {
+  @include dimensions(79px,140px);
+  @include flex(column, flex-start, flex-start);
+  gap: 16px;
+}
+.footerNav li a,
+.footerInteract li a {
+  color: var(--secondaryText);
+}
+.footerInteract {
+  @include dimensions(125px,140px);
+  @include flex(column, flex-start, flex-start);
+  gap: 16px;
+  padding: 0;
+}
+.footerSocials {
+  @include dimensions(155px,199px);
+  @include flex(column, flex-start, center);
+  gap: 16px;
+  padding: 0;
+}
+.socialImage {
+  @include dimensions(44px,44px);
+}

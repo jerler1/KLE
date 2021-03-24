@@ -1,17 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Footer.css";
-import {
-  email,
-  instagram,
-  phone,
-  podcast,
-  yelp,
-  background,
-  pic1,
-  pic2,
-  pic3,
-} from "../../assets/index";
+import "./Footer.scss";
+import { email, instagram, phone, podcast, yelp } from "../../assets/index";
 
 const Footer = () => {
   return (
@@ -84,7 +74,9 @@ const Footer = () => {
         </div>
       </section>
       <section>
-        <p className="subFooter">Kinetic Lighting and Electric 2021  |  Design by zoerem.com </p>
+        <p className="subFooter">
+          Kinetic Lighting and Electric 2021 | Design by zoerem.com{" "}
+        </p>
       </section>
     </footer>
   );
