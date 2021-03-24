@@ -5,8 +5,9 @@
   @include dimensions(100%, 676px);
   color: var(--secondaryText);
   background-color: rgba(var(--mainBackgroundColor), 1);
-  gap: 24px;
+  gap: 1.5rem;
   padding: 24px;
+  padding-top: 48px;
 }
 .mobileFooterNav {
   @include flex(row, space-between, flex-start);
@@ -17,7 +18,7 @@
   .footerLinks {
     @include flex(column, flex-start, flex-start);
     @include dimensions(152px, 284px);
-    gap: 16px;
+    gap: 1rem;
     padding: 0;
   }
 }
@@ -29,6 +30,6 @@
 }
 .mobileCopyright{
     font-size: 14px;
-    margin-top: 56px;
+    margin-top: 36px;
     font-weight: 300;
 }

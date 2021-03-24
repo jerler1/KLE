@@ -81,6 +81,7 @@ body,
 #root > div,
 div[data-reactroot] {
   height: 100%;
+  width: 100%;
 }
 
 html {
