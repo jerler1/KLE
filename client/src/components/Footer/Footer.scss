@@ -1,13 +1,5 @@
-@mixin flex($direction, $justify, $align) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-}
-@mixin dimensions($width, $height) {
-  width: $width;
-  height: $height;
-}
+@import "../../sass/mixins/mixins";
+
 .footerContainer {
   @include flex(column, space-between, flex-end);
   @include dimensions(100%, 538px);
