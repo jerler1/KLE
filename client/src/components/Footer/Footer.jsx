@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import {
   email,
@@ -14,19 +15,19 @@ import {
 
 const Footer = () => {
   return (
-    <footer>
-      <section className="footerContainer">
+    <footer className="footerContainer">
+      <section className="footerContent">
         <aside className="businessInformation">
           <ul>
             <li>Kinetic Lighting and Electric CA C10 License #838279</li>
             <li className="basedIn">Based in Mill Valley, CA</li>
             <li className="servingMarin">Serving Marin, SF and the East Bay</li>
             <li className="image">
-              <img className="phoneImage" src={phone} />
+              <img className="phoneImage" src={phone} alt="phone" />
               415.569.7167
             </li>
             <li className="image imageMargin">
-              <img className="emailImage" src={email} />
+              <img className="emailImage" src={email} alt="email" />
               hello@kineticelectricsf.com
             </li>
           </ul>
@@ -34,30 +35,30 @@ const Footer = () => {
         <div className="footerLinks">
           <ul className="footerNav">
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a>Portfolio</a>
+              <Link to="/">Portfolio</Link>
             </li>
             <li>
-              <a>About Us</a>
+              <Link to="/">About Us</Link>
             </li>
             <li>
-              <a>Services</a>
+              <Link to="/">Services</Link>
             </li>
           </ul>
           <ul className="footerInteract">
             <li>
-              <a>FAQs</a>
+              <Link to="/">FAQs</Link>
             </li>
             <li>
-              <a>Partners</a>
+              <Link to="/">Partners</Link>
             </li>
             <li>
-              <a>Join Our Team</a>
+              <Link to="/">Join Our Team</Link>
             </li>
             <li>
-              <a>Contact Us</a>
+              <Link to="/">Contact Us</Link>
             </li>
           </ul>
           <ul className="footerSocials">
@@ -65,16 +66,25 @@ const Footer = () => {
               <p>See Us in the Wild</p>
             </li>
             <li>
-              <img src={yelp} className="socialImage"/>
+              <Link to="/">
+                <img src={yelp} className="socialImage" alt="yelp" />
+              </Link>
             </li>
             <li>
-              <img src={instagram} className="socialImage"/>
+              <Link to="/">
+                <img src={instagram} className="socialImage" alt="instagram" />
+              </Link>
             </li>
             <li>
-              <img src={podcast} className="socialImage"/>
+              <Link to="/">
+                <img src={podcast} className="socialImage" alt="podcast" />
+              </Link>
             </li>
           </ul>
         </div>
+      </section>
+      <section>
+        <p className="subFooter">Kinetic Lighting and Electric 2021  |  Design by zoerem.com </p>
       </section>
     </footer>
   );

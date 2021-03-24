@@ -81,8 +81,6 @@ div[data-reactroot] {
 }
 
 html {
-  height: 100%;
-  width: 1440px;
   box-sizing: border-box;
 }
 
@@ -97,3 +95,6 @@ html {
   padding: 0;
 }
 
+html {
+  background-color: green;
+}
