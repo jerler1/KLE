@@ -1,0 +1,34 @@
+@import "../../sass/mixins/mixins";
+
+.mobileFooterContainer {
+  @include flex(column, flex-start, flex-start);
+  @include dimensions(100%, 676px);
+  color: var(--secondaryText);
+  background-color: rgba(var(--mainBackgroundColor), 1);
+  gap: 24px;
+  padding: 24px;
+}
+.mobileFooterNav {
+  @include flex(row, space-between, flex-start);
+  @include dimensions(100%, 284px);
+  ul li a {
+    color: var(--secondaryText);
+  }
+  .footerLinks {
+    @include flex(column, flex-start, flex-start);
+    @include dimensions(152px, 284px);
+    gap: 16px;
+    padding: 0;
+  }
+}
+
+.mobileAside {
+  @include flex(column, flex-start, flex-start);
+  @include dimensions(100%, 242px);
+  gap: 24px;
+}
+.mobileCopyright{
+    font-size: 14px;
+    margin-top: 56px;
+    font-weight: 300;
+}

@@ -5,8 +5,8 @@ import { instagram, podcast, yelp } from "../../assets/index";
 
 const MobileFooter = () => {
   return (
-    <footer className="footerContainer">
-      <section>
+    <footer className="mobileFooterContainer">
+      <nav className="mobileFooterNav">
         <ul className="footerLinks">
           <li>
             <Link to="/">Home</Link>
@@ -53,17 +53,22 @@ const MobileFooter = () => {
             </Link>
           </li>
         </ul>
-      </section>
-
-      <button>Call Us</button>
-      <button>Email Us</button>
-      <p>Kinetic Lighting and Electric CA C10 License #838279</p>
-      <p className="basedIn">Based in Mill Valley, CA</p>
-      <p className="servingMarin">Serving Marin, SF and the East Bay</p>
-      <section>
-        <p className="subFooter">
-          Kinetic Lighting and Electric 2021 | Design by zoerem.com
-        </p>
+      </nav>
+      <aside className="mobileAside">
+        <button>Call Us</button>
+        <button>Email Us</button>
+        <div>
+          <p>Kinetic Lighting and Electric</p>
+          <p>CA C10 License #838279</p>
+        </div>
+        <div>
+          <p>Based in Mill Valley, CA</p>
+          <p>Serving Marin, SF and the East Bay</p>
+        </div>
+      </aside>
+      <section className="mobileCopyright">
+        <p className="subFooter">Kinetic Lighting and Electric 2021</p>
+        <p>Design by zoerem.com</p>
       </section>
     </footer>
   );
