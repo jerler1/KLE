@@ -18,7 +18,7 @@
   .footerLinks {
     @include flex(column, flex-start, flex-start);
     @include dimensions(152px, 284px);
-    gap: 1rem;
+    gap: 16px;
     padding: 0;
   }
 }
