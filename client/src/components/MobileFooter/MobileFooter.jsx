@@ -67,7 +67,7 @@ const MobileFooter = () => {
         </div>
       </aside>
       <section className="mobileCopyright">
-        <p className="subFooter">Kinetic Lighting and Electric 2021</p>
+        <p>Kinetic Lighting and Electric 2021</p>
         <p>Design by zoerem.com</p>
       </section>
     </footer>
