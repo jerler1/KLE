@@ -14,11 +14,9 @@ function App() {
       <div>
         <Navbar />
         <main className="App">
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
+
         </main>
-        {isTabletOrMobile ? <MobileFooter /> : <Footer />}
+
       </div>
     </Router>
   );
