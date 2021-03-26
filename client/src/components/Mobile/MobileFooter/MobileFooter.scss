@@ -1,4 +1,4 @@
-@import "../../sass/mixins/mixins";
+@import "../../../sass/mixins/mixins";
 
 .mobileFooterContainer {
   @include flex(column, flex-start, flex-start);

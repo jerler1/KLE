@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./MobileFooter.scss";
-import { instagram, podcast, yelp } from "../../assets/index";
+import { instagram, podcast, yelp } from "../../../assets/index";
 
 const MobileFooter = () => {
   return (
