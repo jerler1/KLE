@@ -17,8 +17,8 @@ const Navbar = () => {
                 </span>
               </button>
               <div className="menu menuOne">
-                  <a href="#">Why Us</a>
-                  <a href="#">Portfolio</a>
+                <a href="#">Why Us</a>
+                <a href="#">Portfolio</a>
               </div>
             </li>
             <li>
@@ -28,6 +28,11 @@ const Navbar = () => {
                   <img src={arrowDown} alt="arrow down" />
                 </span>
               </button>
+              <div className="menu menuTwo">
+                <a href="#">Who We Are</a>
+                <a href="#">Our Services</a>
+                <a href="#">Join Our Team</a>
+              </div>
             </li>
             <li>
               <button href="#">
@@ -36,6 +41,10 @@ const Navbar = () => {
                   <img src={arrowDown} alt="arrow down" />
                 </span>
               </button>
+              <div className="menu menuThree">
+                <a href="#">FAQs</a>
+                <a href="#">Our Partners</a>
+              </div>
             </li>
           </ul>
           <div className="contactUsButton">
