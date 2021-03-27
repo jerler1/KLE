@@ -46,6 +46,9 @@
             @include dimensions(150px, 95px);
             visibility: hidden;
           }
+          .active {
+              visibility: visible;
+          }
         }
         li button {
           background: none;

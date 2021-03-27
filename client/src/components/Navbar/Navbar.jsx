@@ -4,13 +4,21 @@ import "./Navbar.scss";
 import { arrowDown } from "../../assets/index";
 
 const Navbar = () => {
-  const [toggleMenuOne, setToggleMenuOne] = useState(false);
-  const [toggleMenuTwo, setToggleMenuTwo] = useState(false);
-  const [toggleMenuThree, setToggleMenuThree] = useState(false);
+  const [toggleMenuState, setToggleMenuState] = useState({
+    menuOne: false,
+    menuTwo: false,
+    menuThree: false,
+  });
 
   const toggleMenu = (event) => {
-    console.log(event.target);
-  }
+    let { name, value } = event.currentTarget;
+    value = JSON.parse(value);
+    setToggleMenuState({ ...toggleMenuState, [name]: !value });
+  };
+
+  const closeMenu = (event) => {
+    setToggleMenuState({ menuOne: false, menuTwo: false, menuThree: false });
+  };
 
   return (
     <nav className="navbarContainer">
@@ -19,38 +27,68 @@ const Navbar = () => {
         <div className="navWrapper">
           <ul className="navDropdown">
             <li>
-              <button onClick={toggleMenu} name="menuOne">
+              <button
+                onClick={toggleMenu}
+                name="menuOne"
+                value={toggleMenuState.menuOne}
+              >
                 Our Work
                 <span>
                   <img src={arrowDown} alt="arrow down" />
                 </span>
               </button>
-              <div className={toggleMenuOne ? "menu menuOne active" : "menu menuOne"}>
+              <div
+                className={
+                  toggleMenuState.menuOne
+                    ? "menu menuOne active"
+                    : "menu menuOne"
+                }
+              >
                 <Link to="/">Why Us</Link>
                 <Link to="/">Portfolio</Link>
               </div>
             </li>
             <li>
-              <button onClick={toggleMenu} name="menuTwo">
+              <button
+                onClick={toggleMenu}
+                name="menuTwo"
+                value={toggleMenuState.menuTwo}
+              >
                 About Us
                 <span>
                   <img src={arrowDown} alt="arrow down" />
                 </span>
               </button>
-              <div className={toggleMenuTwo ? "menu menuTwo active" : "menu menuTwo"}>
+              <div
+                className={
+                  toggleMenuState.menuTwo
+                    ? "menu menuTwo active"
+                    : "menu menuTwo"
+                }
+              >
                 <Link to="/">Who We Are</Link>
                 <Link to="/">Our Services</Link>
                 <Link to="/">Join Our Team</Link>
               </div>
             </li>
             <li>
-              <button onClick={toggleMenu} name="menuThree">
+              <button
+                onClick={toggleMenu}
+                name="menuThree"
+                value={toggleMenuState.menuThree}
+              >
                 Resources
                 <span>
                   <img src={arrowDown} alt="arrow down" />
                 </span>
               </button>
-              <div className={toggleMenuThree ? "menu menuThree active" : "menu menuThree"}>
+              <div
+                className={
+                  toggleMenuState.menuThree
+                    ? "menu menuThree active"
+                    : "menu menuThree"
+                }
+              >
                 <Link to="/">FAQs</Link>
                 <Link to="/">Our Partners</Link>
               </div>
