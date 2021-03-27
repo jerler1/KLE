@@ -10,28 +10,32 @@ const Navbar = () => {
         <div className="navWrapper">
           <ul className="navDropdown">
             <li>
-              <a href="#">
+              <button href="#">
                 Our Work
                 <span>
                   <img src={arrowDown} alt="arrow down" />
                 </span>
-              </a>
+              </button>
+              <div className="menu menuOne">
+                  <a href="#">Why Us</a>
+                  <a href="#">Portfolio</a>
+              </div>
             </li>
             <li>
-              <a href="#">
+              <button href="#">
                 About Us
                 <span>
                   <img src={arrowDown} alt="arrow down" />
                 </span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#">
+              <button href="#">
                 Resources
                 <span>
                   <img src={arrowDown} alt="arrow down" />
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
           <div className="contactUsButton">
