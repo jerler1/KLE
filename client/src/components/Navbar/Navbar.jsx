@@ -43,91 +43,182 @@ const Navbar = () => {
   );
 
   return (
-      <nav className="mobileNavbarContainer">
-
-      </nav>
-    // <nav className="navbarContainer">
-    //   <div className="brand-logo"></div>
-    //   <div className="nav-links">
-    //     <div className="navWrapper">
-    //       <ul className="navDropdown">
-    //         <li>
-    //           <button
-    //             onClick={toggleMenu}
-    //             name="menuOne"
-    //             value={toggleMenuState.menuOne}
-    //           >
-    //             Our Work
-    //             <span>
-    //               <img src={arrowDown} alt="arrow down" />
-    //             </span>
-    //           </button>
-    //           <div
-    //             ref={menu}
-    //             className={
-    //               toggleMenuState.menuOne
-    //                 ? "menu menuOne active"
-    //                 : "menu menuOne"
-    //             }
-    //           >
-    //             <Link to="/">Why Us</Link>
-    //             <Link to="/">Portfolio</Link>
-    //           </div>
-    //         </li>
-    //         <li>
-    //           <button
-    //             onClick={toggleMenu}
-    //             name="menuTwo"
-    //             value={toggleMenuState.menuTwo}
-    //           >
-    //             About Us
-    //             <span>
-    //               <img src={arrowDown} alt="arrow down" />
-    //             </span>
-    //           </button>
-    //           <div
-    //             ref={menu}
-    //             className={
-    //               toggleMenuState.menuTwo
-    //                 ? "menu menuTwo active"
-    //                 : "menu menuTwo"
-    //             }
-    //           >
-    //             <Link to="/">Who We Are</Link>
-    //             <Link to="/">Our Services</Link>
-    //             <Link to="/">Join Our Team</Link>
-    //           </div>
-    //         </li>
-    //         <li>
-    //           <button
-    //             onClick={toggleMenu}
-    //             name="menuThree"
-    //             value={toggleMenuState.menuThree}
-    //           >
-    //             Resources
-    //             <span>
-    //               <img src={arrowDown} alt="arrow down" />
-    //             </span>
-    //           </button>
-    //           <div
-    //             ref={menu}
-    //             className={
-    //               toggleMenuState.menuThree
-    //                 ? "menu menuThree active"
-    //                 : "menu menuThree"
-    //             }
-    //           >
-    //             <Link to="/">FAQs</Link>
-    //             <Link to="/">Our Partners</Link>
-    //           </div>
-    //         </li>
-    //       </ul>
-    //       <div className="contactUsButton">
-    //         <button>Contact Us</button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </nav>
+    <nav
+      className={
+        isTabletOrMobile
+          ? "mobileNavbarContainer navbar"
+          : "navbarContainer navbar"
+      }
+    >
+      {isTabletOrMobile && (
+        <>
+          <section className="mobileNavbarTopWrapper">
+            <div className="brand-logo"></div>
+            <div className="contactUsButton">
+              <button>Contact Us</button>
+            </div>
+          </section>
+          <section className="mobileNavbarBottomWrapper">
+            <ul className="mobileDropdownWrapper">
+              <li>
+                <button
+                  onClick={toggleMenu}
+                  name="menuOne"
+                  value={toggleMenuState.menuOne}
+                >
+                  Our Work
+                  <span>
+                    <img src={arrowDown} alt="arrow down" />
+                  </span>
+                </button>
+                <div
+                  ref={menu}
+                  className={
+                    toggleMenuState.menuOne
+                      ? "menu menuOne active"
+                      : "menu menuOne"
+                  }
+                >
+                  <Link to="/">Why Us</Link>
+                  <Link to="/">Portfolio</Link>
+                </div>
+              </li>
+              <li>
+                <button
+                  onClick={toggleMenu}
+                  name="menuTwo"
+                  value={toggleMenuState.menuTwo}
+                >
+                  About Us
+                  <span>
+                    <img src={arrowDown} alt="arrow down" />
+                  </span>
+                </button>
+                <div
+                  ref={menu}
+                  className={
+                    toggleMenuState.menuTwo
+                      ? "menu menuTwo active"
+                      : "menu menuTwo"
+                  }
+                >
+                  <Link to="/">Who We Are</Link>
+                  <Link to="/">Our Services</Link>
+                  <Link to="/">Join Our Team</Link>
+                </div>
+              </li>
+              <li>
+                <button
+                  onClick={toggleMenu}
+                  name="menuThree"
+                  value={toggleMenuState.menuThree}
+                >
+                  Resources
+                  <span>
+                    <img src={arrowDown} alt="arrow down" />
+                  </span>
+                </button>
+                <div
+                  ref={menu}
+                  className={
+                    toggleMenuState.menuThree
+                      ? "menu menuThree active"
+                      : "menu menuThree"
+                  }
+                >
+                  <Link to="/">FAQs</Link>
+                  <Link to="/">Our Partners</Link>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </>
+      )}
+      {!isTabletOrMobile && (
+        <>
+          <div className="brand-logo"></div>
+          <div className="nav-links">
+            <div className="navWrapper">
+              <ul className="navDropdown">
+                <li>
+                  <button
+                    onClick={toggleMenu}
+                    name="menuOne"
+                    value={toggleMenuState.menuOne}
+                  >
+                    Our Work
+                    <span>
+                      <img src={arrowDown} alt="arrow down" />
+                    </span>
+                  </button>
+                  <div
+                    ref={menu}
+                    className={
+                      toggleMenuState.menuOne
+                        ? "menu menuOne active"
+                        : "menu menuOne"
+                    }
+                  >
+                    <Link to="/">Why Us</Link>
+                    <Link to="/">Portfolio</Link>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    onClick={toggleMenu}
+                    name="menuTwo"
+                    value={toggleMenuState.menuTwo}
+                  >
+                    About Us
+                    <span>
+                      <img src={arrowDown} alt="arrow down" />
+                    </span>
+                  </button>
+                  <div
+                    ref={menu}
+                    className={
+                      toggleMenuState.menuTwo
+                        ? "menu menuTwo active"
+                        : "menu menuTwo"
+                    }
+                  >
+                    <Link to="/">Who We Are</Link>
+                    <Link to="/">Our Services</Link>
+                    <Link to="/">Join Our Team</Link>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    onClick={toggleMenu}
+                    name="menuThree"
+                    value={toggleMenuState.menuThree}
+                  >
+                    Resources
+                    <span>
+                      <img src={arrowDown} alt="arrow down" />
+                    </span>
+                  </button>
+                  <div
+                    ref={menu}
+                    className={
+                      toggleMenuState.menuThree
+                        ? "menu menuThree active"
+                        : "menu menuThree"
+                    }
+                  >
+                    <Link to="/">FAQs</Link>
+                    <Link to="/">Our Partners</Link>
+                  </div>
+                </li>
+              </ul>
+              <div className="contactUsButton">
+                <button>Contact Us</button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </nav>
   );
 };
 
