@@ -5,7 +5,7 @@ import "./Navbar.scss";
 import { arrowDown } from "../../assets/index";
 
 const Navbar = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1023px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
 
   const [toggleMenuState, setToggleMenuState] = useState({
     menuOne: false,
@@ -30,7 +30,7 @@ const Navbar = () => {
     value = JSON.parse(value);
     setToggleMenuState({ ...toggleMenuState, [name]: !value });
   };
-  
+
   const closeMenu = useCallback((event) => {
     if (menuOneRef.current && !menuOneRef.current.contains(event.target)) {
       setToggleMenuState({
