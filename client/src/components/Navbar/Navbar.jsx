@@ -15,7 +15,6 @@ const Navbar = () => {
     if (menuOne || menuTwo || menuThree) {
       document.addEventListener("click", closeMenu);
     }
-
   }, [toggleMenuState]);
 
   // Making references for the menu's.
