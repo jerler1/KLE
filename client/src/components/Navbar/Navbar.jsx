@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { arrowDown } from "../../assets/index";
@@ -10,6 +10,22 @@ const Navbar = () => {
     menuThree: false,
   });
 
+  useEffect(() => {
+    const { menuOne, menuTwo, menuThree } = toggleMenuState;
+    if (menuOne) {
+      document.addEventListener("click", closeMenu);
+    }
+    if (menuTwo) {
+      document.addEventListener("click", closeMenu);
+    }
+    if (menuThree) {
+      document.addEventListener("click", closeMenu);
+    }
+  }, [toggleMenuState]);
+
+  // Making references for the menu's.
+  const menu = useRef();
+
   const toggleMenu = (event) => {
     let { name, value } = event.currentTarget;
     value = JSON.parse(value);
@@ -17,7 +33,10 @@ const Navbar = () => {
   };
 
   const closeMenu = (event) => {
-    setToggleMenuState({ menuOne: false, menuTwo: false, menuThree: false });
+    if (menu.current && !menu.current.contains(event.target)) {
+      setToggleMenuState({ menuOne: false, menuTwo: false, menuThree: false });
+      document.removeEventListener("click", closeMenu);
+    }
   };
 
   return (
@@ -38,6 +57,7 @@ const Navbar = () => {
                 </span>
               </button>
               <div
+                ref={menu}
                 className={
                   toggleMenuState.menuOne
                     ? "menu menuOne active"
@@ -60,6 +80,7 @@ const Navbar = () => {
                 </span>
               </button>
               <div
+                ref={menu}
                 className={
                   toggleMenuState.menuTwo
                     ? "menu menuTwo active"
@@ -83,6 +104,7 @@ const Navbar = () => {
                 </span>
               </button>
               <div
+                ref={menu}
                 className={
                   toggleMenuState.menuThree
                     ? "menu menuThree active"
