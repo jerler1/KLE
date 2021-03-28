@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { arrowDown } from "../../assets/index";
@@ -13,7 +13,7 @@ const Navbar = () => {
   useEffect(() => {
     const { menuOne, menuTwo, menuThree } = toggleMenuState;
     if (menuOne || menuTwo || menuThree) {
-      document.addEventListener("click", closeMenu);
+      document.addEventListener("click", closeMenu, true);
     }
   }, [toggleMenuState]);
 
@@ -25,13 +25,12 @@ const Navbar = () => {
     value = JSON.parse(value);
     setToggleMenuState({ ...toggleMenuState, [name]: !value });
   };
-
-  const closeMenu = (event) => {
+  const closeMenu = useCallback((event) => {
     if (menu.current && !menu.current.contains(event.target)) {
       setToggleMenuState({ menuOne: false, menuTwo: false, menuThree: false });
       document.removeEventListener("click", closeMenu);
     }
-  };
+  }, [menu]);
 
   return (
     <nav className="navbarContainer">
