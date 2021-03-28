@@ -1,5 +1,5 @@
 @import "../../sass/mixins/mixins";
-
+// Shared CSS elements between mobile and Navbar
 .navbar {
   position: fixed;
   top: 0;
@@ -8,6 +8,23 @@
   background-color: rgba(var(--mainBackgroundColor), 0.8);
 }
 
+.menuOne {
+  @include dimensions(130px, 95px);
+  visibility: hidden;
+}
+.menuTwo {
+  @include dimensions(182px, 120px);
+  visibility: hidden;
+}
+.menuThree {
+  @include dimensions(150px, 95px);
+  visibility: hidden;
+}
+.active {
+  visibility: visible;
+}
+
+// Desktop CSS for Navbar.
 .navbarContainer {
   @include dimensions(100%, 84px);
   @include flex(row, space-between, flex-start);
@@ -37,21 +54,6 @@
               border-left: 1px solid #6b6b6b;
             }
           }
-          .menuOne {
-            @include dimensions(130px, 95px);
-            visibility: hidden;
-          }
-          .menuTwo {
-            @include dimensions(182px, 120px);
-            visibility: hidden;
-          }
-          .menuThree {
-            @include dimensions(150px, 95px);
-            visibility: hidden;
-          }
-          .active {
-            visibility: visible;
-          }
         }
         li button {
           background: none;
@@ -68,7 +70,7 @@
           span {
             margin-left: 4px;
             img {
-              @include dimensions(21px, 23px);
+              @include dimensions(24px, 24px);
             }
           }
         }
@@ -83,18 +85,63 @@
 }
 
 .mobileNavbarContainer {
-    @include dimensions(100%, 96px);
-    @include flex(column, space-between, flex-start);
-    .mobileNavbarTopWrapper {
-        @include dimensions(100%, 44px);
-        @include flex(row, space-between, flex-start);
+  @include dimensions(100%, 96px);
+  @include flex(column, flex-start, flex-start);
+  .mobileNavbarTopWrapper {
+    @include dimensions(100%, 44px);
+    @include flex(row, space-between, space-between);
+    flex:auto;
+    .brand-logo {
+        @include dimensions(100%, 100%);
+        @include flex(row, center, center);
     }
-    .mobileNavbarBottomWrapper {
+    .contactUsButton {
+        @include dimensions( 100%, 100%);
+        @include flex(row, center, center);
+    }
+  }
+  .mobileNavbarBottomWrapper {
+    @include dimensions(100%, min-content);
+    @include flex(row, space-between, space-between);
+    .mobileDropdownWrapper {
         @include dimensions(100%, min-content);
-        @include flex(row, flex-start, flex-start);
-        .mobileDropdownWrapper {
-            display: flex;
-            flex-direction: row;
+        @include flex(row, space-around, center);
+      li {
+        position: relative;
+        .menu {
+          @include flex(column, center, flex-start);
+          background-color: rgba(var(--mainBackgroundColor), 0.8);
+          position: absolute;
+          border-bottom-left-radius: 6px;
+          top: 27px;
+          a {
+            padding: 3px 6px;
+            margin: 0px 8px;
+            color: var(--mainText);
+            border-left: 1px solid #6b6b6b;
+          }
         }
+      }
+      li button {
+          white-space: nowrap;
+        background: none;
+        border: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--mainText);
+        padding: 0 0px;
+        font-family: "Gilroy-Bold", Courier, monospace;
+        line-height: 1.11;
+        letter-spacing: 0.54px;
+        span {
+          margin-left: 0px;
+          img {
+            @include dimensions(24px, 24px);
+          }
+        }
+      }
     }
+  }
 }

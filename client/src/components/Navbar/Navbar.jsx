@@ -21,26 +21,26 @@ const Navbar = () => {
   }, [toggleMenuState]);
 
   // Making references for the menu's.
-  const menu = useRef();
+  const menuOneRef = useRef();
+  const menuTwoRef = useRef();
+  const menuThreeRef = useRef();
 
   const toggleMenu = (event) => {
     let { name, value } = event.currentTarget;
     value = JSON.parse(value);
     setToggleMenuState({ ...toggleMenuState, [name]: !value });
   };
-  const closeMenu = useCallback(
-    (event) => {
-      if (menu.current && !menu.current.contains(event.target)) {
-        setToggleMenuState({
-          menuOne: false,
-          menuTwo: false,
-          menuThree: false,
-        });
-        document.removeEventListener("click", closeMenu);
-      }
-    },
-    [menu]
-  );
+  
+  const closeMenu = useCallback((event) => {
+    if (menuOneRef.current && !menuOneRef.current.contains(event.target)) {
+      setToggleMenuState({
+        menuOne: false,
+        menuTwo: false,
+        menuThree: false,
+      });
+      document.removeEventListener("click", closeMenu);
+    }
+  }, []);
 
   return (
     <nav
@@ -72,7 +72,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <div
-                  ref={menu}
+                  ref={menuOneRef}
                   className={
                     toggleMenuState.menuOne
                       ? "menu menuOne active"
@@ -95,7 +95,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <div
-                  ref={menu}
+                  ref={menuTwoRef}
                   className={
                     toggleMenuState.menuTwo
                       ? "menu menuTwo active"
@@ -119,7 +119,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <div
-                  ref={menu}
+                  ref={menuThreeRef}
                   className={
                     toggleMenuState.menuThree
                       ? "menu menuThree active"
@@ -152,7 +152,7 @@ const Navbar = () => {
                     </span>
                   </button>
                   <div
-                    ref={menu}
+                    ref={menuOneRef}
                     className={
                       toggleMenuState.menuOne
                         ? "menu menuOne active"
@@ -175,7 +175,7 @@ const Navbar = () => {
                     </span>
                   </button>
                   <div
-                    ref={menu}
+                    ref={menuTwoRef}
                     className={
                       toggleMenuState.menuTwo
                         ? "menu menuTwo active"
@@ -199,7 +199,7 @@ const Navbar = () => {
                     </span>
                   </button>
                   <div
-                    ref={menu}
+                    ref={menuThreeRef}
                     className={
                       toggleMenuState.menuThree
                         ? "menu menuThree active"
