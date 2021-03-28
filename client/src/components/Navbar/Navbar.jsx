@@ -12,15 +12,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const { menuOne, menuTwo, menuThree } = toggleMenuState;
-    if (menuOne) {
+    if (menuOne || menuTwo || menuThree) {
       document.addEventListener("click", closeMenu);
     }
-    if (menuTwo) {
-      document.addEventListener("click", closeMenu);
-    }
-    if (menuThree) {
-      document.addEventListener("click", closeMenu);
-    }
+
   }, [toggleMenuState]);
 
   // Making references for the menu's.
