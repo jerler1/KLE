@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import "./Navbar.scss";
@@ -14,6 +14,24 @@ const Navbar = () => {
   });
 
   useEffect(() => {
+    const outsideClickCloseMenu = (event) => {
+      debugger;
+      let menuRef;
+      const { menuOne, menuTwo, menuThree } = toggleMenuState;
+      if (menuOne) {
+        menuRef = menuOneRef;
+      }
+      if (menuTwo) {
+        menuRef = menuTwoRef;
+      }
+      if (menuThree) {
+        menuRef = menuThreeRef;
+      }
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+        document.removeEventListener("click", closeMenu);
+      }
+    };
     const { menuOne, menuTwo, menuThree } = toggleMenuState;
     if (menuOne || menuTwo || menuThree) {
       document.addEventListener("click", outsideClickCloseMenu, true);
@@ -30,6 +48,7 @@ const Navbar = () => {
     value = JSON.parse(value);
     setToggleMenuState({ ...toggleMenuState, [name]: !value });
   };
+
   const closeMenu = () => {
     setToggleMenuState({
       menuOne: false,
@@ -37,26 +56,6 @@ const Navbar = () => {
       menuThree: false,
     });
   };
-  const outsideClickCloseMenu = useCallback(
-    (event) => {
-      let menuRef;
-      const { menuOne, menuTwo, menuThree } = toggleMenuState;
-      if (menuOne) {
-        menuRef = menuOneRef;
-      }
-      if (menuTwo) {
-        menuRef = menuTwoRef;
-      }
-      if (menuThree) {
-        menuRef = menuThreeRef;
-      }
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        closeMenu();
-        document.removeEventListener("click", closeMenu);
-      }
-    },
-    [toggleMenuState]
-  );
 
   return (
     <nav
