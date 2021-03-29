@@ -48,7 +48,8 @@
     .homePictureThree {
       @include dimensions(100%, 593px);
     }
-    .homePictureTwoBanner, .homePictureThreeBanner {
+    .homePictureTwoBanner,
+    .homePictureThreeBanner {
       @include dimensions(400px, 100%);
       @include flex(column, center, center);
       position: absolute;
@@ -66,6 +67,14 @@
       }
       p:nth-child(4n) {
         margin-bottom: 78px;
+      }
+    }
+    .homePictureThreeBanner {
+      svg {
+        margin-bottom: 48px;
+      }
+      :last-child {
+          margin-top: 32px;
       }
     }
   }
