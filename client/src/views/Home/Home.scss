@@ -1,0 +1,7 @@
+@import "../../sass/mixins/mixins";
+
+.homeContainer {
+    @include flex(column, flex-start, flex-start);
+    @include dimensions(100%, 902px);
+    background-image: url("../../assets/images/Background.png");
+}
