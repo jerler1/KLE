@@ -43,7 +43,7 @@
         li {
           position: relative;
           .menu {
-            @include flex(column, flex-start, flex-start);
+            @include flex(column, center, flex-start);
             background-color: rgba(var(--mainBackgroundColor), 0.8);
             position: absolute;
             border-bottom-left-radius: 6px;
