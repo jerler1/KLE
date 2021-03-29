@@ -16,7 +16,7 @@ const Navbar = () => {
   useEffect(() => {
     const { menuOne, menuTwo, menuThree } = toggleMenuState;
     if (menuOne || menuTwo || menuThree) {
-      document.addEventListener("click", closeMenu, true);
+      document.addEventListener("click", outsideClickCloseMenu, true);
     }
   }, [toggleMenuState]);
 
@@ -30,14 +30,16 @@ const Navbar = () => {
     value = JSON.parse(value);
     setToggleMenuState({ ...toggleMenuState, [name]: !value });
   };
-
-  const closeMenu = useCallback((event) => {
+  const closeMenu = () => {
+    setToggleMenuState({
+      menuOne: false,
+      menuTwo: false,
+      menuThree: false,
+    });
+  };
+  const outsideClickCloseMenu = useCallback((event) => {
     if (menuOneRef.current && !menuOneRef.current.contains(event.target)) {
-      setToggleMenuState({
-        menuOne: false,
-        menuTwo: false,
-        menuThree: false,
-      });
+      closeMenu();
       document.removeEventListener("click", closeMenu);
     }
   }, []);
@@ -79,8 +81,10 @@ const Navbar = () => {
                       : "menu menuOne"
                   }
                 >
-                  <Link to="/">Why Us</Link>
-                  <Link to="/">Portfolio</Link>
+                  <Link to="/" onClick={closeMenu}>
+                    Why Us
+                  </Link>
+                  <Link to="/" onClick={closeMenu}>Portfolio</Link>
                 </div>
               </li>
               <li>
@@ -102,9 +106,9 @@ const Navbar = () => {
                       : "menu menuTwo"
                   }
                 >
-                  <Link to="/">Who We Are</Link>
-                  <Link to="/">Our Services</Link>
-                  <Link to="/">Join Our Team</Link>
+                  <Link to="/" onClick={closeMenu}>Who We Are</Link>
+                  <Link to="/" onClick={closeMenu}>Our Services</Link>
+                  <Link to="/" onClick={closeMenu}>Join Our Team</Link>
                 </div>
               </li>
               <li>
@@ -126,8 +130,8 @@ const Navbar = () => {
                       : "menu menuThree"
                   }
                 >
-                  <Link to="/">FAQs</Link>
-                  <Link to="/">Our Partners</Link>
+                  <Link to="/" onClick={closeMenu}>FAQs</Link>
+                  <Link to="/" onClick={closeMenu}>Our Partners</Link>
                 </div>
               </li>
             </ul>
@@ -159,8 +163,8 @@ const Navbar = () => {
                         : "menu menuOne"
                     }
                   >
-                    <Link to="/">Why Us</Link>
-                    <Link to="/">Portfolio</Link>
+                    <Link to="/" onClick={closeMenu}>Why Us</Link>
+                    <Link to="/" onClick={closeMenu}>Portfolio</Link>
                   </div>
                 </li>
                 <li>
@@ -182,9 +186,9 @@ const Navbar = () => {
                         : "menu menuTwo"
                     }
                   >
-                    <Link to="/">Who We Are</Link>
-                    <Link to="/">Our Services</Link>
-                    <Link to="/">Join Our Team</Link>
+                    <Link to="/" onClick={closeMenu}>Who We Are</Link>
+                    <Link to="/" onClick={closeMenu}>Our Services</Link>
+                    <Link to="/" onClick={closeMenu}>Join Our Team</Link>
                   </div>
                 </li>
                 <li>
@@ -206,8 +210,8 @@ const Navbar = () => {
                         : "menu menuThree"
                     }
                   >
-                    <Link to="/">FAQs</Link>
-                    <Link to="/">Our Partners</Link>
+                    <Link to="/" onClick={closeMenu}>FAQs</Link>
+                    <Link to="/" onClick={closeMenu}>Our Partners</Link>
                   </div>
                 </li>
               </ul>
