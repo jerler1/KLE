@@ -1,6 +1,7 @@
 @import "../../sass/mixins/mixins";
 // Shared CSS elements between mobile and Navbar
 .navbar {
+  z-index: 8;
   position: fixed;
   top: 0;
   left: 0;
@@ -90,22 +91,22 @@
   .mobileNavbarTopWrapper {
     @include dimensions(100%, 44px);
     @include flex(row, space-between, space-between);
-    flex:auto;
+    flex: auto;
     .brand-logo {
-        @include dimensions(100%, 100%);
-        @include flex(row, center, center);
+      @include dimensions(100%, 100%);
+      @include flex(row, center, center);
     }
     .contactUsButton {
-        @include dimensions( 100%, 100%);
-        @include flex(row, center, center);
+      @include dimensions(100%, 100%);
+      @include flex(row, center, center);
     }
   }
   .mobileNavbarBottomWrapper {
     @include dimensions(100%, min-content);
     @include flex(row, space-between, space-between);
     .mobileDropdownWrapper {
-        @include dimensions(100%, min-content);
-        @include flex(row, space-around, center);
+      @include dimensions(100%, min-content);
+      @include flex(row, space-around, center);
       li {
         position: relative;
         .menu {
@@ -123,7 +124,7 @@
         }
       }
       li button {
-          white-space: nowrap;
+        white-space: nowrap;
         background: none;
         border: none;
         padding: 0;
