@@ -37,12 +37,26 @@ const Navbar = () => {
       menuThree: false,
     });
   };
-  const outsideClickCloseMenu = useCallback((event) => {
-    if (menuOneRef.current && !menuOneRef.current.contains(event.target)) {
-      closeMenu();
-      document.removeEventListener("click", closeMenu);
-    }
-  }, []);
+  const outsideClickCloseMenu = useCallback(
+    (event) => {
+      let menuRef;
+      const { menuOne, menuTwo, menuThree } = toggleMenuState;
+      if (menuOne) {
+        menuRef = menuOneRef;
+      }
+      if (menuTwo) {
+        menuRef = menuTwoRef;
+      }
+      if (menuThree) {
+        menuRef = menuThreeRef;
+      }
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+        document.removeEventListener("click", closeMenu);
+      }
+    },
+    [toggleMenuState]
+  );
 
   return (
     <nav
@@ -84,7 +98,9 @@ const Navbar = () => {
                   <Link to="/" onClick={closeMenu}>
                     Why Us
                   </Link>
-                  <Link to="/" onClick={closeMenu}>Portfolio</Link>
+                  <Link to="/" onClick={closeMenu}>
+                    Portfolio
+                  </Link>
                 </div>
               </li>
               <li>
@@ -106,9 +122,15 @@ const Navbar = () => {
                       : "menu menuTwo"
                   }
                 >
-                  <Link to="/" onClick={closeMenu}>Who We Are</Link>
-                  <Link to="/" onClick={closeMenu}>Our Services</Link>
-                  <Link to="/" onClick={closeMenu}>Join Our Team</Link>
+                  <Link to="/" onClick={closeMenu}>
+                    Who We Are
+                  </Link>
+                  <Link to="/" onClick={closeMenu}>
+                    Our Services
+                  </Link>
+                  <Link to="/" onClick={closeMenu}>
+                    Join Our Team
+                  </Link>
                 </div>
               </li>
               <li>
@@ -130,8 +152,12 @@ const Navbar = () => {
                       : "menu menuThree"
                   }
                 >
-                  <Link to="/" onClick={closeMenu}>FAQs</Link>
-                  <Link to="/" onClick={closeMenu}>Our Partners</Link>
+                  <Link to="/" onClick={closeMenu}>
+                    FAQs
+                  </Link>
+                  <Link to="/" onClick={closeMenu}>
+                    Our Partners
+                  </Link>
                 </div>
               </li>
             </ul>
@@ -163,8 +189,12 @@ const Navbar = () => {
                         : "menu menuOne"
                     }
                   >
-                    <Link to="/" onClick={closeMenu}>Why Us</Link>
-                    <Link to="/" onClick={closeMenu}>Portfolio</Link>
+                    <Link to="/" onClick={closeMenu}>
+                      Why Us
+                    </Link>
+                    <Link to="/" onClick={closeMenu}>
+                      Portfolio
+                    </Link>
                   </div>
                 </li>
                 <li>
@@ -186,9 +216,15 @@ const Navbar = () => {
                         : "menu menuTwo"
                     }
                   >
-                    <Link to="/" onClick={closeMenu}>Who We Are</Link>
-                    <Link to="/" onClick={closeMenu}>Our Services</Link>
-                    <Link to="/" onClick={closeMenu}>Join Our Team</Link>
+                    <Link to="/" onClick={closeMenu}>
+                      Who We Are
+                    </Link>
+                    <Link to="/" onClick={closeMenu}>
+                      Our Services
+                    </Link>
+                    <Link to="/" onClick={closeMenu}>
+                      Join Our Team
+                    </Link>
                   </div>
                 </li>
                 <li>
@@ -210,8 +246,12 @@ const Navbar = () => {
                         : "menu menuThree"
                     }
                   >
-                    <Link to="/" onClick={closeMenu}>FAQs</Link>
-                    <Link to="/" onClick={closeMenu}>Our Partners</Link>
+                    <Link to="/" onClick={closeMenu}>
+                      FAQs
+                    </Link>
+                    <Link to="/" onClick={closeMenu}>
+                      Our Partners
+                    </Link>
                   </div>
                 </li>
               </ul>
