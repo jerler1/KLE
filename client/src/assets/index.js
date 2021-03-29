@@ -8,6 +8,6 @@ export const arrowDown = require("./icons/arrow-down.png").default;
 
 // Images
 export const background = require("./images/Background.png").default;
-export const pic1 = require("./images/pic1-SanAnselmo.png").default;
+export const pic1 = require("./images/pic3-SanAnselmo.png").default;
 export const pic2 = require("./images/pic2-Ellsworth.jpg").default;
-export const pic3 = require("./images/pic3-SanAnselmo.png").default;
+export const pic3 = require("./images/pic1-SanAnselmo.png").default;

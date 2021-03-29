@@ -1,7 +1,25 @@
 @import "../../sass/mixins/mixins";
 
 .homeContainer {
-    @include flex(column, flex-start, flex-start);
-    @include dimensions(100%, 902px);
-    background-image: url("../../assets/images/Background.png");
+  @include flex(column, flex-start, flex-start);
+  @include dimensions(100%, 2237px);
+  background-image: url("../../assets/images/Background.png");
+  section {
+    margin-bottom: 96px;
+  }
+  img {
+    object-fit: cover;
+  }
+  .homeHero {
+    @include dimensions(100%, 763px);
+    .homePictureOne {
+      @include dimensions(100%, 763px);
+    }
+  }
+  .homeHeroTwo, .homeHeroThree {
+    @include dimensions(100%, 593px);
+    .homePictureTwo, .homePictureThree {
+      @include dimensions(100%, 593px);
+    }
+  }
 }
