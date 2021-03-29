@@ -6,6 +6,9 @@ const Home = () => {
   return <div className="homeContainer">
     <section className="homeHero">
       <img className="homePictureOne" src={pic1} alt="Well Lighted Kitchen."/>
+      <aside className="homePictureOneBanner">
+
+      </aside>
     </section>
     <section className="homeHeroTwo">
       <img className="homePictureTwo" src={pic2} alt="Well Lighted Kitchen."/>

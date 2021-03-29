@@ -12,8 +12,17 @@
   }
   .homeHero {
     @include dimensions(100%, 763px);
+    position: relative;
     .homePictureOne {
       @include dimensions(100%, 763px);
+    }
+    .homePictureOneBanner{
+        position: absolute;
+        left: 0;
+        bottom: 7%;
+        @include dimensions(751px, 391px);
+        @include flex(column, flex-start, flex-start);
+        background-color: rgba(var(--mainBackgroundColor), 0.9);
     }
   }
   .homeHeroTwo, .homeHeroThree {

@@ -23,7 +23,7 @@
 because the values will be placed in a rgba() later with a opacity value */
 :root {
   --mainBackgroundColor: 24, 23, 25;
-  --mainForegroundColor: rgb(39, 36, 44);
+  --mainForegroundColor: 39, 36, 44;
   --subForegroundColor: 61, 58, 65;
   --accent1: rgb(206, 70, 52);
   --accent2: rgb(216, 216, 217);
