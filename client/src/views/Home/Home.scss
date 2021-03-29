@@ -16,34 +16,57 @@
     .homePictureOne {
       @include dimensions(100%, 763px);
     }
-    .homePictureOneBanner{
-        position: absolute;
-        left: 0;
-        bottom: 7%;
-        @include dimensions(800px, 391px);
-        border-top-right-radius: 25px;
-        background-color: rgba(var(--mainBackgroundColor), 0.9);
-        .homePictureOneContent{
-            color: var(--mainText);
-            margin: 48px 24px 32px 48px;
-            @include dimensions(100%, 100%);
-            @include flex(column, flex-start, flex-start);
-            .homePictureOneBlurb {
-                @include dimensions(575px, 100px);
-                margin-top: 8px;
-                margin-bottom: 24px;
-                color: var(--secondaryText);
-                span {
-                    font-family: "Gilroy-Bold"
-                }
-            }
+    .homePictureOneBanner {
+      position: absolute;
+      left: 0;
+      bottom: 7%;
+      @include dimensions(800px, 391px);
+      border-top-right-radius: 25px;
+      background-color: rgba(var(--mainBackgroundColor), 0.9);
+      .homePictureOneContent {
+        color: var(--mainText);
+        margin: 48px 24px 32px 48px;
+        @include dimensions(100%, 100%);
+        @include flex(column, flex-start, flex-start);
+        .homePictureOneBlurb {
+          @include dimensions(575px, 100px);
+          margin-top: 8px;
+          margin-bottom: 24px;
+          color: var(--secondaryText);
+          span {
+            font-family: "Gilroy-Bold";
+          }
         }
+      }
     }
   }
-  .homeHeroTwo, .homeHeroThree {
+  .homeHeroTwo,
+  .homeHeroThree {
     @include dimensions(100%, 593px);
-    .homePictureTwo, .homePictureThree {
+    position: relative;
+    .homePictureTwo,
+    .homePictureThree {
       @include dimensions(100%, 593px);
+    }
+    .homePictureTwoBanner, .homePictureThreeBanner {
+      @include dimensions(400px, 100%);
+      @include flex(column, center, center);
+      position: absolute;
+      background-color: rgba(var(--subForegroundColor), 0.8);
+      top: 0;
+      bottom: 0;
+      right: 7%;
+      h4 {
+        color: var(--mainText);
+        margin-bottom: 43px;
+      }
+      p:not(:last-child) {
+        color: var(--secondaryText);
+        margin-bottom: 28px;
+      }
+      p:nth-child(4n) {
+        margin-bottom: 78px;
+      }
     }
   }
 }
