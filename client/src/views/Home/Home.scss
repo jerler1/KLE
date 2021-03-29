@@ -20,9 +20,24 @@
         position: absolute;
         left: 0;
         bottom: 7%;
-        @include dimensions(751px, 391px);
-        @include flex(column, flex-start, flex-start);
+        @include dimensions(800px, 391px);
+        border-top-right-radius: 25px;
         background-color: rgba(var(--mainBackgroundColor), 0.9);
+        .homePictureOneContent{
+            color: var(--mainText);
+            margin: 48px 24px 32px 48px;
+            @include dimensions(100%, 100%);
+            @include flex(column, flex-start, flex-start);
+            .homePictureOneBlurb {
+                @include dimensions(575px, 100px);
+                margin-top: 8px;
+                margin-bottom: 24px;
+                color: var(--secondaryText);
+                span {
+                    font-family: "Gilroy-Bold"
+                }
+            }
+        }
     }
   }
   .homeHeroTwo, .homeHeroThree {
