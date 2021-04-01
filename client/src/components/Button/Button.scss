@@ -19,8 +19,9 @@
   background: rgba(var(--mainBackgroundColor), 1);
 }
 .gradientButton {
+  border: none;
   background: linear-gradient(
-      to top,
+      to right,
       rgba(206, 54, 52, 0.84),
       rgba(206, 54, 52, 0.84),
       rgba(219, 94, 74, 0.83),
