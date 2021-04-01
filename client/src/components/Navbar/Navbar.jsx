@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import Button from "../Button/Button";
 import "./Navbar.scss";
 import { arrowDown } from "../../assets/index";
 
@@ -69,7 +70,7 @@ const Navbar = () => {
           <section className="mobileNavbarTopWrapper">
             <div className="brand-logo"></div>
             <div className="contactUsButton">
-              <button>Contact Us</button>
+              <Button type="secondary">Contact Us</Button>
             </div>
           </section>
           <section className="mobileNavbarBottomWrapper">
@@ -254,7 +255,7 @@ const Navbar = () => {
                 </li>
               </ul>
               <div className="contactUsButton">
-                <button>Contact Us</button>
+                <Button type="secondary">Contact Us</Button>
               </div>
             </div>
           </div>

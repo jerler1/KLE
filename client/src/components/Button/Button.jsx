@@ -10,6 +10,9 @@ const Button = ({ type, children }) => {
     if (type === "primary") {
       setButtonType({ ...buttonType, primary: true });
     }
+    if (type === "secondary")  {
+        setButtonType({...buttonType, secondary: true})
+    }
   }, []);
   return (
     <>
