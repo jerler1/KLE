@@ -6,6 +6,9 @@
   background-image: url("../../assets/images/Background.png");
   section {
     margin-bottom: 96px;
+    @include for-size(phone) {
+      margin-bottom: 72px;
+    }
   }
   img {
     object-fit: cover;
@@ -13,8 +16,14 @@
   .homeHero {
     @include dimensions(100%, 763px);
     position: relative;
+    @include for-size(phone) {
+      @include dimensions(100%, 500px);
+    }
     .homePictureOne {
       @include dimensions(100%, 763px);
+      @include for-size(phone){
+        @include dimensions(100%, 500px);
+      }
     }
     .homePictureOneBanner {
       position: absolute;
@@ -23,6 +32,11 @@
       @include dimensions(800px, 391px);
       border-top-right-radius: 25px;
       background-color: rgba(var(--mainBackgroundColor), 0.9);
+      @include for-size(phone) {
+        border-top-right-radius: 32px;
+        @include dimensions(100%, 391px);
+        top: 90%;
+      }
       .homePictureOneContent {
         color: var(--mainText);
         padding: 48px 24px 0px 48px;
@@ -58,16 +72,32 @@
       top: 0;
       bottom: 0;
       right: 7%;
+      @include for-size(phone) {
+        width: 194px;
+        right: 4%;
+        @include flex(column, flex-end, center);
+        padding-bottom: 48px;
+      }
       h4 {
         color: var(--mainText);
         margin-bottom: 43px;
+        text-align: center;
+        @include for-size(phone) {
+          margin-bottom: 16px;
+        }
       }
       p:not(:last-child) {
         color: var(--secondaryText);
         margin-bottom: 28px;
+        @include for-size(phone){
+          margin-bottom: 16px;
+        }
       }
       p:nth-child(4n) {
         margin-bottom: 78px;
+        @include for-size(phone){
+          margin-bottom: 32px;
+        }
       }
     }
     .homePictureThreeBanner {
