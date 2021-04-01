@@ -3,12 +3,10 @@
 .footerContainer {
   @include flex(column, space-between, flex-end);
   @include dimensions(100%, 538px);
-
   color: var(--secondaryText);
   background-color: rgba(var(--mainBackgroundColor), 1);
   padding: 128px 0 16px;
 }
-
 .footerContent {
   @include flex(row, space-between, flex-start);
   @include dimensions(100%, 226px);
@@ -40,15 +38,14 @@
   ul .image {
     @include dimensions(300px, 31px);
     @include flex(row, flex-start, center);
-    margin-right: 8px;
-    padding: 4px 0;
-  }
-  .phoneImage,
-  .emailImage {
-    @include dimensions(18.4px, 20.1px);
-  }
-  .imageMargin {
-    margin-top: 24px;
+    .phoneImage,
+    .emailImage {
+      @include dimensions(18.4px, 20.1px);
+      margin-right: 8px;
+    }
+    .imageMargin {
+      margin-top: 24px;
+    }
   }
 }
 
@@ -59,7 +56,9 @@
 .footerLinks {
   @include dimensions(471px, 199px);
   @include flex(row, flex-start, flex-start);
-  gap: 56px;
+  ul:not(:last-child) {
+    margin-right: 56px;
+  }
 }
 
 .footerNav {
