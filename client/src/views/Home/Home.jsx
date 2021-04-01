@@ -37,7 +37,7 @@ const Home = () => {
           <p>Communication</p>
           <p>Integrity</p>
           <p>Accountability</p>
-          <button>Learn More</button>
+          <Button className="button secondaryButton">Learn More</Button>
         </aside>
       </section>
       <section className="homeHeroThree">
@@ -62,8 +62,8 @@ const Home = () => {
               strokeLinejoin="round"
             />
           </svg>
-          <button>View Portfolio</button>
-          <button>See Services</button>
+          <Button className="button secondaryButton">View Portfolio</Button>
+          <Button className="button primaryButton">See Services</Button>
         </aside>
       </section>
     </div>

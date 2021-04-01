@@ -70,7 +70,7 @@ const Navbar = () => {
           <section className="mobileNavbarTopWrapper">
             <div className="brand-logo"></div>
             <div className="contactUsButton">
-              <Button type="secondary">Contact Us</Button>
+              <Button className="button secondaryButton">Contact Us</Button>
             </div>
           </section>
           <section className="mobileNavbarBottomWrapper">
@@ -255,7 +255,7 @@ const Navbar = () => {
                 </li>
               </ul>
               <div className="contactUsButton">
-                <Button type="secondary">Contact Us</Button>
+                <Button className="button secondaryButton">Contact Us</Button>
               </div>
             </div>
           </div>

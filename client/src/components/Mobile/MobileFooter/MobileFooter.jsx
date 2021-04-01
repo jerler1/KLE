@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../../Button/Button";
 import "./MobileFooter.scss";
-import { instagram, podcast, yelp } from "../../../assets/index";
+import { instagram, podcast, yelp, email, phone } from "../../../assets/index";
 
 const MobileFooter = () => {
   return (
@@ -55,8 +56,18 @@ const MobileFooter = () => {
         </ul>
       </nav>
       <aside className="mobileAside">
-        <button>Call Us</button>
-        <button>Email Us</button>
+        <Button className="button secondaryButton flex">
+          <span>
+            <img src={phone} alt="phone" />
+          </span>
+          Call Us
+        </Button>
+        <Button className="button secondaryButton flex">
+          <span>
+            <img src={email} alt="email" />
+          </span>
+          Email Us
+        </Button>
         <div>
           <p>Kinetic Lighting and Electric</p>
           <p>CA C10 License #838279</p>
