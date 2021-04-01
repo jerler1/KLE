@@ -25,7 +25,7 @@
       background-color: rgba(var(--mainBackgroundColor), 0.9);
       .homePictureOneContent {
         color: var(--mainText);
-        margin: 48px 24px 32px 48px;
+        padding: 48px 24px 0px 48px;
         @include dimensions(100%, 100%);
         @include flex(column, flex-start, flex-start);
         .homePictureOneBlurb {
