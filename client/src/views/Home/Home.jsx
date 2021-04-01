@@ -1,5 +1,6 @@
 import React from "react";
 import { pic1, pic2, pic3 } from "../../assets/index";
+import Button from "../../components/Button/Button";
 import "./Home.scss";
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
               since 2004. Providing complete lighting design systems and
               installation to illuminate your dreams into a reality.
             </p>
-            <button>Get a Quote</button>
+            <Button>Get a Quote</Button>
           </div>
         </aside>
       </section>
