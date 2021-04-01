@@ -34,7 +34,7 @@
     @include dimensions(650px, 100%);
     align-content: center;
     .navWrapper {
-      @include flex(row, space-between, flex-start);
+      @include flex(row, space-between, center);
       @include dimensions(100%, min-content);
       .navDropdown {
         display: flex;
