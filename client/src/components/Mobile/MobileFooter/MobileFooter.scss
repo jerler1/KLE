@@ -5,9 +5,13 @@
   @include dimensions(100%, 676px);
   color: var(--secondaryText);
   background-color: rgba(var(--mainBackgroundColor), 1);
-  gap: 1.5rem;
   padding: 24px;
   padding-top: 48px;
+  nav,
+  aside {
+    height: calc(100% - 1.5rem);
+    margin-bottom: 1.5rem;
+  }
 }
 .mobileFooterNav {
   @include flex(row, space-between, flex-start);
@@ -18,19 +22,25 @@
   .footerLinks {
     @include flex(column, flex-start, flex-start);
     @include dimensions(152px, 284px);
-    gap: 16px;
     padding: 0;
+    li:not(:last-child) {
+      height: calc(100% - 16px);
+      margin-bottom: 16px;
+    }
   }
 }
 
 .mobileAside {
   @include flex(column, flex-start, flex-start);
   @include dimensions(100%, 242px);
-  gap: 24px;
+  button, div:not(:last-child) {
+    height: calc(100% - 16px);
+    margin-bottom: 16px;
+  }
 }
-.mobileCopyright{
-    font-size: 14px;
-    margin-top: 36px;
-    font-weight: 300;
-    width: 100%;
+.mobileCopyright {
+  font-size: 14px;
+  margin-top: 36px;
+  font-weight: 300;
+  width: 100%;
 }
