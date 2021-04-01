@@ -5,13 +5,19 @@ const Button = ({ type, children }) => {
   const [buttonType, setButtonType] = useState({
     primary: false,
     secondary: false,
+    gradient: false,
   });
   useEffect(() => {
-    if (type === "primary") {
-      setButtonType({ ...buttonType, primary: true });
-    }
-    if (type === "secondary")  {
-        setButtonType({...buttonType, secondary: true})
+    switch (type) {
+      case "primary":
+        setButtonType({ ...buttonType, primary: true });
+        break;
+      case "secondary":
+        setButtonType({ ...buttonType, secondary: true });
+        break;
+      case "gradient":
+        setButtonType({ ...buttonType, gradient: true });
+        break;
     }
   }, []);
   return (
@@ -21,6 +27,9 @@ const Button = ({ type, children }) => {
       )}
       {buttonType.secondary && (
         <button className="button secondaryButton">{children}</button>
+      )}
+      {buttonType.gradient && (
+        <button className="button gradientButton">{children}</button>
       )}
     </>
   );

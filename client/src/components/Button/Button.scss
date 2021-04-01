@@ -14,7 +14,17 @@
   color: var(--mainText);
 }
 .secondaryButton {
-    border: 2px solid var(--mainText);
-    color: var(--mainText);
-    background: rgba(var(--mainBackgroundColor), 1);
+  border: 2px solid var(--mainText);
+  color: var(--mainText);
+  background: rgba(var(--mainBackgroundColor), 1);
+}
+.gradientButton {
+  background: linear-gradient(
+      to top,
+      rgba(206, 54, 52, 0.84),
+      rgba(206, 54, 52, 0.84),
+      rgba(219, 94, 74, 0.83),
+      rgba(255, 182, 96, 0.8)
+    ),
+    linear-gradient(to bottom, #ffffff, #ffffff);
 }
