@@ -37,8 +37,24 @@
       background-color: rgba(var(--mainBackgroundColor), 0.9);
       @include for-size(phone) {
         border-top-right-radius: 32px;
-        @include dimensions(100%, 391px);
-        top: 90%;
+        @include dimensions(100%, auto);
+        h2 {
+          font-weight: 400;
+          font-size: 2rem;
+          line-height: 2rem;
+          letter-spacing: 2%;
+          margin-bottom: 16px;
+        }
+        h3 {
+          font-weight: 400;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+          letter-spacing: 2%;
+          margin-bottom: 16px;
+        }
+        button {
+          margin-bottom: 16px;
+        }
       }
       .homePictureOneContent {
         color: var(--mainText);
@@ -51,6 +67,10 @@
           margin-bottom: 20px;
           letter-spacing: 1.1px;
           color: var(--secondaryText);
+          @include for-size(phone){
+            width: 100%;
+            height: auto;
+          }
           span {
             font-family: "Gilroy-Bold";
           }
@@ -106,6 +126,9 @@
     .homePictureThreeBanner {
       svg {
         margin-bottom: 48px;
+        @include for-size(phone){
+          @include dimensions(19px, 28px);
+        }
       }
       :last-child {
           margin-top: 32px;
