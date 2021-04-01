@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import "./Button.scss";
 
-const Button = (props) => {
-    return (
-        <button className="primaryButton">
-            {props.children}
-        </button>
-    );
+const Button = ({ type, children }) => {
+  const [buttonType, setButtonType] = useState({
+    primary: false,
+    secondary: false,
+  });
+  useEffect(() => {
+    if (type === "primary") {
+      setButtonType({ ...buttonType, primary: true });
+    }
+  }, []);
+  return (
+    <>
+      {buttonType.primary && (
+        <button className="button primaryButton">{children}</button>
+      )}
+      {buttonType.secondary && (
+        <button className="button secondaryButton">{children}</button>
+      )}
+    </>
+  );
 };
 
 export default Button;
