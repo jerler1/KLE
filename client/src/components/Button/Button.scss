@@ -29,3 +29,27 @@
     ),
     linear-gradient(to bottom, #ffffff, #ffffff);
 }
+.gradientBorderButton {
+  background: linear-gradient(
+      to right,
+      rgba(206, 54, 52, 0.84),
+      rgba(206, 54, 52, 0.84),
+      rgba(219, 94, 74, 0.83),
+      rgba(255, 182, 96, 0.8)
+    ),
+    linear-gradient(to bottom, #ffffff, #ffffff);
+    color: black;
+    border-radius: 8px;
+    display: block;
+    position: relative;
+    z-index: 2;
+    span {
+        align-items: center;
+        background: rgba(var(--mainForegroundColor), 1);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+}

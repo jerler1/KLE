@@ -22,7 +22,7 @@ const Home = () => {
               since 2004. Providing complete lighting design systems and
               installation to illuminate your dreams into a reality.
             </p>
-            <Button type="primary">Get a Quote</Button>
+            <Button className="button primaryButton">Get a Quote</Button>
           </div>
         </aside>
       </section>
