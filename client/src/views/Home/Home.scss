@@ -29,9 +29,10 @@
         @include dimensions(100%, 100%);
         @include flex(column, flex-start, flex-start);
         .homePictureOneBlurb {
-          @include dimensions(575px, 100px);
+          @include dimensions(600px, 100px);
           margin-top: 8px;
-          margin-bottom: 24px;
+          margin-bottom: 20px;
+          letter-spacing: 1.1px;
           color: var(--secondaryText);
           span {
             font-family: "Gilroy-Bold";
