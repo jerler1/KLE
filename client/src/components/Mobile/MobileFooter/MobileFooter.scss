@@ -3,12 +3,12 @@
 .mobileFooterContainer {
   @include flex(column, flex-start, flex-start);
   @include dimensions(100%, 676px);
+  position: relative;
   color: var(--secondaryText);
   background-color: rgba(var(--mainBackgroundColor), 1);
   padding: 24px;
   padding-top: 48px;
-  nav,
-  aside {
+  nav {
     height: calc(100% - 1.5rem);
     margin-bottom: 1.5rem;
   }
@@ -47,8 +47,9 @@
   }
 }
 .mobileCopyright {
+  font-family: "Gilroy-Bold", sans-serif;
+  color: #C2BBBB;
   font-size: 14px;
   margin-top: 36px;
-  font-weight: 300;
   width: 100%;
 }
