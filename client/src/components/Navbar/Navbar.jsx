@@ -15,7 +15,6 @@ const Navbar = () => {
 
   useEffect(() => {
     const outsideClickCloseMenu = (event) => {
-      debugger;
       let menuRef;
       const { menuOne, menuTwo, menuThree } = toggleMenuState;
       if (menuOne) {
@@ -29,7 +28,7 @@ const Navbar = () => {
       }
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         closeMenu();
-        document.removeEventListener("click", closeMenu);
+        document.removeEventListener("click", outsideClickCloseMenu);
       }
     };
     const { menuOne, menuTwo, menuThree } = toggleMenuState;
