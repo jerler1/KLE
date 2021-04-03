@@ -52,14 +52,16 @@
     height: calc(100% - 16px);
     margin-bottom: 1.5rem;
   }
-  button span {
+  button {
+    width: 135px;
+  span {
     @include flex(row, center, center);
     img {
       @include dimensions(18.4px, 20.1px);
       align-content: center;
       margin-right: 8px;
     }
-  }
+  }}
 }
 .mobileCopyright {
   font-family: "Gilroy-Bold", sans-serif;
