@@ -34,7 +34,7 @@ const MobileFooter = () => {
             <Link to="/">Contact Us</Link>
           </li>
         </ul>
-        <ul className="footerSocials">
+        <ul className="mobileFooterSocials">
           <li>
             <p>See Us in the Wild</p>
           </li>

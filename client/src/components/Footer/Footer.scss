@@ -84,7 +84,7 @@
 }
 
 .footerSocials {
-  @include dimensions(155px, 220px);
+  @include dimensions(155px, auto);
   @include flex(column, flex-start, center);
   padding: 0;
   li:not(:last-child) {

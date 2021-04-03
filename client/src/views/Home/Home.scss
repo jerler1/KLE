@@ -39,7 +39,7 @@
       background-color: rgba(var(--mainBackgroundColor), 0.9);
       @include for-size(phone) {
         border-top-right-radius: 32px;
-        @include dimensions(100%, auto);
+        @include dimensions(100%, 391px);
         h2 {
           font-weight: 400;
           font-size: 2rem;
