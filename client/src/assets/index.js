@@ -5,6 +5,7 @@ export const phone = require("./icons/phone.png").default;
 export const podcast = require("./icons/podcast.png").default;
 export const yelp = require("./icons/yelp.png").default;
 export const arrowDown = require("./icons/arrow-down.png").default;
+export const Logo = require("./icons/Logo.svg").default;
 
 // Images
 export const background = require("./images/Background.png").default;

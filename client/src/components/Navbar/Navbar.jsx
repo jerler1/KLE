@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
 import "./Navbar.scss";
-import { arrowDown } from "../../assets/index";
+import { arrowDown, Logo } from "../../assets/index";
 
 const Navbar = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
@@ -68,7 +68,11 @@ const Navbar = () => {
       {isTabletOrMobile && (
         <>
           <section className="mobileNavbarTopWrapper">
-            <div className="brand-logo"></div>
+            <div className="brand-logo-wrapper">
+              <div className="brand-logo">
+    
+              </div>
+            </div>
             <div className="contactUsButton">
               <Button className="button secondaryButton">Contact Us</Button>
             </div>

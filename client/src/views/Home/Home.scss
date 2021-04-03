@@ -5,7 +5,7 @@
   @include dimensions(100%, 2237px);
   background-image: url("../../assets/images/Background.png");
   @include for-size(phone){
-    height: 2024px;
+    height: auto;
   }
   section {
     margin-bottom: 96px;
@@ -39,7 +39,7 @@
       background-color: rgba(var(--mainBackgroundColor), 0.9);
       @include for-size(phone) {
         border-top-right-radius: 32px;
-        @include dimensions(100%, 391px);
+        @include dimensions(100%, auto);
         h2 {
           font-weight: 400;
           font-size: 2rem;
@@ -104,6 +104,9 @@
       top: 0;
       bottom: 0;
       right: 7%;
+      button {
+        width: 153px;
+      }
       @include for-size(phone) {
         width: 194px;
         right: 4%;
