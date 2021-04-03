@@ -3,7 +3,7 @@
 .footerContainer {
   @include flex(column, space-between, flex-end);
   @include dimensions(100%, 538px);
-  color: var(--secondaryText);
+  color: var(--mainText);
   background-color: rgba(var(--mainBackgroundColor), 1);
   padding: 128px 0 16px;
 }
@@ -13,6 +13,7 @@
   padding: 0 48px;
 }
 .subFooter {
+  color: var(--secondaryText);
   width: 444px;
   height: 17px;
   font-size: 14px;
@@ -71,7 +72,7 @@
 }
 .footerNav li a,
 .footerInteract li a {
-  color: var(--secondaryText);
+  color: var(--mainText);
 }
 .footerInteract {
   @include dimensions(125px, 140px);
