@@ -4,9 +4,9 @@
   @include flex(column, flex-start, flex-start);
   @include dimensions(100%, 2237px);
   background-image: url("../../assets/images/Background.png");
-  // @include for-szie(phone){
-  //   // height
-  // }
+  @include for-size(phone){
+    height: 2024px;
+  }
   section {
     margin-bottom: 96px;
     @include for-size(phone) {
@@ -20,7 +20,9 @@
     @include dimensions(100%, 763px);
     position: relative;
     @include for-size(phone) {
-      @include dimensions(100%, 500px);
+      @include dimensions(100%, auto);
+      @include flex(column, flex-start, flex-start);
+      position:initial;
     }
     .homePictureOne {
       @include dimensions(100%, 763px);
@@ -55,6 +57,7 @@
         button {
           margin-bottom: 16px;
         }
+        position: initial;
       }
       .homePictureOneContent {
         color: var(--mainText);
@@ -82,9 +85,15 @@
   .homeHeroThree {
     @include dimensions(100%, 593px);
     position: relative;
+    @include for-size(phone) {
+      height: 484px;
+    }
     .homePictureTwo,
     .homePictureThree {
       @include dimensions(100%, 593px);
+      @include for-size(phone) {
+        height: 484px;
+      }
     }
     .homePictureTwoBanner,
     .homePictureThreeBanner {
