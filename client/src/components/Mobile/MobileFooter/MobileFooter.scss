@@ -2,12 +2,11 @@
 
 .mobileFooterContainer {
   @include flex(column, flex-start, flex-start);
-  @include dimensions(100%, 676px);
+  @include dimensions(100%, 700px);
   position: relative;
-  color: var(--secondaryText);
+  color: var(--mainText);
   background-color: rgba(var(--mainBackgroundColor), 1);
-  padding: 24px;
-  padding-top: 48px;
+  padding: 48px 24px 24px;
   nav {
     height: calc(100% - 1.5rem);
     margin-bottom: 1.5rem;
@@ -17,7 +16,7 @@
   @include flex(row, space-between, flex-start);
   @include dimensions(100%, 284px);
   ul li a {
-    color: var(--secondaryText);
+    color: var(--mainText);
   }
   .footerLinks {
     @include flex(column, flex-start, flex-start);
@@ -48,7 +47,7 @@
 }
 .mobileCopyright {
   font-family: "Gilroy-Bold", sans-serif;
-  color: #C2BBBB;
+  color: var(--secondaryText);
   font-size: 14px;
   margin-top: 36px;
   width: 100%;
