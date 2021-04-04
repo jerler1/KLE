@@ -54,20 +54,23 @@
   }
   button {
     width: 135px;
-  span {
-    @include flex(row, center, center);
-    img {
-      @include dimensions(18.4px, 20.1px);
-      align-content: center;
-      margin-right: 8px;
+    span {
+      @include flex(row, center, center);
+      img {
+        @include dimensions(18.4px, 20.1px);
+        align-content: center;
+        margin-right: 8px;
+      }
     }
-  }}
+  }
 }
 .mobileCopyright {
   font-family: "Gilroy-Bold", sans-serif;
   color: var(--secondaryText);
-  font-size: 14px;
   margin-top: 36px;
   margin-bottom: 24px;
   width: 100%;
+  p {
+    font-size: 13px;
+  }
 }
