@@ -2,12 +2,16 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./Navbar.scss";
 import { arrowDown, Logo } from "../../assets/index";
 
 const Navbar = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
 
+  const [isMenuOneActive, setIsMenuOneActive] = useState(false);
+  const [isMenuTwoActive, setIsMenuTwoActive] = useState(false);
+  const [isMenuThreeActive, setIsMenuThreeActive] = useState(false);
   const [toggleMenuState, setToggleMenuState] = useState({
     menuOne: false,
     menuTwo: false,
@@ -32,11 +36,10 @@ const Navbar = () => {
         document.removeEventListener("click", outsideClickCloseMenu);
       }
     };
-    const { menuOne, menuTwo, menuThree } = toggleMenuState;
-    if (menuOne || menuTwo || menuThree) {
+    if (isMenuOneActive || isMenuTwoActive || isMenuThreeActive) {
       document.addEventListener("click", outsideClickCloseMenu, true);
     }
-  }, [toggleMenuState]);
+  }, [isMenuOneActive, isMenuTwoActive, isMenuThreeActive]);
 
   // Making references for the menu's.
   const menuOneRef = useRef();
@@ -45,6 +48,7 @@ const Navbar = () => {
 
   const toggleMenu = (event) => {
     let { name, value } = event.currentTarget;
+    console.log(name);
     value = JSON.parse(value);
     setToggleMenuState({ ...toggleMenuState, [name]: !value });
   };
@@ -69,9 +73,7 @@ const Navbar = () => {
         <>
           <section className="mobileNavbarTopWrapper">
             <div className="brand-logo-wrapper">
-              <div className="brand-logo">
-    
-              </div>
+              <div className="brand-logo"></div>
             </div>
             <div className="contactUsButton">
               <Button className="button secondaryButton">Contact Us</Button>
@@ -83,19 +85,17 @@ const Navbar = () => {
                 <button
                   onClick={toggleMenu}
                   name="menuOne"
-                  value={toggleMenuState.menuOne}
+                  value={isMenuOneActive}
                 >
                   Our Work
                   <span>
                     <img src={arrowDown} alt="arrow down" />
                   </span>
                 </button>
-                <div
+                {/* <Dropdown
                   ref={menuOneRef}
                   className={
-                    toggleMenuState.menuOne
-                      ? "menu menuOne active"
-                      : "menu menuOne"
+                    isMenuOneActive ? "menu menuOne active" : "menu menuOne"
                   }
                 >
                   <Link to="/" onClick={closeMenu}>
@@ -104,13 +104,13 @@ const Navbar = () => {
                   <Link to="/" onClick={closeMenu}>
                     Portfolio
                   </Link>
-                </div>
+                </Dropdown> */}
               </li>
               <li>
                 <button
                   onClick={toggleMenu}
                   name="menuTwo"
-                  value={toggleMenuState.menuTwo}
+                  value={isMenuTwoActive}
                 >
                   About Us
                   <span>
@@ -120,7 +120,7 @@ const Navbar = () => {
                 <div
                   ref={menuTwoRef}
                   className={
-                    toggleMenuState.menuTwo
+                    isMenuTwoActive
                       ? "menu menuTwo active"
                       : "menu menuTwo"
                   }
@@ -140,7 +140,7 @@ const Navbar = () => {
                 <button
                   onClick={toggleMenu}
                   name="menuThree"
-                  value={toggleMenuState.menuThree}
+                  value={isMenuThreeActive}
                 >
                   Resources
                   <span>
@@ -150,7 +150,7 @@ const Navbar = () => {
                 <div
                   ref={menuThreeRef}
                   className={
-                    toggleMenuState.menuThree
+                    isMenuThreeActive
                       ? "menu menuThree active"
                       : "menu menuThree"
                   }
@@ -177,7 +177,7 @@ const Navbar = () => {
                   <button
                     onClick={toggleMenu}
                     name="menuOne"
-                    value={toggleMenuState.menuOne}
+                    value={isMenuOneActive}
                   >
                     Our Work
                     <span>
@@ -187,7 +187,7 @@ const Navbar = () => {
                   <div
                     ref={menuOneRef}
                     className={
-                      toggleMenuState.menuOne
+                      isMenuOneActive
                         ? "menu menuOne active"
                         : "menu menuOne"
                     }
@@ -204,7 +204,7 @@ const Navbar = () => {
                   <button
                     onClick={toggleMenu}
                     name="menuTwo"
-                    value={toggleMenuState.menuTwo}
+                    value={isMenuTwoActive}
                   >
                     About Us
                     <span>
@@ -214,7 +214,7 @@ const Navbar = () => {
                   <div
                     ref={menuTwoRef}
                     className={
-                      toggleMenuState.menuTwo
+                      isMenuTwoActive
                         ? "menu menuTwo active"
                         : "menu menuTwo"
                     }
@@ -234,7 +234,7 @@ const Navbar = () => {
                   <button
                     onClick={toggleMenu}
                     name="menuThree"
-                    value={toggleMenuState.menuThree}
+                    value={isMenuThreeActive}
                   >
                     Resources
                     <span>
@@ -244,7 +244,7 @@ const Navbar = () => {
                   <div
                     ref={menuThreeRef}
                     className={
-                      toggleMenuState.menuThree
+                      isMenuThreeActive
                         ? "menu menuThree active"
                         : "menu menuThree"
                     }

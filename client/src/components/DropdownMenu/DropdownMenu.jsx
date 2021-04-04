@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { arrowDown } from "../../assets/index";
 import "./DropdownMenu.scss";
 
 const DropdownMenu = ({ children }) => {
@@ -31,7 +32,7 @@ const DropdownMenu = ({ children }) => {
         onClick={onClick}
         className="menu-trigger"
         name="menuTwo"
-        value={isMenuTwoActive}
+        // value={isMenuTwoActive}
       >
         About Us
         <span>
@@ -40,7 +41,7 @@ const DropdownMenu = ({ children }) => {
       </button>
       <nav
         ref={dropdownRef}
-        className={`menu ${isMenuTwoActive ? "active" : "inactive"}`}
+        className={`menu ${isActive ? "active" : "inactive"}`}
       >
         {children}
       </nav>
