@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export const useDetectOutsideClick = (element, intialState) => {
+export const useDetectOutsideClick = (element, initialState) => {
   const [isActive, setIsActive] = useState(initialState);
 
   useEffect(() => {
     const pageClickEvent = (e) => {
       // If the active element exists and is clicked outside of
-      if (el.current !== null && !el.current.contains(e.target)) {
+      if (element.current !== null && !element.current.contains(e.target)) {
         setIsActive(!isActive);
       }
     };
