@@ -5,6 +5,8 @@ export const useDetectOutsideClick = (element, initialState) => {
 
   useEffect(() => {
     const pageClickEvent = (e) => {
+        console.log("inside hook")
+        console.log(element.current);
       // If the active element exists and is clicked outside of
       if (element.current !== null && !element.current.contains(e.target)) {
         setIsActive(!isActive);
