@@ -18,19 +18,18 @@ const DropdownMenu = ({ children, message, menu }) => {
           <img src={arrowDown} alt="arrow down" />
         </span>
       </button>
-      <nav className="menu-wrapper">
-        <div
-          ref={dropdownRef}
-          className={`menu ${isActive ? "active" : "inactive"} ${
-            menu === "one"
-              ? "menuOne"
-              : menu === "two"
-              ? "menuTwo"
-              : menu === "three"
-              ? "menuThree"
-              : ""
-          }`}
-        >
+      <nav
+        className={`menu-wrapper ${isActive ? "active" : "inactive"} ${
+          menu === "one"
+            ? "menuOne"
+            : menu === "two"
+            ? "menuTwo"
+            : menu === "three"
+            ? "menuThree"
+            : ""
+        }`}
+      >
+        <div ref={dropdownRef} className="menu">
           {children}
         </div>
       </nav>
