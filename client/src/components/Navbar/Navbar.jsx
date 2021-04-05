@@ -29,16 +29,16 @@ const Navbar = () => {
           </section>
           <section className="mobileNavbarBottomWrapper">
             <ul className="mobileDropdownWrapper">
-              <DropdownMenu message="Our Work">
+              <DropdownMenu message="Our Work" menu="one">
                 <Link to="/">Why Us</Link>
                 <Link to="/">Portfolio</Link>
               </DropdownMenu>
-              <DropdownMenu message="About Us">
+              <DropdownMenu message="About Us" menu="two">
                 <Link to="/">Who We Are</Link>
                 <Link to="/">Our Services</Link>
                 <Link to="/">Join Our Team</Link>
               </DropdownMenu>
-              <DropdownMenu message="Resources">
+              <DropdownMenu message="Resources" menu="three">
                 <Link to="/">FAQs</Link>
                 <Link to="/">Our Partners</Link>
               </DropdownMenu>
@@ -52,16 +52,16 @@ const Navbar = () => {
           <div className="nav-links">
             <div className="navWrapper">
               <ul className="navDropdown">
-                <DropdownMenu message="Our Work">
+                <DropdownMenu message="Our Work" menu="one">
                   <Link to="/">Why Us</Link>
                   <Link to="/">Portfolio</Link>
                 </DropdownMenu>
-                <DropdownMenu message="About Us">
+                <DropdownMenu message="About Us" menu="two">
                   <Link to="/">Who We Are</Link>
                   <Link to="/">Our Services</Link>
                   <Link to="/">Join Our Team</Link>
                 </DropdownMenu>
-                <DropdownMenu message="Resources">
+                <DropdownMenu message="Resources" menu="three">
                   <Link to="/">FAQs</Link>
                   <Link to="/">Our Partners</Link>
                 </DropdownMenu>
