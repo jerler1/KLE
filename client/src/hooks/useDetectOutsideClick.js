@@ -5,8 +5,12 @@ export const useDetectOutsideClick = (element, initialState) => {
 
   useEffect(() => {
     const pageClickEvent = (e) => {
+      console.log(e.target);
       // If the active element exists and is clicked outside of
       if (element.current !== null && !element.current.contains(e.target)) {
+        setIsActive(!isActive);
+      }
+      if (element.current !== null && e.target instanceof HTMLAnchorElement) {
         setIsActive(!isActive);
       }
     };

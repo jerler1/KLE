@@ -1,23 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./Navbar.scss";
-import { arrowDown, Logo } from "../../assets/index";
+import { Logo } from "../../assets/index";
 
 const Navbar = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
-
-  const closeMenu = () => {
-    console.log("attempting to close");
-    setIsMenuOneActive(false);
-    setToggleMenuState({
-      menuOne: false,
-      menuTwo: false,
-      menuThree: false,
-    });
-  };
 
   return (
     <nav
@@ -40,31 +30,17 @@ const Navbar = () => {
           <section className="mobileNavbarBottomWrapper">
             <ul className="mobileDropdownWrapper">
               <DropdownMenu message="Our Work">
-                <Link to="/" onClick={closeMenu}>
-                  Why Us
-                </Link>
-                <Link to="/" onClick={closeMenu}>
-                  Portfolio
-                </Link>
+                <Link to="/">Why Us</Link>
+                <Link to="/">Portfolio</Link>
               </DropdownMenu>
               <DropdownMenu message="About Us">
-                <Link to="/" onClick={closeMenu}>
-                  Who We Are
-                </Link>
-                <Link to="/" onClick={closeMenu}>
-                  Our Services
-                </Link>
-                <Link to="/" onClick={closeMenu}>
-                  Join Our Team
-                </Link>
+                <Link to="/">Who We Are</Link>
+                <Link to="/">Our Services</Link>
+                <Link to="/">Join Our Team</Link>
               </DropdownMenu>
               <DropdownMenu message="Resources">
-                <Link to="/" onClick={closeMenu}>
-                  FAQs
-                </Link>
-                <Link to="/" onClick={closeMenu}>
-                  Our Partners
-                </Link>
+                <Link to="/">FAQs</Link>
+                <Link to="/">Our Partners</Link>
               </DropdownMenu>
             </ul>
           </section>
@@ -77,31 +53,17 @@ const Navbar = () => {
             <div className="navWrapper">
               <ul className="navDropdown">
                 <DropdownMenu message="Our Work">
-                  <Link to="/" onClick={closeMenu}>
-                    Why Us
-                  </Link>
-                  <Link to="/" onClick={closeMenu}>
-                    Portfolio
-                  </Link>
+                  <Link to="/">Why Us</Link>
+                  <Link to="/">Portfolio</Link>
                 </DropdownMenu>
                 <DropdownMenu message="About Us">
-                  <Link to="/" onClick={closeMenu}>
-                    Who We Are
-                  </Link>
-                  <Link to="/" onClick={closeMenu}>
-                    Our Services
-                  </Link>
-                  <Link to="/" onClick={closeMenu}>
-                    Join Our Team
-                  </Link>
+                  <Link to="/">Who We Are</Link>
+                  <Link to="/">Our Services</Link>
+                  <Link to="/">Join Our Team</Link>
                 </DropdownMenu>
                 <DropdownMenu message="Resources">
-                  <Link to="/" onClick={closeMenu}>
-                    FAQs
-                  </Link>
-                  <Link to="/" onClick={closeMenu}>
-                    Our Partners
-                  </Link>
+                  <Link to="/">FAQs</Link>
+                  <Link to="/">Our Partners</Link>
                 </DropdownMenu>
               </ul>
               <div className="contactUsButton">
