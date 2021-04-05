@@ -8,6 +8,16 @@ import Footer from "./components/Footer/Footer";
 import MobileFooter from "./components/Mobile/MobileFooter/MobileFooter";
 
 function App() {
+  function handleFirstTab(e) {
+    if (e.keyCode === 9) {
+      // the "I am a keyboard user" key
+      document.body.classList.add("user-is-tabbing");
+      window.removeEventListener("keydown", handleFirstTab);
+    }
+  }
+
+  window.addEventListener("keydown", handleFirstTab);
+
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1023px)" });
   return (
     <Router>
