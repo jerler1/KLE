@@ -11,18 +11,18 @@
 
 .menuOne {
   @include dimensions(130px, 95px);
-  visibility: hidden;
 }
 .menuTwo {
   @include dimensions(182px, 120px);
-  visibility: hidden;
 }
 .menuThree {
   @include dimensions(150px, 95px);
-  visibility: hidden;
 }
 .active {
   visibility: visible;
+}
+.inactive {
+  visibility: hidden;
 }
 
 // Desktop CSS for Navbar.
