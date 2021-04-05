@@ -3,7 +3,7 @@ import { useDetectOutsideClick } from "../../hooks/useDetectOutsideClick";
 import { arrowDown } from "../../assets/index";
 import "./DropdownMenu.scss";
 
-const DropdownMenu = ({ children, message }) => {
+const DropdownMenu = ({ children, message, menu }) => {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => {
@@ -18,12 +18,22 @@ const DropdownMenu = ({ children, message }) => {
           <img src={arrowDown} alt="arrow down" />
         </span>
       </button>
-      <div
-        ref={dropdownRef}
-        className={`menu ${isActive ? "active" : "inactive"}`}
-      >
-        {children}
-      </div>
+      <nav className="menu-wrapper">
+        <div
+          ref={dropdownRef}
+          className={`menu ${isActive ? "active" : "inactive"} ${
+            menu === "one"
+              ? "menuOne"
+              : menu === "two"
+              ? "menuTwo"
+              : menu === "three"
+              ? "menuThree"
+              : ""
+          }`}
+        >
+          {children}
+        </div>
+      </nav>
     </li>
   );
 };
