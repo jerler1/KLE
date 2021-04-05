@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
@@ -7,6 +7,7 @@ import "./Navbar.scss";
 import { Logo } from "../../assets/index";
 
 const Navbar = () => {
+  const location = useLocation();
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
 
   return (
@@ -30,17 +31,51 @@ const Navbar = () => {
           <section className="mobileNavbarBottomWrapper">
             <ul className="mobileDropdownWrapper">
               <DropdownMenu message="Our Work" menu="one">
-                <Link to="/">Why Us</Link>
-                <Link to="/">Portfolio</Link>
+                <ul>
+                  <li
+                    className={location.pathname === "/" ? "menu-active" : ""}
+                  >
+                    <Link to="/">Why Us</Link>
+                  </li>
+                  <li
+                    className={location.pathname === "/" ? "menu-active" : ""}
+                  >
+                    <Link to="/">Portfolio</Link>
+                  </li>
+                </ul>
               </DropdownMenu>
               <DropdownMenu message="About Us" menu="two">
-                <Link to="/">Who We Are</Link>
-                <Link to="/">Our Services</Link>
-                <Link to="/">Join Our Team</Link>
+                <ul>
+                  <li
+                    className={location.pathname === "/" ? "menu-active" : ""}
+                  >
+                    <Link to="/">Who We Are</Link>
+                  </li>
+                  <li
+                    className={location.pathname === "/" ? "menu-active" : ""}
+                  >
+                    <Link to="/">Our Services</Link>
+                  </li>
+                  <li
+                    className={location.pathname === "/" ? "menu-active" : ""}
+                  >
+                    <Link to="/">Join Our Team</Link>
+                  </li>
+                </ul>
               </DropdownMenu>
               <DropdownMenu message="Resources" menu="three">
-                <Link to="/">FAQs</Link>
-                <Link to="/">Our Partners</Link>
+                <ul>
+                  <li
+                    className={location.pathname === "/" ? "menu-active" : ""}
+                  >
+                    <Link to="/">FAQs</Link>
+                  </li>
+                  <li
+                    className={location.pathname === "/" ? "menu-active" : ""}
+                  >
+                    <Link to="/">Our Partners</Link>
+                  </li>
+                </ul>
               </DropdownMenu>
             </ul>
           </section>
@@ -53,17 +88,51 @@ const Navbar = () => {
             <div className="navWrapper">
               <ul className="navDropdown">
                 <DropdownMenu message="Our Work" menu="one">
-                  <Link to="/">Why Us</Link>
-                  <Link to="/">Portfolio</Link>
+                  <ul>
+                    <li
+                      className={location.pathname === "/" ? "menu-active" : ""}
+                    >
+                      <Link to="/">Why Us</Link>
+                    </li>
+                    <li
+                      className={location.pathname === "/" ? "menu-active" : ""}
+                    >
+                      <Link to="/">Portfolio</Link>
+                    </li>
+                  </ul>
                 </DropdownMenu>
                 <DropdownMenu message="About Us" menu="two">
-                  <Link to="/">Who We Are</Link>
-                  <Link to="/">Our Services</Link>
-                  <Link to="/">Join Our Team</Link>
+                  <ul>
+                    <li
+                      className={location.pathname === "/" ? "menu-active" : ""}
+                    >
+                      <Link to="/">Who We Are</Link>
+                    </li>
+                    <li
+                      className={location.pathname === "/" ? "menu-active" : ""}
+                    >
+                      <Link to="/">Our Services</Link>
+                    </li>
+                    <li
+                      className={location.pathname === "/" ? "menu-active" : ""}
+                    >
+                      <Link to="/">Join Our Team</Link>
+                    </li>
+                  </ul>
                 </DropdownMenu>
                 <DropdownMenu message="Resources" menu="three">
-                  <Link to="/">FAQs</Link>
-                  <Link to="/">Our Partners</Link>
+                  <ul>
+                    <li
+                      className={location.pathname === "/" ? "menu-active" : ""}
+                    >
+                      <Link to="/">FAQs</Link>
+                    </li>
+                    <li
+                      className={location.pathname === "/" ? "menu-active" : ""}
+                    >
+                      <Link to="/">Our Partners</Link>
+                    </li>
+                  </ul>
                 </DropdownMenu>
               </ul>
               <div className="contactUsButton">

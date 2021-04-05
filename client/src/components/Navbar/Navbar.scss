@@ -16,13 +16,19 @@
   @include dimensions(182px, 120px);
 }
 .menuThree {
-  @include dimensions(150px, 95px);
+  @include dimensions(160px, 95px);
+  @include for-size(phone) {
+    right: 0;
+  }
 }
 .active {
   visibility: visible;
 }
 .inactive {
   visibility: hidden;
+}
+.menu-active {
+  text-decoration: dashed;
 }
 
 // Desktop CSS for Navbar.
@@ -43,18 +49,27 @@
         li {
           position: relative;
           .menu-wrapper {
+            @include flex(column, center, flex-start);
+            background-color: rgba(var(--mainBackgroundColor), 0.8);
+            border-bottom-left-radius: 6px;
             position: absolute;
+            top: 55px;
             .menu {
               @include flex(column, center, flex-start);
-              background-color: rgba(var(--mainBackgroundColor), 0.8);
-              position: absolute;
-              border-bottom-left-radius: 6px;
-              top: 55px;
-              a {
-                padding: 3px 6px;
-                margin: 0px 8px;
-                color: var(--mainText);
-                border-left: 1px solid #6b6b6b;
+              border-left: 1px solid #6b6b6b;
+              margin-left: 1rem;
+              ul li {
+                padding: 6px 6px;
+                a {
+                  margin: 0px 8px;
+                  color: var(--mainText);
+                  &:hover {
+                    background-color: lawngreen;
+                  }
+                  &:active {
+                    background-color: lightpink;
+                  }
+                }
               }
             }
           }
@@ -120,18 +135,27 @@
       li {
         position: relative;
         .menu-wrapper {
-          padding: 50px;
+          @include flex(column, center, flex-start);
+          background-color: rgba(var(--mainBackgroundColor), 0.8);
+          border-bottom-left-radius: 6px;
+          position: absolute;
+          top: 27px;
           .menu {
             @include flex(column, center, flex-start);
-            background-color: rgba(var(--mainBackgroundColor), 0.8);
-            position: absolute;
-            border-bottom-left-radius: 6px;
-            top: 27px;
-            a {
-              padding: 3px 6px;
-              margin: 0px 8px;
-              color: var(--mainText);
-              border-left: 1px solid #6b6b6b;
+            border-left: 1px solid #6b6b6b;
+            margin-left: 1rem;
+            ul li {
+              padding: 6px 6px;
+              a {
+                margin: 0px 8px;
+                color: var(--mainText);
+                &:hover {
+                  background-color: lawngreen;
+                }
+                &:active {
+                  background-color: lightpink;
+                }
+              }
             }
           }
         }
