@@ -12,7 +12,7 @@ const DropdownMenu = ({ children, message }) => {
 
   return (
     <li className="menu-container">
-      <button onClick={onClick} name="menuOne" value={isActive}>
+      <button onClick={onClick} value={isActive}>
         {message}
         <span>
           <img src={arrowDown} alt="arrow down" />
