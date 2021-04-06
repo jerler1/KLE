@@ -4,7 +4,7 @@
   @include flex(column, flex-start, flex-start);
   @include dimensions(100%, 2237px);
   background-image: url("../../assets/images/Background.png");
-  @include for-size(phone){
+  @include for-size(phone) {
     height: auto;
   }
   section {
@@ -22,11 +22,11 @@
     @include for-size(phone) {
       @include dimensions(100%, auto);
       @include flex(column, flex-start, flex-start);
-      position:initial;
+      position: initial;
     }
     .homePictureOne {
       @include dimensions(100%, 763px);
-      @include for-size(phone){
+      @include for-size(phone) {
         @include dimensions(100%, 500px);
       }
     }
@@ -46,7 +46,7 @@
           line-height: 2rem;
           letter-spacing: 2%;
           margin-bottom: 16px;
-          @media only screen and (max-width: 400px){
+          @media only screen and (max-width: 400px) {
             font-size: 1.5rem;
           }
         }
@@ -56,13 +56,13 @@
           line-height: 1.5rem;
           letter-spacing: 2%;
           margin-bottom: 16px;
-          @media only screen and (max-width: 400px){
+          @media only screen and (max-width: 400px) {
             word-spacing: inherit;
           }
         }
         p {
-          @media only screen and (max-width: 400px){
-            font-size: 1.0rem;
+          @media only screen and (max-width: 400px) {
+            font-size: 1rem;
           }
         }
         button {
@@ -75,7 +75,7 @@
         padding: 48px 24px 0px 48px;
         @include dimensions(100%, 100%);
         @include flex(column, flex-start, flex-start);
-        @include for-size(phone){
+        @include for-size(phone) {
           padding: 48px 8px 0px 16px;
         }
         .homePictureOneBlurb {
@@ -84,7 +84,7 @@
           margin-bottom: 20px;
           letter-spacing: 1.1px;
           color: var(--secondaryText);
-          @include for-size(phone){
+          @include for-size(phone) {
             width: 100%;
             height: auto;
           }
@@ -118,16 +118,16 @@
       top: 0;
       bottom: 0;
       right: 7%;
-      button {
-        width: 153px;
-      }
       @include for-size(phone) {
         width: 194px;
         right: 4%;
         @include flex(column, flex-end, center);
         padding-bottom: 48px;
       }
-      h4 {
+      button {
+        width: 153px;
+      }
+      .bannerHeader {
         color: var(--mainText);
         margin-bottom: 43px;
         text-align: center;
@@ -135,29 +135,35 @@
           margin-bottom: 16px;
         }
       }
-      p:not(:last-child) {
-        color: var(--secondaryText);
-        margin-bottom: 28px;
-        @include for-size(phone){
-          margin-bottom: 16px;
-        }
-      }
-      p:nth-child(4n) {
-        margin-bottom: 78px;
-        @include for-size(phone){
-          margin-bottom: 32px;
+      .bannerTwoContent {
+        @include flex(column, center, center);
+        .bannerLeftAligned {
+          align-self: flex-start;
+          color: var(--secondaryText);
+          p:not(:last-child) { 
+            margin-bottom: 28px;
+            @include for-size(phone) {
+              margin-bottom: 16px;
+            }
+          }
+          p:last-child {
+            margin-bottom: 78px;
+            @include for-size(phone) {
+              margin-bottom: 32px;
+            }
+          }
         }
       }
     }
     .homePictureThreeBanner {
       svg {
         margin-bottom: 48px;
-        @include for-size(phone){
+        @include for-size(phone) {
           @include dimensions(19px, 28px);
         }
       }
       :last-child {
-          margin-top: 32px;
+        margin-top: 32px;
       }
     }
   }

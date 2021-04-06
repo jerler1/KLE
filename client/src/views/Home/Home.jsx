@@ -33,11 +33,15 @@ const Home = () => {
           alt="Well Lighted Kitchen."
         />
         <aside className="homePictureTwoBanner">
-          <h4>The Kinetic Experience</h4>
-          <p>Communication</p>
-          <p>Integrity</p>
-          <p>Accountability</p>
-          <Button className="button secondaryButton">Learn More</Button>
+          <div className="bannerTwoContent">
+            <h4 className="bannerHeader">The Kinetic Experience</h4>
+            <div className="bannerLeftAligned">
+              <p className="bannerLeftAligned">Communication</p>
+              <p className="bannerLeftAligned">Integrity</p>
+              <p className="bannerLeftAligned">Accountability</p>
+            </div>
+            <Button className="button secondaryButton">Learn More</Button>
+          </div>
         </aside>
       </section>
       <section className="homeHeroThree">
@@ -47,7 +51,7 @@ const Home = () => {
           alt="Well Lighted Kitchen."
         />
         <aside className="homePictureThreeBanner">
-          <h4>What We Do</h4>
+          <h4 className="bannerHeader">What We Do</h4>
           <svg
             width="146"
             height="226"
