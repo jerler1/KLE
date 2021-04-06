@@ -57,7 +57,7 @@
   }
 }
 button:hover {
-  border: none;
+  border: 2px solid rgba(var(--mainBackgroundColor), 1);
   background: linear-gradient(
       to right,
       rgba(206, 54, 52, 0.84),
@@ -67,6 +67,7 @@ button:hover {
     ),
     linear-gradient(to bottom, #ffffff, #ffffff);
     color: black;
+    cursor: pointer;
 }
 button:active {
   background: #E44E39;
