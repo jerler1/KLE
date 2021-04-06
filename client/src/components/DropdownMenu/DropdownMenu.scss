@@ -1,3 +1,4 @@
+// TODO abstract.
 .dropMenuInactive,
 .footerLinks .footerNav a,
 .footerLinks .footerInteract a,
@@ -42,4 +43,7 @@
     bottom: -3px;
     background: #ce4634;
   }
+}
+.rotateArrow {
+  transform: rotate(180deg);
 }

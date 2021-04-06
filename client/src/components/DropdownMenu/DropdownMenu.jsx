@@ -19,7 +19,11 @@ const DropdownMenu = ({ children, message, menu }) => {
           {message}
         </div>
         <span>
-          <img src={arrowDown} alt="arrow down" />
+          <img
+            className={isActive ? "rotateArrow" : ""}
+            src={arrowDown}
+            alt="arrow down"
+          />
         </span>
       </button>
       <nav
