@@ -159,7 +159,7 @@
           background-color: rgba(var(--mainBackgroundColor), 0.8);
           border-bottom-left-radius: 6px;
           position: absolute;
-          top: 35px;
+          top: 27px;
           .mobile-menu {
             @include flex(column, center, flex-start);
             border-left: 1px solid #6b6b6b;
@@ -171,31 +171,28 @@
                 display: block;
                 margin: 0px 8px;
                 color: var(--mainText);
-                &::before {
-                  content: "";
-                  position: absolute;
-                  width: 0;
-                  height: 2px;
-                  bottom: 5px;
-                  left: 0;
-                  background: linear-gradient(
-                      to right,
-                      rgba(206, 54, 52, 0.84),
-                      rgba(206, 54, 52, 0.84),
-                      rgba(219, 94, 74, 0.83),
-                      rgba(255, 182, 96, 0.8)
-                    ),
-                    linear-gradient(to bottom, #ffffff, #ffffff);
-                  visibility: hidden;
-                  transition: all 0.25s ease-in-out;
-                }
-                &:hover::before {
-                  visibility: visible;
-                  width: 100%;
-                }
-                &:active {
-                  background-color: lightpink;
-                }
+                // &::before {
+                //   content: "";
+                //   position: absolute;
+                //   width: 0;
+                //   height: 2px;
+                //   bottom: 5px;
+                //   left: 0;
+                //   background: linear-gradient(
+                //       to right,
+                //       rgba(206, 54, 52, 0.84),
+                //       rgba(206, 54, 52, 0.84),
+                //       rgba(219, 94, 74, 0.83),
+                //       rgba(255, 182, 96, 0.8)
+                //     ),
+                //     linear-gradient(to bottom, #ffffff, #ffffff);
+                //   visibility: hidden;
+                //   transition: all 0.25s ease-in-out;
+                // }
+                // &:hover::before {
+                //   visibility: visible;
+                //   width: 100%;
+                // }
               }
             }
           }

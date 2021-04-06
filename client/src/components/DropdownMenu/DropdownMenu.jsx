@@ -14,8 +14,8 @@ const DropdownMenu = ({ children, message, menu }) => {
 
   return (
     <li className="menu-container">
-      <button onClick={onClick} value={isActive}>
-        <div className="buttonName">{message}</div>
+      <button onClick={onClick} value={isActive} className={isActive ? "" : ""}>
+        <div className={` ${isActive ? "dropMenuActive" : "buttonName"}`}>{message}</div>
         <span>
           <img src={arrowDown} alt="arrow down" />
         </span>
