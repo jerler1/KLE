@@ -33,12 +33,12 @@ const Navbar = () => {
               <DropdownMenu message="Our Work" menu="one">
                 <ul>
                   <li
-                    className={location.pathname === "/" ? "menu-active" : ""}
+                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                   >
                     <Link to="/">Why Us</Link>
                   </li>
                   <li
-                    className={location.pathname === "/" ? "menu-active" : ""}
+                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                   >
                     <Link to="/">Portfolio</Link>
                   </li>
@@ -47,17 +47,17 @@ const Navbar = () => {
               <DropdownMenu message="About Us" menu="two">
                 <ul>
                   <li
-                    className={location.pathname === "/" ? "menu-active" : ""}
+                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                   >
                     <Link to="/">Who We Are</Link>
                   </li>
                   <li
-                    className={location.pathname === "/" ? "menu-active" : ""}
+                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                   >
                     <Link to="/">Our Services</Link>
                   </li>
                   <li
-                    className={location.pathname === "/" ? "menu-active" : ""}
+                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                   >
                     <Link to="/">Join Our Team</Link>
                   </li>
@@ -66,12 +66,12 @@ const Navbar = () => {
               <DropdownMenu message="Resources" menu="three">
                 <ul>
                   <li
-                    className={location.pathname === "/" ? "menu-active" : ""}
+                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                   >
                     <Link to="/">FAQs</Link>
                   </li>
                   <li
-                    className={location.pathname === "/" ? "menu-active" : ""}
+                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                   >
                     <Link to="/">Our Partners</Link>
                   </li>
@@ -90,12 +90,12 @@ const Navbar = () => {
                 <DropdownMenu message="Our Work" menu="one">
                   <ul>
                     <li
-                      className={location.pathname === "/" ? "menu-active" : ""}
+                      className={location.pathname === "/portfolio" ? "menu-link-active" : "menu-link-inactive"}
                     >
                       <Link to="/">Why Us</Link>
                     </li>
                     <li
-                      className={location.pathname === "/" ? "menu-active" : ""}
+                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                     >
                       <Link to="/">Portfolio</Link>
                     </li>
@@ -104,17 +104,17 @@ const Navbar = () => {
                 <DropdownMenu message="About Us" menu="two">
                   <ul>
                     <li
-                      className={location.pathname === "/" ? "menu-active" : ""}
+                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                     >
                       <Link to="/">Who We Are</Link>
                     </li>
                     <li
-                      className={location.pathname === "/" ? "menu-active" : ""}
+                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                     >
                       <Link to="/">Our Services</Link>
                     </li>
                     <li
-                      className={location.pathname === "/" ? "menu-active" : ""}
+                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                     >
                       <Link to="/">Join Our Team</Link>
                     </li>
@@ -123,12 +123,12 @@ const Navbar = () => {
                 <DropdownMenu message="Resources" menu="three">
                   <ul>
                     <li
-                      className={location.pathname === "/" ? "menu-active" : ""}
+                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                     >
                       <Link to="/">FAQs</Link>
                     </li>
                     <li
-                      className={location.pathname === "/" ? "menu-active" : ""}
+                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
                     >
                       <Link to="/">Our Partners</Link>
                     </li>
