@@ -1,4 +1,4 @@
-.menu-container button {
+.menu-container .buttonName {
   position: relative;
   &::before {
     content: "";
@@ -17,15 +17,15 @@
       ),
       linear-gradient(to bottom, #ffffff, #ffffff);
     visibility: hidden;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.35s ease-in-out;
   }
   &:hover::before {
     visibility: visible;
-    width: 80%;
+    width: 100%;
   }
   &:active::before {
     visibility: visible;
     background: #ce4634;
-    width: 80%;
+    width: 100%;
   }
 }

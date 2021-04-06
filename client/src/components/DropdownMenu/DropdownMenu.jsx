@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useDetectOutsideClick } from "../../hooks/useDetectOutsideClick";
 import { arrowDown } from "../../assets/index";
+import { useMediaQuery } from "react-responsive";
 import "./DropdownMenu.scss";
 
 const DropdownMenu = ({ children, message, menu }) => {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
   const onClick = () => {
     setIsActive(!isActive);
   };
@@ -13,7 +15,7 @@ const DropdownMenu = ({ children, message, menu }) => {
   return (
     <li className="menu-container">
       <button onClick={onClick} value={isActive}>
-        {message}
+        <div className="buttonName">{message}</div>
         <span>
           <img src={arrowDown} alt="arrow down" />
         </span>
@@ -29,7 +31,10 @@ const DropdownMenu = ({ children, message, menu }) => {
             : ""
         }`}
       >
-        <div ref={dropdownRef} className="menu">
+        <div
+          ref={dropdownRef}
+          className={isTabletOrMobile ? "mobile-menu" : "menu"}
+        >
           {children}
         </div>
       </nav>
