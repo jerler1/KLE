@@ -68,7 +68,6 @@
                     content: "";
                     position: absolute;
                     width: 0;
-                    padding-top: 2px;
                     height: 2px;
                     bottom: -3px;
                     left: 0;
@@ -88,7 +87,7 @@
                     width: 100%;
                   }
                   &:active::before {
-                    background: #CE4634;
+                    background: #ce4634;
                     width: 100%;
                   }
                 }
@@ -160,8 +159,8 @@
           background-color: rgba(var(--mainBackgroundColor), 0.8);
           border-bottom-left-radius: 6px;
           position: absolute;
-          top: 27px;
-          .menu {
+          top: 35px;
+          .mobile-menu {
             @include flex(column, center, flex-start);
             border-left: 1px solid #6b6b6b;
             margin-left: 1rem;
@@ -177,9 +176,16 @@
                   position: absolute;
                   width: 0;
                   height: 2px;
-                  bottom: 0;
+                  bottom: 5px;
                   left: 0;
-                  background-color: white;
+                  background: linear-gradient(
+                      to right,
+                      rgba(206, 54, 52, 0.84),
+                      rgba(206, 54, 52, 0.84),
+                      rgba(219, 94, 74, 0.83),
+                      rgba(255, 182, 96, 0.8)
+                    ),
+                    linear-gradient(to bottom, #ffffff, #ffffff);
                   visibility: hidden;
                   transition: all 0.25s ease-in-out;
                 }
