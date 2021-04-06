@@ -1,25 +1,44 @@
 .button {
   border-radius: 8px;
   padding: 12px 16px;
-  box-shadow: 1px 3px 8px 0px #000000 25%;
+  z-index: 10;
+  position: relative;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
 }
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+.button:hover {
+  background: linear-gradient(
+      to right,
+      rgba(206, 54, 52, 0.84),
+      rgba(206, 54, 52, 0.84),
+      rgba(219, 94, 74, 0.83),
+      rgba(255, 182, 96, 0.8)
+    ),
+    linear-gradient(to bottom, #ffffff, #ffffff);
+  color: black;
+  cursor: pointer;
+  box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.7);
 }
-
+.button:active {
+  background: #e44e39;
+  cursor: pointer;
+  color: black;
+}
 .primaryButton {
   // #CE4634
   border: 2px solid var(--accent1);
   background: rgba(var(--subForegroundColor), 1);
   color: var(--mainText);
 }
+.primaryButton:hover {
+  border: 2px solid var(--accent1);
+}
 .secondaryButton {
   border: 2px solid var(--mainText);
   color: var(--mainText);
   background: rgba(var(--mainBackgroundColor), 1);
+}
+.secondaryButton:hover {
+  border: 2px solid rgba(var(--mainBackgroundColor), 1);
 }
 .gradientButton {
   border: none;
@@ -31,45 +50,4 @@
       rgba(255, 182, 96, 0.8)
     ),
     linear-gradient(to bottom, #ffffff, #ffffff);
-}
-.gradientBorderButton {
-  background: linear-gradient(
-      to right,
-      rgba(206, 54, 52, 0.84),
-      rgba(206, 54, 52, 0.84),
-      rgba(219, 94, 74, 0.83),
-      rgba(255, 182, 96, 0.8)
-    ),
-    linear-gradient(to bottom, #ffffff, #ffffff);
-  color: black;
-  border-radius: 8px;
-  display: block;
-  position: relative;
-  z-index: 2;
-  span {
-    align-items: center;
-    background: rgba(var(--mainForegroundColor), 1);
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-  }
-}
-button:hover {
-  border: 2px solid rgba(var(--mainBackgroundColor), 1);
-  background: linear-gradient(
-      to right,
-      rgba(206, 54, 52, 0.84),
-      rgba(206, 54, 52, 0.84),
-      rgba(219, 94, 74, 0.83),
-      rgba(255, 182, 96, 0.8)
-    ),
-    linear-gradient(to bottom, #ffffff, #ffffff);
-    color: black;
-    cursor: pointer;
-}
-button:active {
-  background: #E44E39;
-  color: black;
 }
