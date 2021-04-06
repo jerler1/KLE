@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 const Icons = ({ name, ...otherProps }) => {
-  const [iconModule, setIconModule] = iseState(null);
+  const [iconModule, setIconModule] = useState(null);
 
   useEffect(() => {
     import(`../../assets/icons/${name}.svg`)
