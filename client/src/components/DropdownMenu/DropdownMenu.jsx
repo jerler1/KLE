@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { useDetectOutsideClick } from "../../hooks/useDetectOutsideClick";
 import { arrowDown } from "../../assets/index";
 import { useMediaQuery } from "react-responsive";
