@@ -1,4 +1,7 @@
-.dropMenuInactive {
+.dropMenuInactive,
+.footerLinks .footerNav a,
+.footerLinks .footerInteract a,
+.mobileFooterNav .footerLinks li a {
   position: relative;
   &::before {
     content: "";
