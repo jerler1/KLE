@@ -1,24 +1,31 @@
-// .menu-container {
-//     position: relative;
-//   }
-
-//   .menu {
-//     background: #ffffff;
-//     border-radius: 8px;
-//     position: absolute;
-//     top: 60px;
-//     right: 0;
-//     width: 300px;
-//     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-//     opacity: 0;
-//     visibility: hidden;
-//     transform: translateY(-20px);
-//     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-//   }
-  
-//   .menu.active {
-//     opacity: 1;
-//     visibility: visible;
-//     transform: translateY(0);
-//   }
-  
+.menu-container button {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+        to right,
+        rgba(206, 54, 52, 0.84),
+        rgba(206, 54, 52, 0.84),
+        rgba(219, 94, 74, 0.83),
+        rgba(255, 182, 96, 0.8)
+      ),
+      linear-gradient(to bottom, #ffffff, #ffffff);
+    visibility: hidden;
+    transition: all 0.15s ease-in-out;
+  }
+  &:hover::before {
+    visibility: visible;
+    width: 80%;
+  }
+  &:active::before {
+    visibility: visible;
+    background: #ce4634;
+    width: 80%;
+  }
+}

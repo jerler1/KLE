@@ -62,12 +62,34 @@
                 padding: 6px 6px;
                 a {
                   margin: 0px 8px;
+                  position: relative;
                   color: var(--mainText);
-                  &:hover {
-                    background-color: lawngreen;
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    padding-top: 2px;
+                    height: 2px;
+                    bottom: -3px;
+                    left: 0;
+                    background: linear-gradient(
+                        to right,
+                        rgba(206, 54, 52, 0.84),
+                        rgba(206, 54, 52, 0.84),
+                        rgba(219, 94, 74, 0.83),
+                        rgba(255, 182, 96, 0.8)
+                      ),
+                      linear-gradient(to bottom, #ffffff, #ffffff);
+                    visibility: hidden;
+                    transition: all 0.35s ease-in-out;
                   }
-                  &:active {
-                    background-color: lightpink;
+                  &:hover::before {
+                    visibility: visible;
+                    width: 100%;
+                  }
+                  &:active::before {
+                    background: #CE4634;
+                    width: 100%;
                   }
                 }
               }
@@ -77,12 +99,11 @@
         li button {
           background: none;
           border: none;
-          padding: 0;
           display: flex;
           justify-content: center;
           align-items: center;
           color: var(--mainText);
-          padding: 0 16px;
+          margin: 0 16px;
           font-family: "Gilroy-Bold", Courier, monospace;
           line-height: 1.11;
           letter-spacing: 0.54px;
@@ -147,10 +168,24 @@
             ul li {
               padding: 6px 6px;
               a {
+                position: relative;
+                display: block;
                 margin: 0px 8px;
                 color: var(--mainText);
-                &:hover {
-                  background-color: lawngreen;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 0;
+                  height: 2px;
+                  bottom: 0;
+                  left: 0;
+                  background-color: white;
+                  visibility: hidden;
+                  transition: all 0.25s ease-in-out;
+                }
+                &:hover::before {
+                  visibility: visible;
+                  width: 100%;
                 }
                 &:active {
                   background-color: lightpink;
