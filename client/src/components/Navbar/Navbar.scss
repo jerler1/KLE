@@ -32,6 +32,11 @@
 .navbarContainer {
   @include dimensions(100%, 84px);
   @include flex(row, space-between, flex-start);
+  .brand-logo {
+    @include dimensions(20%, 100%);
+    @include flex(row, flex-start, center);
+    margin-left: 2.5%;
+  }
   .nav-links {
     @include flex(column, center, flex-start);
     @include dimensions(650px, 100%);
@@ -145,20 +150,25 @@
     @include dimensions(100%, 44px);
     @include flex(row, space-between, space-between);
     flex: auto;
-    .brand-logo-wrapper {
-      @include dimensions(100%, 100%);
-      @include flex(row, center, center);
-      align-items: center;
-      .brand-logo {
-        margin: 10px;
-        @include flex(row, flex-start, flex-start);
-        @include dimensions(100px, 100px);
+    .brand-logo {
+      @include dimensions(60%, 100%);
+      @include flex(row, flex-start, center);
+      margin-left: 2.5%;
+      .logo-wrapper {
+        @include dimensions(100%, 100%);
+        @include flex(row, flex-start, center);
       }
     }
     .contactUsButton {
-      @include dimensions(100%, 100%);
+      @include dimensions(40%, 100%);
       @include flex(row, flex-end, center);
       margin-right: 2%;
+      @media only screen and (max-width: 450px){
+        button {
+          font-size: 12px;
+          width: 100px;
+        }
+      }
     }
   }
   .mobileNavbarBottomWrapper {
@@ -186,28 +196,6 @@
                 display: block;
                 margin: 0px 8px;
                 color: var(--mainText);
-                // &::before {
-                //   content: "";
-                //   position: absolute;
-                //   width: 0;
-                //   height: 2px;
-                //   bottom: 5px;
-                //   left: 0;
-                //   background: linear-gradient(
-                //       to right,
-                //       rgba(206, 54, 52, 0.84),
-                //       rgba(206, 54, 52, 0.84),
-                //       rgba(219, 94, 74, 0.83),
-                //       rgba(255, 182, 96, 0.8)
-                //     ),
-                //     linear-gradient(to bottom, #ffffff, #ffffff);
-                //   visibility: hidden;
-                //   transition: all 0.25s ease-in-out;
-                // }
-                // &:hover::before {
-                //   visibility: visible;
-                //   width: 100%;
-                // }
               }
             }
           }
@@ -226,6 +214,11 @@
         font-family: "Gilroy-Bold", Courier, monospace;
         line-height: 1.11;
         letter-spacing: 0.54px;
+        @media only screen and (max-width: 450px){
+          .dropMenuActive, .dropMenuInactive {
+            font-size: 14px;
+          }
+        }
         span {
           margin-left: 0px;
           img {

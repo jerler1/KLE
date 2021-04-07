@@ -4,11 +4,13 @@ import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./Navbar.scss";
-import { Logo } from "../../assets/index";
+import Icon from "../Icon/Icon";
+import Logo from "../Logo/Logo";
+// import Logo from "../../assets/index"
 
 const Navbar = () => {
   const location = useLocation();
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
 
   return (
     <nav
@@ -21,8 +23,10 @@ const Navbar = () => {
       {isTabletOrMobile && (
         <>
           <section className="mobileNavbarTopWrapper">
-            <div className="brand-logo-wrapper">
-              <div className="brand-logo"></div>
+            <div className="brand-logo">
+              <div className="logo-wrapper">
+                <Logo />
+              </div>
             </div>
             <div className="contactUsButton">
               <Button className="button secondaryButton">Contact Us</Button>
@@ -33,12 +37,20 @@ const Navbar = () => {
               <DropdownMenu message="Our Work" menu="one">
                 <ul>
                   <li
-                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                    className={
+                      location.pathname === "/"
+                        ? "menu-link-active"
+                        : "menu-link-inactive"
+                    }
                   >
                     <Link to="/">Why Us</Link>
                   </li>
                   <li
-                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                    className={
+                      location.pathname === "/"
+                        ? "menu-link-active"
+                        : "menu-link-inactive"
+                    }
                   >
                     <Link to="/">Portfolio</Link>
                   </li>
@@ -47,17 +59,29 @@ const Navbar = () => {
               <DropdownMenu message="About Us" menu="two">
                 <ul>
                   <li
-                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                    className={
+                      location.pathname === "/"
+                        ? "menu-link-active"
+                        : "menu-link-inactive"
+                    }
                   >
                     <Link to="/">Who We Are</Link>
                   </li>
                   <li
-                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                    className={
+                      location.pathname === "/"
+                        ? "menu-link-active"
+                        : "menu-link-inactive"
+                    }
                   >
                     <Link to="/">Our Services</Link>
                   </li>
                   <li
-                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                    className={
+                      location.pathname === "/"
+                        ? "menu-link-active"
+                        : "menu-link-inactive"
+                    }
                   >
                     <Link to="/">Join Our Team</Link>
                   </li>
@@ -66,12 +90,20 @@ const Navbar = () => {
               <DropdownMenu message="Resources" menu="three">
                 <ul>
                   <li
-                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                    className={
+                      location.pathname === "/"
+                        ? "menu-link-active"
+                        : "menu-link-inactive"
+                    }
                   >
                     <Link to="/">FAQs</Link>
                   </li>
                   <li
-                    className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                    className={
+                      location.pathname === "/"
+                        ? "menu-link-active"
+                        : "menu-link-inactive"
+                    }
                   >
                     <Link to="/">Our Partners</Link>
                   </li>
@@ -83,19 +115,31 @@ const Navbar = () => {
       )}
       {!isTabletOrMobile && (
         <>
-          <div className="brand-logo"></div>
+          <div className="brand-logo">
+            <div className="logo-wrapper">
+              <Logo />
+            </div>
+          </div>
           <div className="nav-links">
             <div className="navWrapper">
               <ul className="navDropdown">
                 <DropdownMenu message="Our Work" menu="one">
                   <ul>
                     <li
-                      className={location.pathname === "/portfolio" ? "menu-link-active" : "menu-link-inactive"}
+                      className={
+                        location.pathname === "/portfolio"
+                          ? "menu-link-active"
+                          : "menu-link-inactive"
+                      }
                     >
                       <Link to="/">Why Us</Link>
                     </li>
                     <li
-                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                      className={
+                        location.pathname === "/"
+                          ? "menu-link-active"
+                          : "menu-link-inactive"
+                      }
                     >
                       <Link to="/">Portfolio</Link>
                     </li>
@@ -104,17 +148,29 @@ const Navbar = () => {
                 <DropdownMenu message="About Us" menu="two">
                   <ul>
                     <li
-                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                      className={
+                        location.pathname === "/"
+                          ? "menu-link-active"
+                          : "menu-link-inactive"
+                      }
                     >
                       <Link to="/">Who We Are</Link>
                     </li>
                     <li
-                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                      className={
+                        location.pathname === "/"
+                          ? "menu-link-active"
+                          : "menu-link-inactive"
+                      }
                     >
                       <Link to="/">Our Services</Link>
                     </li>
                     <li
-                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                      className={
+                        location.pathname === "/"
+                          ? "menu-link-active"
+                          : "menu-link-inactive"
+                      }
                     >
                       <Link to="/">Join Our Team</Link>
                     </li>
@@ -123,12 +179,20 @@ const Navbar = () => {
                 <DropdownMenu message="Resources" menu="three">
                   <ul>
                     <li
-                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                      className={
+                        location.pathname === "/"
+                          ? "menu-link-active"
+                          : "menu-link-inactive"
+                      }
                     >
                       <Link to="/">FAQs</Link>
                     </li>
                     <li
-                      className={location.pathname === "/" ? "menu-link-active" : "menu-link-inactive"}
+                      className={
+                        location.pathname === "/"
+                          ? "menu-link-active"
+                          : "menu-link-inactive"
+                      }
                     >
                       <Link to="/">Our Partners</Link>
                     </li>

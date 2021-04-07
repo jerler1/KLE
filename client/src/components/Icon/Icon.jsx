@@ -1,7 +1,7 @@
 // https://dev.to/barrbozzo/the-right-way-to-use-svg-icons-with-react-30o3
 import React, { useEffect, useState } from "react";
 
-const Icons = ({ name, ...otherProps }) => {
+function Icon({ name, ...otherProps }) {
   const [iconModule, setIconModule] = useState(null);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ const Icons = ({ name, ...otherProps }) => {
     if (!iconModule) return null;
 
     const Component = iconModule.ReactComponent;
-
+    
     return <Component {...otherProps} />;
   };
   return <>{renderIcon()}</>;
 };
 
-export default Icons;
+export default Icon;
