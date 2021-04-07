@@ -29,7 +29,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="contactUsButton">
-              <Button className="button secondaryButton">Contact Us</Button>
+              <Button className="button secondaryButton">Contact <span className="logoVisibility">Us</span></Button>
             </div>
           </section>
           <section className="mobileNavbarBottomWrapper">
