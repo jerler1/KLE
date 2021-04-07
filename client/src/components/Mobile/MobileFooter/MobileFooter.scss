@@ -53,6 +53,7 @@
     margin-bottom: 1.5rem;
   }
   button {
+    @include flex(row, flex-start, center);
     width: 135px;
     span {
       @include flex(row, center, center);
