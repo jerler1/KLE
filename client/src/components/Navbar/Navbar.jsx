@@ -25,11 +25,13 @@ const Navbar = () => {
           <section className="mobileNavbarTopWrapper">
             <div className="brand-logo">
               <div className="logo-wrapper">
-                <Logo />
+                <Link to="/"><Logo /></Link>
               </div>
             </div>
             <div className="contactUsButton">
-              <Button className="button secondaryButton">Contact <span className="logoVisibility">Us</span></Button>
+              <Button className="button secondaryButton">
+                Contact <span className="logoVisibility">Us</span>
+              </Button>
             </div>
           </section>
           <section className="mobileNavbarBottomWrapper">
@@ -117,7 +119,7 @@ const Navbar = () => {
         <>
           <div className="brand-logo">
             <div className="logo-wrapper">
-              <Logo />
+              <Link to="/"><Logo /></Link>
             </div>
           </div>
           <div className="nav-links">

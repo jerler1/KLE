@@ -157,6 +157,10 @@
       .logo-wrapper {
         @include dimensions(100%, 100%);
         @include flex(row, flex-start, center);
+        a {
+          @include dimensions(100%, 100%);
+          @include flex(row, flex-start, center);
+        }
       }
     }
     .contactUsButton {
