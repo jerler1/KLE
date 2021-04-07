@@ -4,9 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./Navbar.scss";
-import Icon from "../Icon/Icon";
 import Logo from "../Logo/Logo";
-// import Logo from "../../assets/index"
 
 const Navbar = () => {
   const location = useLocation();

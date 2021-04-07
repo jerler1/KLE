@@ -167,7 +167,7 @@
       @include dimensions(40%, 100%);
       @include flex(row, flex-end, center);
       margin-right: 2%;
-      @media only screen and (max-width: 450px) {
+      @media only screen and (max-width: 370px) {
         margin-right: 3%;
         .logoVisibility {
           position: absolute;
