@@ -23,6 +23,11 @@
     visibility: hidden;
     transition: all 0.35s ease-in-out;
   }
+//   @media only screen and (max-width: 450px) {
+//     &::before {
+//       bottom: 0px;
+//     }
+//   }
   &:hover::before {
     visibility: visible;
     width: 100%;
@@ -43,6 +48,11 @@
     bottom: -3px;
     background: #ce4634;
   }
+//   @media only screen and (max-width: 450px) {
+//     &::before {
+//       bottom: 0px;
+//     }
+//   }
 }
 .rotateArrow {
   transform: rotate(180deg);
