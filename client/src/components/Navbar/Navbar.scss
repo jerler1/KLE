@@ -150,7 +150,7 @@
   @include flex(column, flex-start, flex-start);
   .mobileNavbarTopWrapper {
     @include dimensions(100%, 44px);
-    @include flex(row, space-between, space-between);
+    @include flex(row, space-between, min-content);
     flex: auto;
     .brand-logo {
       @include dimensions(50%, 100%);
@@ -188,6 +188,7 @@
     .mobileDropdownWrapper {
       @include dimensions(100%, min-content);
       @include flex(row, space-around, center);
+      padding-bottom: 3px;
       position: relative;
       li {
         .menu-wrapper {
@@ -195,9 +196,9 @@
           background-color: rgba(var(--mainBackgroundColor), 0.8);
           border-bottom-left-radius: 6px;
           position: absolute;
-          top: 27px;
+          top: 30px;
           @media only screen and (max-width: 450px) {
-            top: 19px;
+            top: 22px;
           }
           .mobile-menu {
             @include flex(column, center, flex-start);
