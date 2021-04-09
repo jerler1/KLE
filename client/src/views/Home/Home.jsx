@@ -36,9 +36,18 @@ const Home = () => {
           <div className="bannerTwoContent">
             <h4 className="bannerHeader">The Kinetic Experience</h4>
             <div className="bannerLeftAligned">
-              <p className="bannerLeftAligned">Communication</p>
-              <p className="bannerLeftAligned">Integrity</p>
-              <p className="bannerLeftAligned">Accountability</p>
+              <div className="kineticExperienceValues">
+                <span className="kineticExperienceIcon"></span>
+                <p className="bannerLeftAligned">Communication</p>
+              </div>
+              <div className="kineticExperienceValues">
+                <span className="kineticExperienceIcon"></span>
+                <p className="bannerLeftAligned">Integrity</p>
+              </div>
+              <div className="kineticExperienceValues">
+                <span className="kineticExperienceIcon"></span>
+                <p className="bannerLeftAligned">Accountability</p>
+              </div>
             </div>
             <Button className="button secondaryButton">Learn More</Button>
           </div>
