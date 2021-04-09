@@ -145,6 +145,7 @@
     }
   }
 }
+// Mobile CSS for Navbar.
 .mobileNavbarContainer {
   @include dimensions(100%, 96px);
   @include flex(column, flex-start, flex-start);
@@ -172,6 +173,7 @@
       margin: 0% 2% 0% 2%;
       @media only screen and (max-width: 370px) {
         margin: 0% 2.5% 0% 2.5%;
+        // Hides the "Us" in "Contact Us".
         .logoVisibility {
           position: absolute;
           visibility: hidden;
@@ -196,6 +198,7 @@
           background-color: rgba(var(--mainBackgroundColor), 0.8);
           border-bottom-left-radius: 6px;
           position: absolute;
+          // Adjusting along the y axis for the menu's.
           top: 30px;
           @media only screen and (max-width: 450px) {
             top: 22px;
@@ -235,7 +238,7 @@
         @media only screen and (max-width: 450px) {
           .dropMenuActive,
           .dropMenuInactive {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
         span {
