@@ -11,9 +11,12 @@
 
 .menuOne {
   @include dimensions(130px, 95px);
+  left: 0;
 }
 .menuTwo {
   @include dimensions(182px, 120px);
+  left: 0;
+  right: 0;
 }
 .menuThree {
   @include dimensions(160px, 95px);
@@ -151,9 +154,10 @@
     @include flex(row, space-between, space-between);
     flex: auto;
     .brand-logo {
-      @include dimensions(60%, 100%);
+      @include dimensions(50%, 100%);
       @include flex(row, flex-start, center);
       margin-left: 2.5%;
+      margin-right: 2.5%;
       .logo-wrapper {
         @include dimensions(100%, 100%);
         @include flex(row, flex-start, center);
@@ -166,9 +170,9 @@
     .contactUsButton {
       @include dimensions(40%, 100%);
       @include flex(row, flex-end, center);
-      margin-right: 2%;
+      margin: 0% 2% 0% 2%;
       @media only screen and (max-width: 370px) {
-        margin-right: 3%;
+        margin: 0% 2.5% 0% 2.5%;
         .logoVisibility {
           position: absolute;
           visibility: hidden;
@@ -185,19 +189,18 @@
     .mobileDropdownWrapper {
       @include dimensions(100%, min-content);
       @include flex(row, space-around, center);
+      position: relative;
       li {
-        position: relative;
+        
         .menu-wrapper {
           @include flex(column, center, flex-start);
           background-color: rgba(var(--mainBackgroundColor), 0.8);
           border-bottom-left-radius: 6px;
           position: absolute;
           top: 27px;
-          // @media only screen and (max-width: 450px) {
-          //   &::before {
-          //     top: 0px;
-          //   }
-          // }
+          @media only screen and (max-width: 450px) {
+            top: 19px;
+          }
           .mobile-menu {
             @include flex(column, center, flex-start);
             border-left: 1px solid #6b6b6b;
@@ -210,7 +213,7 @@
                 margin: 0px 8px;
                 color: var(--mainText);
                 @media only screen and (max-width: 450px) {
-                  font-size: 16px;
+                  font-size: 14px;
                 }
               }
             }
@@ -240,9 +243,9 @@
           margin-left: 0px;
           img {
             @include dimensions(24px, 24px);
-            // @media only screen and (max-width: 450px) {
-            //   @include dimensions(16px, 16px);
-            // }
+            @media only screen and (max-width: 450px) {
+              @include dimensions(12px, 12px);
+            }
           }
         }
       }
