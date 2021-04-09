@@ -8,7 +8,6 @@
   right: 0;
   background-color: rgba(var(--mainBackgroundColor), 0.8);
 }
-
 .menuOne {
   @include dimensions(130px, 95px);
   left: 0;
@@ -146,7 +145,6 @@
     }
   }
 }
-
 .mobileNavbarContainer {
   @include dimensions(100%, 96px);
   @include flex(column, flex-start, flex-start);
@@ -192,7 +190,6 @@
       @include flex(row, space-around, center);
       position: relative;
       li {
-        
         .menu-wrapper {
           @include flex(column, center, flex-start);
           background-color: rgba(var(--mainBackgroundColor), 0.8);
