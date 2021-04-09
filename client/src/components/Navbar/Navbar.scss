@@ -221,32 +221,32 @@
             }
           }
         }
-      }
-      li button {
-        white-space: nowrap;
-        background: none;
-        border: none;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--mainText);
-        padding: 0 0px;
-        font-family: "Gilroy-Bold", Courier, monospace;
-        line-height: 1.11;
-        letter-spacing: 0.54px;
-        @media only screen and (max-width: 450px) {
-          .dropMenuActive,
-          .dropMenuInactive {
-            font-size: 14px;
+        button {
+          white-space: nowrap;
+          background: none;
+          border: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--mainText);
+          padding: 0 0px;
+          font-family: "Gilroy-Bold", Courier, monospace;
+          line-height: 1.11;
+          letter-spacing: 0.54px;
+          @media only screen and (max-width: 450px) {
+            .dropMenuActive,
+            .dropMenuInactive {
+              font-size: 14px;
+            }
           }
-        }
-        span {
-          margin-left: 0px;
-          img {
-            @include dimensions(24px, 24px);
-            @media only screen and (max-width: 450px) {
-              @include dimensions(12px, 12px);
+          span {
+            margin-left: 0px;
+            img {
+              @include dimensions(24px, 24px);
+              @media only screen and (max-width: 450px) {
+                @include dimensions(12px, 12px);
+              }
             }
           }
         }
