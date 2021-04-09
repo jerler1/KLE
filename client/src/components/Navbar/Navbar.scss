@@ -15,8 +15,9 @@
 }
 .menuTwo {
   @include dimensions(182px, 120px);
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
 }
 .menuThree {
   @include dimensions(160px, 95px);
