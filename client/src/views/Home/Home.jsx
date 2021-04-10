@@ -38,15 +38,15 @@ const Home = () => {
             <h4 className="bannerHeader">The Kinetic Experience</h4>
             <div className="bannerLeftAligned">
               <div className="kineticExperienceValues">
-                <span className="kineticExperienceIcon"></span>
+                <span className="kineticExperienceIcon"><Icon name="chatbubbles"/></span>
                 <p className="bannerLeftAligned">Communication</p>
               </div>
               <div className="kineticExperienceValues">
-                <span className="kineticExperienceIcon"></span>
+                <span className="kineticExperienceIcon"><Icon name="construct"/></span>
                 <p className="bannerLeftAligned">Integrity</p>
               </div>
               <div className="kineticExperienceValues">
-                <span className="kineticExperienceIcon"></span>
+                <span className="kineticExperienceIcon"><Icon name="clock"/></span>
                 <p className="bannerLeftAligned">Accountability</p>
               </div>
             </div>
@@ -62,7 +62,7 @@ const Home = () => {
         />
         <aside className="homePictureThreeBanner">
           <h4 className="bannerHeader">What We Do</h4>
-          <Icon name="bulb"/>
+          <Icon name="bulb" width="100px"/>
           <Button className="button secondaryButton">View Portfolio</Button>
           <Button className="button primaryButton">See Services</Button>
         </aside>

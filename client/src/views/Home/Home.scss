@@ -139,20 +139,27 @@
       }
       .bannerTwoContent {
         @include flex(column, center, center);
-        .bannerLeftAligned {
-          align-self: flex-start;
-          color: var(--secondaryText);
-          p:not(:last-child) { 
+        .kineticExperienceValues {
+          @include dimensions(min-content, min-content);
+          @include flex(row, flex-start, center);
+          align-content: center;
+          &:not(:last-child) {
             margin-bottom: 28px;
             @include for-size(phone) {
               margin-bottom: 16px;
             }
           }
-          p:last-child {
+          &:last-child {
             margin-bottom: 78px;
             @include for-size(phone) {
               margin-bottom: 32px;
             }
+          }
+          p {
+            margin-left: 1rem;
+            align-self: center;
+            color: var(--mainText);
+            letter-spacing: 0.34px;
           }
         }
       }
