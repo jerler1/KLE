@@ -1,4 +1,4 @@
-// https://dev.to/barrbozzo/the-right-way-to-use-svg-icons-with-react-30o3
+// https://codesandbox.io/s/react-dynamic-svg-import-ts-kzx7n?fontsize=14&hidenavigation=1&theme=dark
 import React, { useEffect, useState, useRef } from "react";
 
 function Icon({ name, ...otherProps }) {
