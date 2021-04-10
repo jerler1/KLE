@@ -9,9 +9,11 @@ function Icon({ name, ...otherProps }) {
     setLoading(true);
     const importIcon = async () => {
       try {
-        ImportedIconRef.current = await import(
-          `../../assets/icons/svg/${name}.svg`
-        ).ReactComponent;
+        ImportedIconRef.current = (
+          await import(
+            `!!@svgr/webpack?-svgo,+titleProp,+ref!../../assets/icons/svg/${name}.svg`
+          )
+        ).default;
       } catch (err) {
         console.log(`${name} icon does not exist: ${err}`);
       } finally {
@@ -21,14 +23,11 @@ function Icon({ name, ...otherProps }) {
     importIcon();
   }, [name]);
 
-  const renderIcon = () => {
-    if (!loading && ImportedIconRef.current) {
-      const { current: ImportedIcon } = ImportedIconRef;
-      return <ImportedIcon {...otherProps} />;
-    }
-    return null;
-  };
-  return <>{renderIcon()}</>;
+  if (!loading && ImportedIconRef.current) {
+    const { current: ImportedIcon } = ImportedIconRef;
+    return <ImportedIcon {...otherProps} />;
+  }
+  return null;
 }
 
 export default Icon;
