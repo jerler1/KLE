@@ -133,6 +133,7 @@
         color: var(--mainText);
         margin-bottom: 43px;
         text-align: center;
+        letter-spacing: 0.34px;
         @include for-size(phone) {
           margin-bottom: 16px;
         }
@@ -168,13 +169,33 @@
       }
     }
     .homePictureThreeBanner {
-      svg {
-        margin-bottom: 48px;
-        @include for-size(phone) {
-          @include dimensions(19px, 28px);
+      .bannerHeader {
+        margin-bottom: 34px;
+        @include flex(row, center, center);
+        span {
+          margin-right: 4px;
+          @include for-size(tablet) {
+            visibility: hidden;
+            position: absolute;
+          }
         }
       }
-      :last-child {
+      .lightBulbBannerThree {
+        @include dimensions(144px, 224px);
+        margin-bottom: 48px;
+        @include for-size(phone) {
+          visibility: hidden;
+          position: absolute;
+          svg {
+            visibility: hidden;
+          }
+        }
+        svg {
+          @include dimensions(100%, 100%);
+          stroke: var(--mainText);
+        }
+      }
+      button:last-child {
         margin-top: 32px;
       }
     }
