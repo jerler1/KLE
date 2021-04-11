@@ -8,9 +8,6 @@ import "./Home.scss";
 const Home = () => {
   let history = useHistory();
 
-  const handleClick = () => {
-    console.log("click");
-  }
   return (
     <div className="homeContainer">
       <section className="homeHero">
@@ -97,7 +94,7 @@ const Home = () => {
           </div>
 
           <Button className="button secondaryButton">View Portfolio</Button>
-          <Button className="button primaryButton" onClick={handleClick}>
+          <Button className="button primaryButton" onClick={() => {history.push("/services")}}>
             See Services
           </Button>
         </aside>

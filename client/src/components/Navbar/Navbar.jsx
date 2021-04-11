@@ -69,12 +69,12 @@ const Navbar = () => {
                   </li>
                   <li
                     className={
-                      location.pathname === "/"
+                      location.pathname === "/services"
                         ? "menu-link-active"
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/">Our Services</Link>
+                    <Link to="/services">Our Services</Link>
                   </li>
                   <li
                     className={
@@ -158,12 +158,12 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
-                        location.pathname === "/"
+                        location.pathname === "/services"
                           ? "menu-link-active"
                           : "menu-link-inactive"
                       }
                     >
-                      <Link to="/">Our Services</Link>
+                      <Link to="/services">Our Services</Link>
                     </li>
                     <li
                       className={
