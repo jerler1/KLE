@@ -1,10 +1,16 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { pic1, pic2, pic3 } from "../../assets/index";
 import Button from "../../components/Button/Button";
 import Icon from "../../components/Icon/Icon";
 import "./Home.scss";
 
 const Home = () => {
+  let history = useHistory();
+
+  const handleClick = () => {
+    console.log("click");
+  }
   return (
     <div className="homeContainer">
       <section className="homeHero">
@@ -91,7 +97,9 @@ const Home = () => {
           </div>
 
           <Button className="button secondaryButton">View Portfolio</Button>
-          <Button className="button primaryButton">See Services</Button>
+          <Button className="button primaryButton" onClick={handleClick}>
+            See Services
+          </Button>
         </aside>
       </section>
     </div>
