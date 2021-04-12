@@ -28,10 +28,10 @@ const Footer = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">Portfolio</Link>
+              <Link to="/portfolio">Portfolio</Link>
             </li>
             <li>
-              <Link to="/">About Us</Link>
+              <Link to="/about">About Us</Link>
             </li>
             <li>
               <Link to="/services">Services</Link>
@@ -39,16 +39,16 @@ const Footer = () => {
           </ul>
           <ul className="footerInteract">
             <li>
-              <Link to="/">FAQs</Link>
+              <Link to="/faq">FAQ</Link>
             </li>
             <li>
-              <Link to="/">Partners</Link>
+              <Link to="/partners">Partners</Link>
             </li>
             <li>
-              <Link to="/">Join Our Team</Link>
+              <Link to="/join-our-team">Join Our Team</Link>
             </li>
             <li>
-              <Link to="/">Contact Us</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </li>
           </ul>
           <ul className="footerSocials">
@@ -66,9 +66,9 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <a href="https://thetimfallershow.com/ep-141-breaking-the-gender-barriers-with-isabella-battig/" target="_blank">
                 <img src={podcast} className="socialImage" alt="podcast" />
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

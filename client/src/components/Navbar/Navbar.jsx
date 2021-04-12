@@ -127,7 +127,7 @@ const Navbar = () => {
                   <ul>
                     <li
                       className={
-                        location.pathname === "/portfolio"
+                        location.pathname === "/portfoli"
                           ? "menu-link-active"
                           : "menu-link-inactive"
                       }
@@ -136,12 +136,12 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
-                        location.pathname === "/"
+                        location.pathname === "/portfolio"
                           ? "menu-link-active"
                           : "menu-link-inactive"
                       }
                     >
-                      <Link to="/">Portfolio</Link>
+                      <Link to="/portfolio">Portfolio</Link>
                     </li>
                   </ul>
                 </DropdownMenu>
