@@ -93,8 +93,15 @@ const Home = () => {
             </svg>
           </div>
 
-          <Button className="button secondaryButton">View Portfolio</Button>
-          <Button className="button primaryButton" onClick={() => {history.push("/services")}}>
+          <Button className="button secondaryButton"             onClick={() => {
+              history.push("/portfolio");
+            }}>View Portfolio</Button>
+          <Button
+            className="button primaryButton"
+            onClick={() => {
+              history.push("/services");
+            }}
+          >
             See Services
           </Button>
         </aside>
