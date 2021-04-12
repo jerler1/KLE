@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
@@ -8,6 +8,7 @@ import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   const location = useLocation();
+  const history = useHistory();
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
 
   return (
@@ -27,7 +28,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="contactUsButton">
-              <Button className="button secondaryButton">
+              <Button className="button secondaryButton" onClick={() => {history.push("/contact")}}>
                 Contact <span className="logoVisibility">Us</span>
               </Button>
             </div>
@@ -38,21 +39,21 @@ const Navbar = () => {
                 <ul>
                   <li
                     className={
-                      location.pathname === "/"
+                      location.pathname === "/why-us"
                         ? "menu-link-active"
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/">Why Us</Link>
+                    <Link to="/why-us">Why Us</Link>
                   </li>
                   <li
                     className={
-                      location.pathname === "/"
+                      location.pathname === "/portfolio"
                         ? "menu-link-active"
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/">Portfolio</Link>
+                    <Link to="/portfolio">Portfolio</Link>
                   </li>
                 </ul>
               </DropdownMenu>
@@ -60,12 +61,12 @@ const Navbar = () => {
                 <ul>
                   <li
                     className={
-                      location.pathname === "/"
+                      location.pathname === "/about"
                         ? "menu-link-active"
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/">Who We Are</Link>
+                    <Link to="/about">Who We Are</Link>
                   </li>
                   <li
                     className={
@@ -78,12 +79,12 @@ const Navbar = () => {
                   </li>
                   <li
                     className={
-                      location.pathname === "/"
+                      location.pathname === "/join-our-team"
                         ? "menu-link-active"
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/">Join Our Team</Link>
+                    <Link to="/join-our-team">Join Our Team</Link>
                   </li>
                 </ul>
               </DropdownMenu>
@@ -91,21 +92,21 @@ const Navbar = () => {
                 <ul>
                   <li
                     className={
-                      location.pathname === "/"
+                      location.pathname === "/faq"
                         ? "menu-link-active"
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/">FAQs</Link>
+                    <Link to="/faq">FAQ</Link>
                   </li>
                   <li
                     className={
-                      location.pathname === "/"
+                      location.pathname === "/partners"
                         ? "menu-link-active"
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/">Our Partners</Link>
+                    <Link to="/partners">Our Partners</Link>
                   </li>
                 </ul>
               </DropdownMenu>
@@ -127,12 +128,12 @@ const Navbar = () => {
                   <ul>
                     <li
                       className={
-                        location.pathname === "/portfoli"
+                        location.pathname === "/why-us"
                           ? "menu-link-active"
                           : "menu-link-inactive"
                       }
                     >
-                      <Link to="/">Why Us</Link>
+                      <Link to="/why-us">Why Us</Link>
                     </li>
                     <li
                       className={
@@ -149,12 +150,12 @@ const Navbar = () => {
                   <ul>
                     <li
                       className={
-                        location.pathname === "/"
+                        location.pathname === "/about"
                           ? "menu-link-active"
                           : "menu-link-inactive"
                       }
                     >
-                      <Link to="/">Who We Are</Link>
+                      <Link to="/about">Who We Are</Link>
                     </li>
                     <li
                       className={
@@ -167,12 +168,12 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
-                        location.pathname === "/"
+                        location.pathname === "/join-our-team"
                           ? "menu-link-active"
                           : "menu-link-inactive"
                       }
                     >
-                      <Link to="/">Join Our Team</Link>
+                      <Link to="/join-our-team">Join Our Team</Link>
                     </li>
                   </ul>
                 </DropdownMenu>
@@ -180,27 +181,27 @@ const Navbar = () => {
                   <ul>
                     <li
                       className={
-                        location.pathname === "/"
+                        location.pathname === "/faq"
                           ? "menu-link-active"
                           : "menu-link-inactive"
                       }
                     >
-                      <Link to="/">FAQs</Link>
+                      <Link to="/faq">FAQ</Link>
                     </li>
                     <li
                       className={
-                        location.pathname === "/"
+                        location.pathname === "/partners"
                           ? "menu-link-active"
                           : "menu-link-inactive"
                       }
                     >
-                      <Link to="/">Our Partners</Link>
+                      <Link to="/partners">Our Partners</Link>
                     </li>
                   </ul>
                 </DropdownMenu>
               </ul>
               <div className="contactUsButton">
-                <Button className="button secondaryButton">Contact Us</Button>
+                <Button className="button secondaryButton" onClick={() => history.push("/contact")}>Contact Us</Button>
               </div>
             </div>
           </div>
