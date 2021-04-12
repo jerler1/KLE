@@ -3,7 +3,8 @@ import { useMediaQuery } from "react-responsive";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./views/Home/Home";
-import Services from "./views/Services/Services"
+import Services from "./views/Services/Services";
+import Portfolio from "./views/Portfolio/Portfolio";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import MobileFooter from "./components/Mobile/MobileFooter/MobileFooter";
@@ -28,6 +29,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/services" component={Services} />
+            <Route path="/portfolio" component={Portfolio} />
           </Switch>
         </main>
         {isTabletOrMobile ? <MobileFooter /> : <Footer />}
