@@ -30,6 +30,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/services" component={Services} />
             <Route path="/portfolio" component={Portfolio} />
+            <Route path="*" component={404} />            
           </Switch>
         </main>
         {isTabletOrMobile ? <MobileFooter /> : <Footer />}
