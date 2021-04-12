@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./views/Home/Home";
 import Services from "./views/Services/Services";
 import Portfolio from "./views/Portfolio/Portfolio";
+import NotFound from "./views/NotFound/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import MobileFooter from "./components/Mobile/MobileFooter/MobileFooter";
@@ -30,7 +31,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/services" component={Services} />
             <Route path="/portfolio" component={Portfolio} />
-            <Route path="*" component={404} />            
+            <Route path="*" component={NotFound} />            
           </Switch>
         </main>
         {isTabletOrMobile ? <MobileFooter /> : <Footer />}
