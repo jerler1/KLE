@@ -66,7 +66,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <a href="https://thetimfallershow.com/ep-141-breaking-the-gender-barriers-with-isabella-battig/" target="_blank">
+              <a href="https://thetimfallershow.com/ep-141-breaking-the-gender-barriers-with-isabella-battig/" target="_blank" rel="noreferrer">
                 <img src={podcast} className="socialImage" alt="podcast" />
               </a>
             </li>
