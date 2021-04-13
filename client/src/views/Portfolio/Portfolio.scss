@@ -1,0 +1,25 @@
+@import "../../sass/mixins/mixins";
+
+.portfolioContainer {
+  @include dimensions(100%, 100vh);
+  .headerBackgroundImage {
+    @include dimensions(100%, 100%);
+    background: linear-gradient(
+        to bottom right,
+        transparent 50%,
+        rgba(var(--mainForegroundColor), 0.8) 50%
+      ),
+      url("../../assets/images/pic3-SanAnselmo.png");
+      background-size: cover;
+    object-fit: stretch;
+    background-repeat: no-repeat;
+    position: relative;
+    .headerTitle {
+        position: absolute;
+        top: 37.2%;
+        right: 12.7%;
+        color: var(--mainText);
+    }
+  }
+
+}
