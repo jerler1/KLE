@@ -1,12 +1,6 @@
 @import "../../sass/mixins/mixins";
 .headerBackgroundImage {
     @include dimensions(100%, 567.5px);
-    // background: linear-gradient(
-    //     to bottom right,
-    //     transparent 50%,
-    //     rgba(var(--mainForegroundColor), 0.8) 50%
-    //   ),
-    //   url("../../assets/images/pic3-SanAnselmo.png");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
