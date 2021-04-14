@@ -1,10 +1,13 @@
 @import "../../sass/mixins/mixins";
 
 .portfolioContainer {
-  @include dimensions(100%, auto);
+  @include dimensions(100%, 2500px);
   background-image: url("../../assets/images/Background.png");
   .headerBackgroundImage {
     @include dimensions(100%, 567.5px);
+    @media only screen and (min-width: 1200px){
+      @include dimensions(100%, 867.5px);
+    }
     background: linear-gradient(
         to bottom right,
         transparent 50%,
@@ -12,7 +15,6 @@
       ),
       url("../../assets/images/pic3-SanAnselmo.png");
     background-size: cover;
-    object-fit: cover;
     background-repeat: no-repeat;
     position: relative;
     .headerTitle {
@@ -50,8 +52,14 @@
         @include flex(column, center, center);
         position: absolute;
         bottom: 0;
-        background-color: rgba(var(--subForegroundColor), .8);
+        background-color: rgba(var(--subForegroundColor), 0.8);
         border-bottom-right-radius: 24px;
+        h4 {
+          color: var(--mainText);
+        }
+        p {
+          color: var(--secondaryText);
+        }
       }
     }
   }

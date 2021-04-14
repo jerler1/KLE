@@ -2,12 +2,13 @@ import React from "react";
 import "./Portfolio.scss";
 // import PageHeader from "../../components/PageHeader/PageHeader";
 import { pic3 } from "../../assets/index";
+import croppedHeader from "../../assets/images/Portfolio/Portfolio-Cropped.png"
 
 const Portfolio = () => {
   return (
     <div className="portfolioContainer">
       <section className="headerBackgroundImage">
-        {/* <img src={pic3} alt="kitchen well lighted"/> */}
+        {/* <img className="headerBackgroundImage" src={croppedHeader} alt="kitchen well lighted"/> */}
         <header className="headerTitle">
           <h1>Portfolio</h1>
         </header>
