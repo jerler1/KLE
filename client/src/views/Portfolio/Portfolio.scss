@@ -2,24 +2,33 @@
 
 .portfolioContainer {
   @include dimensions(100%, 100vh);
+  background-image: url("../../assets/images/Background.png");;
   .headerBackgroundImage {
-    @include dimensions(100%, 100%);
+    @include dimensions(100%, 567.5px);
     background: linear-gradient(
         to bottom right,
         transparent 50%,
         rgba(var(--mainForegroundColor), 0.8) 50%
       ),
       url("../../assets/images/pic3-SanAnselmo.png");
-      background-size: cover;
-    object-fit: stretch;
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     .headerTitle {
-        position: absolute;
-        top: 37.2%;
-        right: 12.7%;
-        color: var(--mainText);
+      position: absolute;
+      bottom: 35%;
+      right: 12.7%;
+      color: var(--mainText);
+      @include for-size(phone) {
+          bottom: 28%;
+      }
+      h1 {
+        letter-spacing: 4px;
+        font-weight: 400 !important;
+        @include for-size(phone) {
+            font-size: 32px !important;
+        }
+      }
     }
   }
-
 }
