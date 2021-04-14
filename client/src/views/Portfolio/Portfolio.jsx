@@ -2,7 +2,6 @@ import React from "react";
 import "./Portfolio.scss";
 // import PageHeader from "../../components/PageHeader/PageHeader";
 import { pic3 } from "../../assets/index";
-import croppedHeader from "../../assets/images/Portfolio/Portfolio-Cropped.png"
 
 const Portfolio = () => {
   return (
