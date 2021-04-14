@@ -1,8 +1,8 @@
 @import "../../sass/mixins/mixins";
 
 .portfolioContainer {
-  @include dimensions(100%, 100vh);
-  background-image: url("../../assets/images/Background.png");;
+  @include dimensions(100%, auto);
+  background-image: url("../../assets/images/Background.png");
   .headerBackgroundImage {
     @include dimensions(100%, 567.5px);
     background: linear-gradient(
@@ -12,6 +12,7 @@
       ),
       url("../../assets/images/pic3-SanAnselmo.png");
     background-size: cover;
+    object-fit: cover;
     background-repeat: no-repeat;
     position: relative;
     .headerTitle {
@@ -20,14 +21,37 @@
       right: 12.7%;
       color: var(--mainText);
       @include for-size(phone) {
-          bottom: 28%;
+        bottom: 28%;
       }
       h1 {
         letter-spacing: 4px;
         font-weight: 400 !important;
         @include for-size(phone) {
-            font-size: 32px !important;
+          font-size: 32px !important;
         }
+      }
+    }
+  }
+  .projectGrid {
+    @include dimensions(100%, auto);
+    @include flex(row, space-between, flex-start);
+    background-color: rgba(var(--mainBackgroundColor), 1);
+    padding: 56px 99px 56px 99px;
+    flex-wrap: wrap;
+    .project {
+      @include dimensions(327px, 535px);
+      background-image: url(../../assets/images/pic1-SanAnselmo.png);
+      border-radius: 24px 2px;
+      background-size: cover;
+      margin: 10px;
+      position: relative;
+      caption {
+        @include dimensions(100%, 13%);
+        @include flex(column, center, center);
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(var(--subForegroundColor), .8);
+        border-bottom-right-radius: 24px;
       }
     }
   }
