@@ -5,29 +5,41 @@
   background-image: url("../../assets/images/Background.png");
   .projectGrid {
     @include dimensions(100%, auto);
-    @include flex(row, space-between, flex-start);
+    @include flex(row, flex-start, flex-start);
     background-color: rgba(var(--mainBackgroundColor), 1);
-    padding: 56px 99px 56px 99px;
+    padding: 0px 99px 0px 99px;
     flex-wrap: wrap;
-    .project {
-      @include dimensions(327px, 535px);
-      background-image: url(../../assets/images/pic1-SanAnselmo.png);
-      border-radius: 24px 2px;
-      background-size: cover;
-      margin: 10px;
-      position: relative;
-      caption {
-        @include dimensions(100%, 13%);
-        @include flex(column, center, center);
-        position: absolute;
-        bottom: 0;
-        background-color: rgba(var(--subForegroundColor), 0.8);
-        border-bottom-right-radius: 24px;
-        h4 {
-          color: var(--mainText);
+    @include for-size(phone) {
+      flex-direction: column;
+      padding: 64px 28px 64px 20px;
+    }
+    .projectContainer {
+      @include dimensions(33.33%, 535px);
+      @include flex(row, center, flex-start);
+      flex-basis: 33.33%;
+      padding-top: 4%;
+      .project {
+        @include dimensions(327px, 100%);
+        position: relative;
+
+        img {
+          @include dimensions(100%, 100%);
+          object-fit: cover;
+          border-radius: 24px 2px;
         }
-        p {
-          color: var(--secondaryText);
+        caption {
+          @include dimensions(100%, 13%);
+          @include flex(column, center, center);
+          position: absolute;
+          bottom: 0;
+          background-color: rgba(var(--subForegroundColor), 0.8);
+          border-bottom-right-radius: 24px;
+          h4 {
+            color: var(--mainText);
+          }
+          p {
+            color: var(--secondaryText);
+          }
         }
       }
     }

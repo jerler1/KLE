@@ -8,16 +8,42 @@ const Portfolio = () => {
     <div className="portfolioContainer">
       <PageHeader message="Portfolio" className="portfolio" />
       <section className="projectGrid">
-        <div className="project">
-          <caption>
-            <h4>Elizabeth Street</h4>
-            <p>Kitchen Remodel</p>
-          </caption>
+        <div className="projectContainer">
+          <div className="project">
+            <img src={pic3} alt="lovely kitchen" />
+            <caption>
+              <h4>Elizabeth Street</h4>
+              <p>Kitchen Remodel</p>
+            </caption>
+          </div>
         </div>
-        <div className="project"></div>
-        <div className="project"></div>
-        <div className="project"></div>
-        <div className="project"></div>
+        <div className="projectContainer">
+          <div className="project">
+            <img src={pic3} alt="lovely kitchen" />
+            <caption>
+              <h4>Elizabeth Street</h4>
+              <p>Kitchen Remodel</p>
+            </caption>
+          </div>
+        </div>
+        <div className="projectContainer">
+          <div className="project">
+            <img src={pic3} alt="lovely kitchen" />
+            <caption>
+              <h4>Elizabeth Street</h4>
+              <p>Kitchen Remodel</p>
+            </caption>
+          </div>
+        </div>
+        <div className="projectContainer">
+          <div className="project">
+            <img src={pic3} alt="lovely kitchen" />
+            <caption>
+              <h4>Elizabeth Street</h4>
+              <p>Kitchen Remodel</p>
+            </caption>
+          </div>
+        </div>
       </section>
       <section></section>
     </div>
