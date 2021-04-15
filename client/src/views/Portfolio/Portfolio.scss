@@ -1,11 +1,8 @@
 @import "../../sass/mixins/mixins";
 
 .portfolioContainer {
-  @include dimensions(100%, 2500px);
+  @include dimensions(100%, auto);
   background-image: url("../../assets/images/Background.png");
-  @include for-size(phone){
-    height: auto;
-  }
   .projectGrid {
     @include dimensions(100%, auto);
     @include flex(row, flex-start, flex-start);
@@ -25,14 +22,15 @@
       @media only screen and (max-width: 1250px) {
         flex-basis: 50%;
       }
-      @media only screen and (max-width: 900px) {
+      @media only screen and (max-width: 905px) {
+        flex-basis: 100%;
         width: 100%;
-        height: 327px;
+        height: auto;
       }
       .project {
         @include dimensions(327px, 100%);
         position: relative;
-        @include for-size(phone){
+        @media only screen and (max-width: 905px) {
           width: 100%;
           height: auto;
         }
