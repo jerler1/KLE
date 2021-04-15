@@ -4,8 +4,6 @@
   @media only screen and (min-width: 1300px) {
     @include dimensions(100%, 667.5px);
   }
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
   .headerTitle {
     position: absolute;
@@ -31,4 +29,6 @@
       rgba(var(--mainForegroundColor), 0.8) 50%
     ),
     url("../../assets/images/pic3-SanAnselmo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
