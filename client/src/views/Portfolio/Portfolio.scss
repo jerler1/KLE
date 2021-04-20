@@ -63,4 +63,34 @@
       }
     }
   }
+  .contactCFAContainer{
+    @include dimensions(100%, 600px);
+    @include flex(row, flex-start, flex-start);
+    @include for-size(phone) {
+      flex-direction: column;
+    }
+    .gloomyPicture {
+      @include dimensions( 60%, 100%);
+      img {
+        @include dimensions(100%, 100%);
+        object-fit: cover;
+      }
+    }
+    .cfaTextWrapper {
+      @include dimensions(40%, 100%);
+      @include flex(column, center, flex-start);
+      background-color: rgba(var(--mainForegroundColor), 1);
+      .cfaText {
+        @include dimensions(50%, 100%);
+        margin-left: 12.9%;
+        @include flex(column, center, flex-start);
+        p {
+          color: var(--mainText);
+          font-size: 48px;
+          line-height: 57.6px;
+          margin-bottom: 10%;
+        }
+      }
+    }
+  }
 }

@@ -2,7 +2,9 @@ import React from "react";
 import "./Portfolio.scss";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Project from "../../components/Project/Project";
+import gloomyPicture from "../../assets/images/CFA/PortfolioCTA.png";
 import { portfolioPictures } from "../../assets/images/Portfolio/index";
+import Button from "../../components/Button/Button";
 
 
 const Portfolio = () => {
@@ -14,7 +16,19 @@ const Portfolio = () => {
           return <Project {...project} />;
         })}
       </section>
-      <section></section>
+      <section className="contactCFAContainer">
+        <div className="gloomyPicture">
+          <img src={gloomyPicture} alt="gloomy kitchen"/>
+        </div>
+        <div className="cfaTextWrapper">
+          <div className="cfaText">
+            <p>Ready to make your space beautiful?</p>
+            <Button>
+              Get in Touch
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
