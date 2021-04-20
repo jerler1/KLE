@@ -6,7 +6,7 @@ function importAll(r) {
   return images;
 }
 
-export const portfolioPictures = {
+export const portfolioPictures = [
   elizabeth: {
     name: "Elizabeth Street",
     shortDescription: "Short",
@@ -51,4 +51,4 @@ export const portfolioPictures = {
       importAll(require.context("./Shasta", false, /\.(png|jpe?g|svg)$/)),
     ],
   },
-};
+];
