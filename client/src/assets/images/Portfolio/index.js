@@ -8,6 +8,7 @@ function importAll(r) {
 
 export const portfolioPictures = [
   {
+    key: "Elizabeth",
     name: "Elizabeth Street",
     shortDescription: "Short",
     mainPicture: require("./Elizabeth-Street/Elizabeth-1.jpg").default,
@@ -18,6 +19,7 @@ export const portfolioPictures = [
     ],
   },
   {
+    key: "506th",
     name: "506th Street",
     shortDescription: "Short",
     mainPicture: require("./576th-Street/main.jpg").default,
@@ -26,6 +28,7 @@ export const portfolioPictures = [
     ],
   },
   {
+    key: "Ellsworth",
     name: "Ellsworth Street",
     shortDescription: "Short",
     mainPicture: require("./Ellsworth-Street/EllsworthDusksetX.jpg").default,
@@ -36,6 +39,7 @@ export const portfolioPictures = [
     ],
   },
   {
+    key: "Anselmo",
     name: "San Anselmo",
     shortDescription: "Short",
     mainPicture: require("./San-Anselmo/Raymond_Kitch.png").default,
@@ -44,6 +48,7 @@ export const portfolioPictures = [
     ],
   },
   {
+    key: "Shasta",
     name: "Shasta",
     shortDescription: "Short",
     mainPicture: require("./Shasta/Bocci_HexTile.jpeg").default,
