@@ -3,8 +3,13 @@ import "./Services.scss";
 
 const Services = () => {
     return (
-        <div>
-            
+        <div className="servicesContainer">
+            <section className="servicesGrid">
+
+            </section>
+            <section className="questionsCallContainer">
+
+            </section>
         </div>
     );
 };
