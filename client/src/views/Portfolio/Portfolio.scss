@@ -2,7 +2,7 @@
 
 .portfolioContainer {
   @include dimensions(100%, auto);
-  background-image: url("../../assets/images/Background.png");
+  background-image: url("../../assets/images/Home/Background.png");
   .projectGrid {
     @include dimensions(100%, auto);
     @include flex(row, flex-start, flex-start);

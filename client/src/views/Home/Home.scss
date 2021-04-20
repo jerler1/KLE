@@ -3,7 +3,7 @@
 .homeContainer {
   @include flex(column, flex-start, flex-start);
   @include dimensions(100%, 2237px);
-  background-image: url("../../assets/images/Background.png");
+  background-image: url("../../assets/images/Home/Background.png");
   @include for-size(phone) {
     height: auto;
   }

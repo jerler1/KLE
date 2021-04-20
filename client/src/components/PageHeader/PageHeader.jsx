@@ -2,10 +2,6 @@ import React from "react";
 import "./PageHeader.scss";
 
 const PageHeader = ({ message, className }) => {
-  // const headerImageStyles = {
-  //   backgroundImage: `linear-gradient(to bottom right, transparent 50%, rgba(var(--mainForegroundColor), 0.8) 50%), url(${url});`
-  // };
-
   return (
     <section className={`headerBackgroundImage ${className}`}>
       <header className="headerTitle">
