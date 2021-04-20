@@ -7,7 +7,7 @@ function importAll(r) {
 }
 
 export const portfolioPictures = [
-  elizabeth: {
+  {
     name: "Elizabeth Street",
     shortDescription: "Short",
     mainPicture: require("./Elizabeth-Street/Elizabeth-1.jpg").default,
@@ -17,7 +17,7 @@ export const portfolioPictures = [
       ),
     ],
   },
-  fiveHundredAndSixthStreet: {
+  {
     name: "506th Street",
     shortDescription: "Short",
     mainPicture: require("./576th-Street/main.jpg").default,
@@ -25,7 +25,7 @@ export const portfolioPictures = [
       importAll(require.context("./576th-Street", false, /\.(png|jpe?g|svg)$/)),
     ],
   },
-  ellsworth: {
+  {
     name: "Ellsworth Street",
     shortDescription: "Short",
     mainPicture: require("./Ellsworth-Street/EllsworthDusksetX.jpg").default,
@@ -35,7 +35,7 @@ export const portfolioPictures = [
       ),
     ],
   },
-  sanAnselmo: {
+  {
     name: "San Anselmo",
     shortDescription: "Short",
     mainPicture: require("./San-Anselmo/Raymond_Kitch.png").default,
@@ -43,7 +43,7 @@ export const portfolioPictures = [
       importAll(require.context("./San-Anselmo", false, /\.(png|jpe?g|svg)$/)),
     ],
   },
-  shasta: {
+  {
     name: "Shasta",
     shortDescription: "Short",
     mainPicture: require("./Shasta/Bocci_HexTile.jpeg").default,
