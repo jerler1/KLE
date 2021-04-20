@@ -2,9 +2,11 @@ import React from "react";
 import "./Portfolio.scss";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Project from "../../components/Project/Project";
+import { portfolioPictures } from "../../assets/images/Portfolio/index";
 import { pic3 } from "../../assets/index";
 
 const Portfolio = () => {
+  console.log(portfolioPictures);
   return (
     <div className="portfolioContainer">
       <PageHeader message="Portfolio" className="portfolio" />
