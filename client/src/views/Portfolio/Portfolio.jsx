@@ -23,7 +23,8 @@ const Portfolio = () => {
         <div className="cfaTextWrapper">
           <div className="cfaText">
             <p>Ready to make your space beautiful?</p>
-            <Button>
+            {/* todo: link button */}
+            <Button className="button primaryButton">
               Get in Touch
             </Button>
           </div>
