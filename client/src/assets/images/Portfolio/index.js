@@ -7,25 +7,48 @@ function importAll(r) {
 }
 
 export const portfolioPictures = {
-  elizabeth: [
-    ...importAll(
-      require.context("./Elizabeth-Street", false, /\.(png|jpe?g|svg)$/)
-    ),
-  ],
-  fiveHundredAndSixthStreet: [
-    ...importAll(
-      require.context("./506th-Street", false, /\.(png|jpe?g|svg)$/)
-    ),
-  ],
-  ellsworth: [
-    ...importAll(
-      require.context("./Ellsworth-Street", false, /\.(png|jpe?g|svg)$/)
-    ),
-  ],
-  sanAnselmo: [
-    ...importAll(require.context("./San-Anselmo", false, /\.(png|jpe?g|svg)$/)),
-  ],
-  shasta: [
-    ...importAll(require.context("./Shasta", false, /\.(png|jpe?g|svg)$/)),
-  ],
+  elizabeth: {
+    name: "Elizabeth Street",
+    shortDescription: "Short",
+    mainPicture: require("./Elizabeth-Street/Elizabeth-1.jpg").default,
+    pictures: [
+      importAll(
+        require.context("./Elizabeth-Street", false, /\.(png|jpe?g|svg)$/)
+      ),
+    ],
+  },
+  fiveHundredAndSixthStreet: {
+    name: "506th Street",
+    shortDescription: "Short",
+    mainPicture: require("./576th-Street/main.jpg").default,
+    pictures: [
+      importAll(require.context("./576th-Street", false, /\.(png|jpe?g|svg)$/)),
+    ],
+  },
+  ellsworth: {
+    name: "Ellsworth Street",
+    shortDescription: "Short",
+    mainPicture: require("./Ellsworth-Street/EllsworthDusksetX.jpg").default,
+    pictures: [
+      importAll(
+        require.context("./Ellsworth-Street", false, /\.(png|jpe?g|svg)$/)
+      ),
+    ],
+  },
+  sanAnselmo: {
+    name: "San Anselmo",
+    shortDescription: "Short",
+    mainPicture: require("./San-Anselmo/Raymond_Kitch.png").default,
+    pictures: [
+      importAll(require.context("./San-Anselmo", false, /\.(png|jpe?g|svg)$/)),
+    ],
+  },
+  shasta: {
+    name: "Shasta",
+    shortDescription: "Short",
+    mainPicture: require("./Shasta/Bocci_HexTile.jpeg").default,
+    pictures: [
+      importAll(require.context("./Shasta", false, /\.(png|jpe?g|svg)$/)),
+    ],
+  },
 };
