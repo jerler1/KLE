@@ -1,5 +1,6 @@
 import React from "react";
 import "./PageHeader.scss";
+import { contactHeader, partnersHeader, portfolioHeader, servicesHeader, whoHeader, whyHeader } from "../../assets/index";
 
 const PageHeader = ({ message, className }) => {
   return (
