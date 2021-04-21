@@ -1,5 +1,6 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
+import { servicesImages } from "../../assets/index";
 import "./Services.scss";
 
 const Services = () => {
