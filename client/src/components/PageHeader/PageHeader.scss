@@ -29,6 +29,16 @@
       rgba(var(--mainForegroundColor), 0.8) 50%
     ),
     url("../../assets/images/Home/pic3-SanAnselmo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services {
+  background: linear-gradient(
+      to bottom right,
+      transparent 50%,
+      rgba(var(--mainForegroundColor), 0.8) 50%
+    ),
+    url("../../assets/images/Header/Services_Whole.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
