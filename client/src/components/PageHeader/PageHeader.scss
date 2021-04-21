@@ -2,7 +2,7 @@
 .headerBackgroundImage {
   @include dimensions(100%, 567.5px);
   @media only screen and (min-width: 1300px) {
-    @include dimensions(100%, 667.5px);
+    @include dimensions(100%, 850px);
   }
   position: relative;
   .headerTitle {

@@ -1,0 +1,6 @@
+@import "../../sass/mixins/mixins";
+
+.servicesContainer{
+    @include dimensions(100%, auto);
+    @include flex(column, flex-start, flex-start);
+}
