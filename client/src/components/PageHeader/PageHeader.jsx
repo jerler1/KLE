@@ -1,20 +1,14 @@
 import React from "react";
 import "./PageHeader.scss";
-import {
-  contactHeader,
-  partnersHeader,
-  portfolioHeader,
-  servicesHeader,
-  whoHeader,
-  whyHeader,
-} from "../../assets/index";
 
 const PageHeader = ({ message, absoluteURL }) => {
-  console.log("AU: ", absoluteURL);
   return (
     <section className={`headerImage`}>
       <div className="imageContainer">
-        <img src={process.env.PUBLIC_URL + `/Header/${absoluteURL}.png`} alt="not working" />
+        <img
+          src={process.env.PUBLIC_URL + `/Header/${absoluteURL}.png`}
+          alt="Well Lighted Design Space"
+        />
         <div className="gradientOverlay"></div>
       </div>
 
