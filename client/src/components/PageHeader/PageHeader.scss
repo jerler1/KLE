@@ -2,9 +2,31 @@
 .headerBackgroundImage {
   @include dimensions(100%, 567.5px);
   @media only screen and (min-width: 1300px) {
-    @include dimensions(100%, 850px);
+    @include dimensions(100%, 650px);
   }
   position: relative;
+  .imageContainer {
+    @include dimensions(100%, 100%);
+    img {
+      @include dimensions(100%, 100%);
+      object-fit: cover;
+    }
+    .gradientOverlay {
+      @include dimensions(100%, 100%);
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include dimensions(100%, 100%);
+        content: "";
+        background: linear-gradient(
+          to bottom right,
+          transparent 50%,
+          rgba(var(--mainForegroundColor), 0.8) 50%
+        );
+      }
+    }
+  }
   .headerTitle {
     position: absolute;
     bottom: 35%;
@@ -21,24 +43,4 @@
       }
     }
   }
-}
-.portfolio {
-  background: linear-gradient(
-      to bottom right,
-      transparent 50%,
-      rgba(var(--mainForegroundColor), 0.8) 50%
-    ),
-    url("../../assets/images/Home/pic3-SanAnselmo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.services {
-  background: linear-gradient(
-      to bottom right,
-      transparent 50%,
-      rgba(var(--mainForegroundColor), 0.8) 50%
-    ),
-    url("../../assets/images/Header/Services-Whole.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
