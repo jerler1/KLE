@@ -10,7 +10,7 @@ import Button from "../../components/Button/Button";
 const Portfolio = () => {
   return (
     <div className="portfolioContainer">
-      <PageHeader message="Portfolio" className="portfolio" />
+      <PageHeader message="Portfolio" className="portfolio" absoluteURL="Portfolio-Whole"/>
       <section className="projectGrid">
         {portfolioPictures.map((project) => {
           return <Project {...project} />;

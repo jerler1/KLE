@@ -6,7 +6,7 @@ import "./Services.scss";
 const Services = () => {
   return (
     <div className="servicesContainer">
-      <PageHeader message="Services" className="services" />
+      <PageHeader message="Services" className="services" absoluteURL="Services-Whole" />
       <section className="servicesGrid"></section>
       <section className="questionsCallContainer"></section>
     </div>

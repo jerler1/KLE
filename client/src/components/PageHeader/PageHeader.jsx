@@ -9,11 +9,12 @@ import {
   whyHeader,
 } from "../../assets/index";
 
-const PageHeader = ({ message, className }) => {
+const PageHeader = ({ message, absoluteURL }) => {
+  console.log("AU: ", absoluteURL);
   return (
-    <section className={`headerBackgroundImage ${className}`}>
+    <section className={`headerImage`}>
       <div className="imageContainer">
-        <img src={servicesHeader} alt="" />
+        <img src={process.env.PUBLIC_URL + `/Header/${absoluteURL}.png`} alt="not working" />
         <div className="gradientOverlay"></div>
       </div>
 
