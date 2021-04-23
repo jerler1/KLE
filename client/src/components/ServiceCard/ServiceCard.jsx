@@ -1,18 +1,18 @@
 import React from "react";
 import "./ServiceCard.scss";
 
-const ServiceCard = ({name, shortDescription, mainPicture, mainText}) => {
+const ServiceCard = ({caption, shortDescription, image, text, alt}) => {
   return (
     <div className="projectContainer">
       <div className="project">
-        <img src={mainPicture} alt="lovely kitchen" />
+        <img src={image} alt={alt} />
         <caption>
-          <h4>{name}</h4>
+          <h4>{caption}</h4>
           <p>{shortDescription}</p>
         </caption>
         <div className="activatedService">
-            <h4>{name}</h4>
-            <p>{mainText}</p>
+            <h4>{caption}</h4>
+            <p>{text}</p>
         </div>
       </div>
     </div>

@@ -31,23 +31,27 @@ export const servicesImages = [
     caption: "",
     image: "",
     text: "",
+    alt: "",
   },
   {
     caption: "Lighting Design & Consultation",
     image: require("./images/Services/01-Consult.png").default,
     text: `Building your dream home? Lighting design is essential for making your new house feel like a home. Whatever your vision, we can work with you to make it a reality. 
     We provide expertise on current fixture trends, as well as size, placement, smart home additions, outlet positioning, and everything else to complete a lighting design system in your new home. Then our team of certified electricians put our plans into place.`,
+    alt: "",
   },
   {
     caption: "Lighting Design & Consultation",
     image: require("./images/Services/01-Consult.png").default,
     text: `Building your dream home? Lighting design is essential for making your new house feel like a home. Whatever your vision, we can work with you to make it a reality. 
     We provide expertise on current fixture trends, as well as size, placement, smart home additions, outlet positioning, and everything else to complete a lighting design system in your new home. Then our team of certified electricians put our plans into place.`,
+    alt: "",
   },
   {
     caption: "Lighting Design & Consultation",
     image: require("./images/Services/01-Consult.png").default,
     text: `Building your dream home? Lighting design is essential for making your new house feel like a home. Whatever your vision, we can work with you to make it a reality. 
     We provide expertise on current fixture trends, as well as size, placement, smart home additions, outlet positioning, and everything else to complete a lighting design system in your new home. Then our team of certified electricians put our plans into place.`,
+    alt: "",
   },
 ];

@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import { servicesImages } from "../../assets/index";
+import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import "./Services.scss";
 
 const Services = () => {
@@ -11,7 +12,11 @@ const Services = () => {
         className="services"
         absoluteURL="Services-Whole"
       />
-      <section className="servicesGrid"></section>
+      <section className="servicesGrid">
+        {servicesImages.map((service) => {
+          return <ServiceCard {...service} />;
+        })}
+      </section>
       <section className="questionsCallContainer"></section>
     </div>
   );
