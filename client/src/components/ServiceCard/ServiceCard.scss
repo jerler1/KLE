@@ -39,20 +39,17 @@
       background-color: rgba(var(--subForegroundColor), 0.8);
       border-bottom-right-radius: 24px;
       @include for-size(phone) {
-        height: 20%;
+        height: 15%;
       }
       @media only screen and (max-width: 400px) {
-        height: 25%;
+        height: 15%;
       }
       h4 {
         color: var(--mainText);
-      }
-      p {
-        color: var(--secondaryText);
+        text-align: center;
       }
     }
     .fullScreenCaption {
-      // visibility: hidden;
       @include dimensions(100%, 92%);
       @include flex(column, flex-start, center);
       background-color: rgba(var(--mainForegroundColor), 0.8);
@@ -63,10 +60,11 @@
       right: 0;
       color: var(--mainText);
       h4 {
-        margin: 5% 0%;
+        margin: 10% 0%;
         font-size: 20px;
         line-height: 24px;
         letter-spacing: 2%;
+        text-align: center;
       }
       .serviceTextContent {
         margin: 0% 5%;
@@ -84,4 +82,7 @@
 .hidden {
   visibility: hidden;
   position: absolute;
+}
+.textLineBreak{
+  white-space: pre-line;
 }

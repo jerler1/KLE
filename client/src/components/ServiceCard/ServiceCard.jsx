@@ -28,7 +28,7 @@ const ServiceCard = ({ caption, shortDescription, image, text, alt }) => {
               isActive ? "serviceTextContent" : "serviceTextContent hidden"
             }
           >
-            <p>{text}</p>
+            <p className="textLineBreak">{text}</p>
           </div>
         </div>
       </div>

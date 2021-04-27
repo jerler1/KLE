@@ -54,6 +54,7 @@ export const servicesImages = [
     image: require("./images/Services/03-SmartHome.png").default,
     text: `There are great benefits to integrating technology into your home. Whether it’s solar paneling, car chargers, auto-initiating generators, or remote thermostats and light switches, we’ve got you covered. 
     
+    
     Certified Lutron Pro Installer.`,
     alt: "Solar Panels",
   },
@@ -66,7 +67,13 @@ export const servicesImages = [
   {
     caption: "Safety Inspections",
     image: require("./images/Services/05-Safety.png").default,
-    text: `There are many reasons you might need a safety inspection before beginning work. Buying a new house and you want to make sure everything’s safe? Condo conversion? They require a private inspection. Working on an older home and not sure what you need or whether it’s safe?`,
+    text: `There are many reasons you might need a safety inspection before beginning work. 
+
+    Buying a new house and you want to make sure everything’s safe? 
+
+    Condo conversion? They require a private inspection. 
+
+    Working on an older home and not sure what you need or whether it’s safe?`,
     alt: "Line Man Inspecting",
   },
   {
