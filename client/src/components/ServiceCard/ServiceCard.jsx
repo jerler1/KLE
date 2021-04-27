@@ -10,11 +10,16 @@ const ServiceCard = ({ caption, shortDescription, image, text, alt }) => {
 
   return (
     <div className="serviceContainer">
-      <div className="service" onClick={onClick}>
+      <div
+        className="service"
+        onClick={onClick}
+        onMouseEnter={onClick}
+        onMouseLeave={() => {
+          setIsActive(false);
+        }}
+      >
         <img src={image} alt={alt} />
-        <caption
-          className={isActive ? "fullScreenCaption" : "miniServiceCaption"}
-        >
+        <div className={isActive ? "fullScreenCaption" : "miniServiceCaption"}>
           <h4>{caption}</h4>
           <div
             className={
@@ -23,7 +28,7 @@ const ServiceCard = ({ caption, shortDescription, image, text, alt }) => {
           >
             <p>{text}</p>
           </div>
-        </caption>
+        </div>
       </div>
     </div>
   );
