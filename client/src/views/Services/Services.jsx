@@ -13,8 +13,8 @@ const Services = () => {
         absoluteURL="Services-Whole"
       />
       <section className="servicesGrid">
-        {servicesImages.map((service) => {
-          return <ServiceCard {...service} />;
+        {servicesImages.map((service, index) => {
+          return <ServiceCard {...service} key={index}/>;
         })}
       </section>
       <section className="questionsCallContainer"></section>
