@@ -12,8 +12,8 @@
         padding: 0px 99px 0px 99px;
         padding-bottom: 4%;
         @include for-size(phone) {
-            flex-direction: column;
-            padding: 64px 28px 64px 20px;
+            @include flex(column, center, center);
+            padding: 0;
           }
     }
 }

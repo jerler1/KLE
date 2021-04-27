@@ -4,7 +4,7 @@ import "./ServiceCard.scss";
 const ServiceCard = ({ caption, shortDescription, image, text, alt }) => {
   const [isActive, setIsActive] = useState(false);
 
-  const onClick = (e) => {
+  const onClick = () => {
     setIsActive(!isActive);
   };
 
@@ -13,7 +13,9 @@ const ServiceCard = ({ caption, shortDescription, image, text, alt }) => {
       <div
         className="service"
         onClick={onClick}
-        onMouseEnter={onClick}
+        onMouseEnter={() => {
+          setIsActive(false);
+        }}
         onMouseLeave={() => {
           setIsActive(false);
         }}
