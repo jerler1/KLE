@@ -14,10 +14,22 @@ const Services = () => {
       />
       <section className="servicesGrid">
         {servicesImages.map((service, index) => {
-          return <ServiceCard {...service} key={index}/>;
+          return <ServiceCard {...service} key={index} />;
         })}
       </section>
-      <section className="questionsCallContainer"></section>
+      <section className="questionsCallContainer">
+        <div className="serviceQuestionsWrapper">
+          <div className="servicesCallToAction">
+            <h3>Questions?</h3>
+            <p>
+              If you don’t see what you’re looking for, you’re unsure what you
+              need, or you have any other questions, please don’t hesitate to
+              reach out.
+            </p>
+          </div>
+          <button className="button primaryButton">Get in Touch</button>
+        </div>
+      </section>
     </div>
   );
 };

@@ -16,7 +16,53 @@
             padding: 0;
           }
     }
-    // .questionsCallContainer {
-    //     @include dimensions(100%, 15%);
-    // }
+    .questionsCallContainer {
+        @include dimensions(100%, 300px);
+        @include flex(row, center, center);
+        position: relative;
+        @include for-size(phone){
+            height: 400px;
+        }
+        .serviceQuestionsWrapper{
+            @include dimensions(70%, 80%);
+            @include flex(row, flex-start, center);
+            align-items: center;
+            border-radius: 24px 0px 0px 2px;
+            background: rgba(var(--mainForegroundColor), 1);
+            position: absolute;
+            right: 0;
+            @include for-size(phone){
+                @include flex(column, center, flex-start);
+                width: 95%;
+            }
+            button {
+                @include for-size(phone) {
+                    margin-left: 6%;
+                    margin-top: 4%;
+                }
+            }
+            .servicesCallToAction{
+                @include dimensions(60%, auto);
+                @include flex(column, center, flex-start);
+                margin: 0% 6%;
+                color: var(--secondaryText);
+                @include for-size(phone) {
+                    width: 100%;
+                }
+                h3 {
+                    margin: 2% 0%;
+                    font-size: 48px;
+                    letter-spacing: 0.34px;
+                    line-height: 57.6px;
+                    @include for-size(phone){
+                        font-size: 36px;
+                        margin: 0% 0% 5% 0%;
+                    }
+                }
+                p {
+                    width: 80%;
+                }
+            }
+        }
+    }
 }
