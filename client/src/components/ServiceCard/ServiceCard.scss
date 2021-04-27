@@ -50,7 +50,7 @@
       }
     }
     .fullScreenCaption {
-      @include dimensions(100%, 92%);
+      @include dimensions(100%, 94%);
       @include flex(column, flex-start, center);
       background-color: rgba(var(--mainForegroundColor), 0.8);
       border-bottom-right-radius: 24px;
@@ -60,7 +60,7 @@
       right: 0;
       color: var(--mainText);
       h4 {
-        margin: 10% 0%;
+        margin: 8% 0%;
         font-size: 20px;
         line-height: 24px;
         letter-spacing: 2%;
