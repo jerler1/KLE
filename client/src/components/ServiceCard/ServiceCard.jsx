@@ -4,17 +4,23 @@ import "./ServiceCard.scss";
 const ServiceCard = ({ caption, shortDescription, image, text, alt }) => {
   const [isActive, setIsActive] = useState(false);
 
+  const onClick = (e) => {
+    setIsActive(!isActive);
+  };
+
   return (
     <div className="serviceContainer">
-      <div className="service">
+      <div className="service" onClick={onClick}>
         <img src={image} alt={alt} />
-        <caption className="miniServiceCaption">
+        <caption
+          className={isActive ? "fullScreenCaption" : "miniServiceCaption"}
+        >
           <h4>{caption}</h4>
-          <p>{shortDescription}</p>
-        </caption>
-        <caption className="fullServiceCaption">
-          <h4>{caption}</h4>
-          <div className="serviceTextContent">
+          <div
+            className={
+              isActive ? "serviceTextContent" : "serviceTextContent hidden"
+            }
+          >
             <p>{text}</p>
           </div>
         </caption>

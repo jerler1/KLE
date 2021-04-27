@@ -48,7 +48,8 @@
         color: var(--secondaryText);
       }
     }
-    .fullServiceCaption {
+    .fullScreenCaption {
+      // visibility: hidden;
       @include dimensions(100%, 92%);
       @include flex(column, flex-start, center);
       background-color: rgba(var(--mainForegroundColor), 0.8);
@@ -69,8 +70,15 @@
         p {
           font-size: 18px;
           text-align: left;
+          line-height: 22.5px;
+          letter-spacing: 0.34px;
         }
       }
     }
   }
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
 }
