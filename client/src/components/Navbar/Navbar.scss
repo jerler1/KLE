@@ -30,6 +30,60 @@
 .inactive {
   visibility: hidden;
 }
+.menu-navLink-inactive {
+  a {
+    margin: 0px 8px;
+    @include for-size(phone) {
+      margin: 0px 0px;
+    }
+    position: relative;
+    color: var(--mainText);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -1px;
+      left: 0;
+      background: linear-gradient(
+          to right,
+          rgba(206, 54, 52, 0.84),
+          rgba(206, 54, 52, 0.84),
+          rgba(219, 94, 74, 0.83),
+          rgba(255, 182, 96, 0.8)
+        ),
+        linear-gradient(to bottom, #ffffff, #ffffff);
+      visibility: hidden;
+      transition: all 0.35s ease-in-out;
+    }
+    &:hover::before {
+      visibility: visible;
+      width: 100%;
+    }
+    &:active::before {
+      background: #ce4634;
+      width: 100%;
+    }
+  }
+}
+.menu-navLink-active {
+  a {
+    margin: 0px 8px;
+    @include for-size(phone) {
+      margin: 0px 0px;
+    }
+    position: relative;
+    color: var(--mainText);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -1px;
+      background: #ce4634;
+    }
+  }
+}
 
 // Desktop CSS for Navbar.
 .navbarContainer {
@@ -51,20 +105,14 @@
         display: flex;
         flex-direction: row;
         margin-left: 5%;
-        .portfolioLink {
-          background: none;
-          border: none;
+        .navLink {
           display: flex;
           justify-content: center;
           align-items: center;
-          color: var(--mainText);
           margin: 0 16px;
           font-family: "Gilroy-Bold", Courier, monospace;
           line-height: 1.11;
           letter-spacing: 0.54px;
-          a {
-            color: var(--mainText);
-          }
         }
         li {
           position: relative;
@@ -207,6 +255,41 @@
       @include flex(row, space-around, center);
       padding-bottom: 3px;
       position: relative;
+      .mobileNavLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin: 0 16px;
+        font-family: "Gilroy-Bold", Courier, monospace;
+        font-size: 14px;
+        line-height: 1.11;
+        letter-spacing: 0.54px;
+        .menu-navLink-inactive {
+          a {
+            &::before {
+              bottom: -2px;
+            }
+          }
+        }
+        .menu-navLink-active {
+          a {
+            &::before {
+              bottom: -2px;
+            }
+          }
+        }
+        // .menu-navLink-inactive {
+        //   a {
+        //     margin: 0px 8px;
+        //     position: relative;
+        //     color: var(--mainText);
+        //     &::before {
+        //       content: "";
+        //       position: absolute;
+        //       width: 0;
+        //       height: 2px;
+        //       bottom: -1px;
+      }
       li {
         .menu-wrapper {
           @include flex(column, center, flex-start);

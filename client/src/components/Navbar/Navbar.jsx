@@ -42,7 +42,18 @@ const Navbar = () => {
           </section>
           <section className="mobileNavbarBottomWrapper">
             <ul className="mobileDropdownWrapper">
-              <DropdownMenu message="Our Work" menu="one">
+              <div className="mobileNavLink">
+                <li
+                  className={
+                    location.pathname === "/portfolio"
+                      ? "menu-navLink-active"
+                      : "menu-navLink-inactive"
+                  }
+                >
+                  <Link to="/portfolio">Portfolio</Link>
+                </li>
+              </div>
+              {/* <DropdownMenu message="Our Work" menu="one">
                 <ul>
                   <li
                     className={
@@ -63,7 +74,7 @@ const Navbar = () => {
                     <Link to="/portfolio">Portfolio</Link>
                   </li>
                 </ul>
-              </DropdownMenu>
+              </DropdownMenu> */}
               <DropdownMenu message="About Us" menu="two">
                 <ul>
                   <li
@@ -95,7 +106,18 @@ const Navbar = () => {
                   </li>
                 </ul>
               </DropdownMenu>
-              <DropdownMenu message="Resources" menu="three">
+              <div className="mobileNavLink">
+                <li
+                  className={
+                    location.pathname === "/partners"
+                      ? "menu-navLink-active"
+                      : "menu-navLink-inactive"
+                  }
+                >
+                  <Link to="/partners">Partners</Link>
+                </li>
+              </div>
+              {/* <DropdownMenu message="Resources" menu="three">
                 <ul>
                   <li
                     className={
@@ -116,7 +138,7 @@ const Navbar = () => {
                     <Link to="/partners">Our Partners</Link>
                   </li>
                 </ul>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </ul>
           </section>
         </>
@@ -133,12 +155,12 @@ const Navbar = () => {
           <div className="nav-links">
             <div className="navWrapper">
               <ul className="navDropdown">
-                <div className="portfolioLink">
+                <div className="navLink">
                   <li
                     className={
                       location.pathname === "/portfolio"
-                        ? "menu-link-active"
-                        : "menu-link-inactive"
+                        ? "menu-navLink-active"
+                        : "menu-navLink-inactive"
                     }
                   >
                     <Link to="/portfolio">Portfolio</Link>
@@ -197,7 +219,18 @@ const Navbar = () => {
                     </li>
                   </ul>
                 </DropdownMenu>
-                <DropdownMenu message="Resources" menu="three">
+                <div className="navLink">
+                  <li
+                    className={
+                      location.pathname === "/partners"
+                        ? "menu-navLink-active"
+                        : "menu-navLink-inactive"
+                    }
+                  >
+                    <Link to="/partners">Partners</Link>
+                  </li>
+                </div>
+                {/* <DropdownMenu message="Resources" menu="three">
                   <ul>
                     <li
                       className={
@@ -218,7 +251,7 @@ const Navbar = () => {
                       <Link to="/partners">Our Partners</Link>
                     </li>
                   </ul>
-                </DropdownMenu>
+                </DropdownMenu> */}
               </ul>
               <div className="contactUsButton">
                 <Button
