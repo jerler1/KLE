@@ -24,11 +24,18 @@ const Navbar = () => {
           <section className="mobileNavbarTopWrapper">
             <div className="brand-logo">
               <div className="logo-wrapper">
-                <Link to="/"><Logo /></Link>
+                <Link to="/">
+                  <Logo />
+                </Link>
               </div>
             </div>
             <div className="contactUsButton">
-              <Button className="button secondaryButton" onClick={() => {history.push("/contact")}}>
+              <Button
+                className="button secondaryButton"
+                onClick={() => {
+                  history.push("/contact");
+                }}
+              >
                 Contact <span className="logoVisibility">Us</span>
               </Button>
             </div>
@@ -118,13 +125,26 @@ const Navbar = () => {
         <>
           <div className="brand-logo">
             <div className="logo-wrapper">
-              <Link to="/"><Logo /></Link>
+              <Link to="/">
+                <Logo />
+              </Link>
             </div>
           </div>
           <div className="nav-links">
             <div className="navWrapper">
               <ul className="navDropdown">
-                <DropdownMenu message="Our Work" menu="one">
+                <div className="portfolioLink">
+                  <li
+                    className={
+                      location.pathname === "/portfolio"
+                        ? "menu-link-active"
+                        : "menu-link-inactive"
+                    }
+                  >
+                    <Link to="/portfolio">Portfolio</Link>
+                  </li>
+                </div>
+                {/* <DropdownMenu message="Our Work" menu="one">
                   <ul>
                     <li
                       className={
@@ -145,7 +165,7 @@ const Navbar = () => {
                       <Link to="/portfolio">Portfolio</Link>
                     </li>
                   </ul>
-                </DropdownMenu>
+                </DropdownMenu> */}
                 <DropdownMenu message="About Us" menu="two">
                   <ul>
                     <li
@@ -201,7 +221,12 @@ const Navbar = () => {
                 </DropdownMenu>
               </ul>
               <div className="contactUsButton">
-                <Button className="button secondaryButton" onClick={() => history.push("/contact")}>Contact Us</Button>
+                <Button
+                  className="button secondaryButton"
+                  onClick={() => history.push("/contact")}
+                >
+                  Contact Us
+                </Button>
               </div>
             </div>
           </div>

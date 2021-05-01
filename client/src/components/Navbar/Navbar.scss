@@ -51,6 +51,21 @@
         display: flex;
         flex-direction: row;
         margin-left: 5%;
+        .portfolioLink {
+          background: none;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--mainText);
+          margin: 0 16px;
+          font-family: "Gilroy-Bold", Courier, monospace;
+          line-height: 1.11;
+          letter-spacing: 0.54px;
+          a {
+            color: var(--mainText);
+          }
+        }
         li {
           position: relative;
           .menu-wrapper {
