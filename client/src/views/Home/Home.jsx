@@ -72,7 +72,7 @@ const Home = () => {
         <aside className="homePictureThreeBanner">
           <h4 className="bannerHeader">
             <span>
-              <Icon name="bulb" alt="lightbulb" />
+              <Icon name="bulb" alt="lightbulb" width="32"/>
             </span>
             <header>What We Do</header>
           </h4>
