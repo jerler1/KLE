@@ -13,25 +13,22 @@ const MobileFooter = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Portfolio</Link>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <Link to="/">About Us</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
             <Link to="/services">Services</Link>
           </li>
           <li>
-            <Link to="/">FAQs</Link>
+            <Link to="/partners">Partners</Link>
           </li>
           <li>
-            <Link to="/">Partners</Link>
+            <Link to="/join-our-team">Join Our Team</Link>
           </li>
           <li>
-            <Link to="/">Join Our Team</Link>
-          </li>
-          <li>
-            <Link to="/">Contact Us</Link>
+            <Link to="/contact-us">Contact Us</Link>
           </li>
         </ul>
         <ul className="mobileFooterSocials">
@@ -39,9 +36,13 @@ const MobileFooter = () => {
             <p>See Us in the Wild</p>
           </li>
           <li>
-            <Link to="/">
+            <a
+              href="https://www.yelp.com/biz/kinetic-lighting-and-electric-mill-valley"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={yelp} className="socialImage" alt="yelp" />
-            </Link>
+            </a>
           </li>
           <li>
             <Link to="/">
@@ -49,9 +50,13 @@ const MobileFooter = () => {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <a
+              href="https://thetimfallershow.com/ep-141-breaking-the-gender-barriers-with-isabella-battig/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={podcast} className="socialImage" alt="podcast" />
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

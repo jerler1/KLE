@@ -39,9 +39,6 @@ const Footer = () => {
           </ul>
           <ul className="footerInteract">
             <li>
-              <Link to="/faq">FAQ</Link>
-            </li>
-            <li>
               <Link to="/partners">Partners</Link>
             </li>
             <li>
@@ -56,9 +53,13 @@ const Footer = () => {
               <p>See Us in the Wild</p>
             </li>
             <li>
-              <Link to="/">
+              <a
+                href="https://www.yelp.com/biz/kinetic-lighting-and-electric-mill-valley"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={yelp} className="socialImage" alt="yelp" />
-              </Link>
+              </a>
             </li>
             <li>
               <Link to="/">
@@ -66,7 +67,11 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <a href="https://thetimfallershow.com/ep-141-breaking-the-gender-barriers-with-isabella-battig/" target="_blank" rel="noreferrer">
+              <a
+                href="https://thetimfallershow.com/ep-141-breaking-the-gender-barriers-with-isabella-battig/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={podcast} className="socialImage" alt="podcast" />
               </a>
             </li>
