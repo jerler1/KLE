@@ -79,8 +79,8 @@
   @include flex(column, flex-start, flex-start);
   padding: 0;
   li:not(:last-child) {
-    height: calc(100% - 16px);
-    margin-bottom: 16px;
+ 
+    margin-bottom: 17.33px;
   }
 }
 
