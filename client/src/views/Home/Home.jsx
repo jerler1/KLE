@@ -42,19 +42,19 @@ const Home = () => {
             <div className="bannerLeftAligned">
               <div className="kineticExperienceValues">
                 <span className="kineticExperienceIcon">
-                  <Icon name="chatbubbles" alt="chat bubbles" />
+                  <Icon name="chatbubbles" alt="chat bubbles" width="32"/>
                 </span>
                 <p className="bannerLeftAligned">Communication</p>
               </div>
               <div className="kineticExperienceValues">
                 <span className="kineticExperienceIcon">
-                  <Icon name="construct" alt="wrenches" />
+                  <Icon name="construct" alt="wrenches" width="32"/>
                 </span>
                 <p className="bannerLeftAligned">Integrity</p>
               </div>
               <div className="kineticExperienceValues">
                 <span className="kineticExperienceIcon">
-                  <Icon name="clock" alt="clock" />
+                  <Icon name="clock" alt="clock" width="32"/>
                 </span>
                 <p className="bannerLeftAligned">Accountability</p>
               </div>
