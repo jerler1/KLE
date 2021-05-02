@@ -33,7 +33,7 @@ const Navbar = () => {
               <Button
                 className="button secondaryButton"
                 onClick={() => {
-                  history.push("/contact");
+                  history.push("/contact-us");
                 }}
               >
                 Contact <span className="logoVisibility">Us</span>
@@ -256,7 +256,7 @@ const Navbar = () => {
               <div className="contactUsButton">
                 <Button
                   className="button secondaryButton"
-                  onClick={() => history.push("/contact")}
+                  onClick={() => history.push("/contact-us")}
                 >
                   Contact Us
                 </Button>
