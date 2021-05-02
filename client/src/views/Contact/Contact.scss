@@ -1,0 +1,41 @@
+@import "../../sass/mixins/mixins";
+
+.contactContainer {
+  @include flex(column, flex-start, flex-start);
+  @include dimensions(100%, auto);
+  .contactSection {
+    @include flex(row, flex-start, flex-start);
+    @include dimensions(100%, 400px);
+    background-color: rgba(var(--mainBackgroundColor), 1);
+    .contactInformationWrapper {
+      @include flex(column, flex-start, center);
+      @include dimensions(50%, 100%);
+      .contactInformationContent {
+        margin: 10% 20%;
+        p {
+          color: var(--secondaryText);
+        }
+        .contactPhoneNumber, .contactEmail {
+          @include flex(row, flex-start, center);
+          margin: 10% 0%;
+          p {
+            color: var(--mainText);
+            margin-left: 2%;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 1.5px;
+            font-family: "Gilroy-Bold";
+          }
+          svg {
+              margin: 0% 2%;
+          }
+        }
+      }
+    }
+    .contactFormWrapper {
+      @include flex(column, flex-start, flex-start);
+      @include dimensions(50%, 100%);
+      color: var(--mainText);
+    }
+  }
+}
