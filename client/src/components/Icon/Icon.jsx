@@ -1,7 +1,7 @@
 // https://codesandbox.io/s/react-dynamic-svg-import-ts-kzx7n?fontsize=14&hidenavigation=1&theme=dark
 import React, { useEffect, useState, useRef } from "react";
 
-function Icon({ name, ...otherProps }) {
+function Icon({ name, width, height, ...otherProps }) {
   const ImportedIconRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +25,7 @@ function Icon({ name, ...otherProps }) {
 
   if (!loading && ImportedIconRef.current) {
     const { current: ImportedIcon } = ImportedIconRef;
-    return <ImportedIcon {...otherProps} />;
+    return <ImportedIcon height={height} width={width} {...otherProps} />;
   }
   return null;
 }
