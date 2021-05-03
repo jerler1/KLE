@@ -14,9 +14,6 @@ const Portfolio = () => {
   }, [images]);
 
   const settingImages = (e) => {
-    // setImages(portfolioPictures[0].pictures);
-    
-    console.log("Setting Images");
     console.log(e.currentTarget);
   }
 
