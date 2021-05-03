@@ -47,12 +47,12 @@
 .mobileAside {
   @include flex(column, flex-start, flex-start);
   @include dimensions(100%, auto);
-  button,
+  a,
   div:not(:last-child) {
     height: calc(100% - 16px);
     margin-bottom: 1.5rem;
   }
-  button {
+  a {
     @include flex(row, flex-start, center);
     width: 135px;
     span {
