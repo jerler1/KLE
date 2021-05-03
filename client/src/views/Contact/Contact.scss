@@ -3,6 +3,9 @@
 .absolute {
   position: absolute;
 }
+.errorMessage {
+  color: var(--accent1);
+}
 
 .contactContainer {
   @include flex(column, flex-start, flex-start);
@@ -22,7 +25,7 @@
       }
       .contactInformationContent {
         @include for-size(phone) {
-          @include flex(column, center, center);
+          @include flex(column, center, flex-start);
         }
         margin: 10% 20%;
         @include for-size(phone) {
@@ -41,7 +44,7 @@
           }
           .contactPhoneNumber,
           .contactEmail {
-            @include flex(row, center, center);
+            @include flex(row, flex-start, center);
             margin: 10% 0%;
             @include for-size(phone) {
               margin: 4% 0%;
@@ -94,7 +97,17 @@
         margin: 3% 0% 3% 0%;
       }
       .contactFormContent {
+        width: 80%;
+        h3 {
+          @include for-size(phone) {
+            font-size: 24px;
+          }
+        }
         .contactForm {
+          width: 80%;
+          @include for-size(phone){
+            width: 100%;
+          }
           .buttonWrapper {
             margin-top: 5%;
             @include flex(row, flex-end, flex-start);
@@ -113,9 +126,15 @@
             }
             input {
               @include dimensions(100%, 32px);
+              padding-left: 10px;
               border-radius: 8px;
+              &::placeholder {
+                font-size: 14px;
+                color: var(--secondaryText);
+              }
             }
             textarea {
+              padding: 10px 10px;
               @include dimensions(100%, 136px);
               border-radius: 8px;
             }

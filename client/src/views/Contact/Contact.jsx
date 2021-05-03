@@ -1,14 +1,56 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
-import Button from "../../components/Button/Button";
 import { email, phone } from "../../assets/index";
 import Icon from "../../components/Icon/Icon";
 import { useMediaQuery } from "react-responsive";
-
+import { useForm } from "react-hook-form";
+import emailjs, { init } from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 import "./Contact.scss";
 
 const Contact = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
+
+  const toastifySuccess = () => {
+    toast.success("Form sent!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: "submit-feedback success",
+      toastId: "notifyToast",
+    });
+  };
+
+  const onSubmit = async (data, error) => {
+    try {
+      const templateParams = {
+        email: data.email,
+        phone: data.phone,
+        time: data.time,
+        message: data.message,
+      };
+
+      await emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        templateParams
+      );
+      reset();
+      toastifySuccess();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="contactContainer">
@@ -35,7 +77,11 @@ const Contact = () => {
                     isTabletOrMobile ? "mobilePhone" : "inactive absolute"
                   }
                 >
-                  <a className="button secondaryButton" href="tel:415-569-7167" aria-label="Phone Link">
+                  <a
+                    className="button secondaryButton"
+                    href="tel:415-569-7167"
+                    aria-label="Phone Link"
+                  >
                     <span>
                       <img src={phone} alt="phone" />
                     </span>
@@ -58,7 +104,11 @@ const Contact = () => {
                     isTabletOrMobile ? "mobileEmail" : "inactive absolute"
                   }
                 >
-                  <a className="button secondaryButton" href="mailto:hello@kineticelectricsf.com" aria-label="Email Link">
+                  <a
+                    className="button secondaryButton"
+                    href="mailto:hello@kineticelectricsf.com"
+                    aria-label="Email Link"
+                  >
                     <span>
                       <img src={email} alt="email" />
                     </span>
@@ -73,22 +123,46 @@ const Contact = () => {
         <div className="contactFormWrapper">
           <div className="contactFormContent">
             <h3>Send us a message</h3>
-            <form className="contactForm">
+            <form
+              className="contactForm"
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
+            >
               <div className="emailInputWrapper">
                 <label className="label">Email</label>
-                <input className="input" type="text" name="email" />
+                <input
+                  className="input"
+                  type="email"
+                  placeholder="email@domain.com"
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                  })}
+                />
+                {errors.email && (
+                  <span className="errorMessage">
+                    Please enter a valid email address.
+                  </span>
+                )}
               </div>
               <div className="phoneInputWrapper">
                 <label className="label">Phone</label>
-                <input className="input" type="text" name="phone" />
+                <input className="input" type="tel" {...register("phone")} />
               </div>
               <div className="timeInputWrapper">
                 <label className="label">Best time to contact you</label>
-                <input className="input" type="text" name="time" />
+                <input className="input" type="text" {...register("time")} />
               </div>
               <div className="messageInputWrapper">
                 <label className="label">Your Message</label>
-                <textarea className="input" type="text" name="message" />
+                <textarea
+                  className="input"
+                  type="text"
+                  {...register("message", { required: true })}
+                />
+                {errors.message && (
+                  <span className="errorMessage">Please enter a message.</span>
+                )}
               </div>
               <div className="buttonWrapper">
                 <button className="button primaryButton">Send</button>
@@ -97,6 +171,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 };
