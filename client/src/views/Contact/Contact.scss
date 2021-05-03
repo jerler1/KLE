@@ -36,6 +36,10 @@
       @include flex(column, flex-start, flex-start);
       @include dimensions(50%, 100%);
       color: var(--mainText);
+      h3 {
+          letter-spacing: 0.25rem;
+          font-weight: 400;
+      }
     }
   }
 }

@@ -17,16 +17,20 @@ const Contact = () => {
               works in Marin, SF and the East Bay.
             </p>
             <div className="contactPhoneNumber">
-                <Icon name="phoneWhite" alt="phone" width="75" height="50"/>
-                <p>415.569.7167</p>
+              <Icon name="phoneWhite" alt="phone" width="75" height="50" />
+              <p>415.569.7167</p>
             </div>
             <div className="contactEmail">
-                <Icon name="emailWhite" alt="email" width="75" height="50"/>
-                <p>hello@kineticelectricsf.com</p>
+              <Icon name="emailWhite" alt="email" width="75" height="50" />
+              <p>hello@kineticelectricsf.com</p>
             </div>
           </div>
         </div>
-        <div className="contactFormWrapper">a</div>
+        <div className="contactFormWrapper">
+          <div className="contactFormContent">
+            <h3>Send us a message</h3>
+          </div>
+        </div>
       </section>
     </div>
   );
