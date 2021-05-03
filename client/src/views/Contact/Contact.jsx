@@ -18,6 +18,8 @@ const Contact = () => {
     reset,
   } = useForm();
 
+  init(process.env.REACT_APP_USER_ID);
+
   const toastifySuccess = () => {
     toast.success("Form sent!", {
       position: "bottom-right",
