@@ -13,8 +13,9 @@ const Portfolio = () => {
     console.log("hi hi");
   }, [images]);
 
-  const settingImages = (e) => {
-    console.log(e.currentTarget);
+  const makeOnProjectClick = (card, e) => {
+    console.log(card.pictures);
+    // console.log(e.currentTarget);
   }
 
   // boolean for if gallery is being shown
@@ -28,8 +29,8 @@ const Portfolio = () => {
         absoluteURL="Portfolio-Whole"
       />
       <section className={images ? "imageGallery" :"projectGrid"}>
-        {images ? <ImageGallery images={images}/> : portfolioPictures.map((project, index) => {
-          return <Project key={index} {...project} settingImages={settingImages} />;
+        {images ? <ImageGallery images={images}/> : portfolioPictures.map((card, index) => {
+          return <Project key={index} {...card} onClick={() => makeOnProjectClick(card)} />;
         })}
       </section>
       <section className="contactCFAContainer">
