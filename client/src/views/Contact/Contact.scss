@@ -32,36 +32,47 @@
           color: var(--secondaryText);
           margin: 7% 0%;
         }
-        .contactPhoneNumber,
-        .contactEmail {
-          @include flex(row, flex-start, center);
-          margin: 10% 0%;
-          @include for-size(phone){
-            margin: 4% 0%;
+        .contactMobileBackground {
+          @include for-size(phone) {
+            @include dimensions(100%, auto);
+            @include flex(column, center, center);
+            padding: 8% 0%;
+            background-image: url("../../assets/images/Home/Background.png");
           }
-          .desktopPhone, .desktopEmail {
-            @include flex(row, flex-start, center);
-            p {
-              color: var(--mainText);
-              margin-left: 2%;
-              font-size: 20px;
-              line-height: 24px;
-              letter-spacing: 1.5px;
-              font-family: "Gilroy-Bold";
+          .contactPhoneNumber,
+          .contactEmail {
+            @include flex(row, center, center);
+            margin: 10% 0%;
+            @include for-size(phone) {
+              margin: 4% 0%;
             }
-            svg {
-              margin: 0% 2%;
-            }
-          }
-          .mobilePhone, .mobileEmail {
-            button {
+            .desktopPhone,
+            .desktopEmail {
               @include flex(row, center, center);
-              @include dimensions(150px, 47px);
-              span {
+              p {
+                color: var(--mainText);
+                margin-left: 2%;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 1.5px;
+                font-family: "Gilroy-Bold";
+              }
+              svg {
+                margin: 0% 2%;
+              }
+            }
+            .mobilePhone,
+            .mobileEmail {
+              @include flex(column, center, center);
+              a {
                 @include flex(row, center, center);
-                img {
-                  @include dimensions(18px, 20px);
-                  margin-right: 10px;
+                @include dimensions(150px, 47px);
+                span {
+                  @include flex(row, center, center);
+                  img {
+                    @include dimensions(18px, 20px);
+                    margin-right: 10px;
+                  }
                 }
               }
             }
@@ -98,6 +109,7 @@
               color: var(--secondaryText);
               font-size: 14px;
               line-height: 16.41px;
+              margin-bottom: 6px;
             }
             input {
               @include dimensions(100%, 32px);

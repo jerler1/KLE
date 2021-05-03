@@ -20,49 +20,52 @@ const Contact = () => {
               Kinetic Lighting and Electric is based in Mill Valley, CA and
               works in Marin, SF and the East Bay.
             </p>
-            <div className="c"></div>
-            <div className="contactPhoneNumber">
-              <div
-                className={
-                  !isTabletOrMobile ? "desktopPhone" : "inactive absolute"
-                }
-              >
-                <Icon name="phoneWhite" alt="phone" width="75" height="50" />
-                <p>415.569.7167</p>
+            <div className="contactMobileBackground">
+              <div className="contactPhoneNumber">
+                <div
+                  className={
+                    !isTabletOrMobile ? "desktopPhone" : "inactive absolute"
+                  }
+                >
+                  <Icon name="phoneWhite" alt="phone" width="75" height="50" />
+                  <p>415.569.7167</p>
+                </div>
+                <div
+                  className={
+                    isTabletOrMobile ? "mobilePhone" : "inactive absolute"
+                  }
+                >
+                  <a className="button secondaryButton" href="tel:415-569-7167" aria-label="Phone Link">
+                    <span>
+                      <img src={phone} alt="phone" />
+                    </span>
+                    Call Us
+                  </a>
+                  <p>415.569.7167</p>
+                </div>
               </div>
-              <div
-                className={
-                  isTabletOrMobile ? "mobilePhone" : "inactive absolute"
-                }
-              >
-                <Button className="button secondaryButton">
-                  <span>
-                    <img src={phone} alt="phone" />
-                  </span>
-                  Call Us
-                </Button>
-              </div>
-            </div>
-            <div className="contactEmail">
-              <div
-                className={
-                  !isTabletOrMobile ? "desktopEmail" : "inactive absolute"
-                }
-              >
-                <Icon name="emailWhite" alt="email" width="75" height="50" />
-                <p>hello@kineticelectricsf.com</p>
-              </div>
-              <div
-                className={
-                  isTabletOrMobile ? "mobileEmail" : "inactive absolute"
-                }
-              >
-                <Button className="button secondaryButton">
-                  <span>
-                    <img src={email} alt="email" />
-                  </span>
-                  Email Us
-                </Button>
+              <div className="contactEmail">
+                <div
+                  className={
+                    !isTabletOrMobile ? "desktopEmail" : "inactive absolute"
+                  }
+                >
+                  <Icon name="emailWhite" alt="email" width="75" height="50" />
+                  <p>hello@kineticelectricsf.com</p>
+                </div>
+                <div
+                  className={
+                    isTabletOrMobile ? "mobileEmail" : "inactive absolute"
+                  }
+                >
+                  <a className="button secondaryButton" href="mailto:hello@kineticelectricsf.com" aria-label="Email Link">
+                    <span>
+                      <img src={email} alt="email" />
+                    </span>
+                    Email Us
+                  </a>
+                  <p>hello@kineticelectricsf.com</p>
+                </div>
               </div>
             </div>
           </div>
