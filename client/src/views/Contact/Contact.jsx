@@ -1,11 +1,15 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
-// import { email, phone } from "../../assets/index";
+import Button from "../../components/Button/Button";
+import { email, phone } from "../../assets/index";
 import Icon from "../../components/Icon/Icon";
+import { useMediaQuery } from "react-responsive";
 
 import "./Contact.scss";
 
 const Contact = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
+
   return (
     <div className="contactContainer">
       <PageHeader message="Contact Us" absoluteURL="Contact-Whole" />
@@ -16,13 +20,50 @@ const Contact = () => {
               Kinetic Lighting and Electric is based in Mill Valley, CA and
               works in Marin, SF and the East Bay.
             </p>
+            <div className="c"></div>
             <div className="contactPhoneNumber">
-              <Icon name="phoneWhite" alt="phone" width="75" height="50" />
-              <p>415.569.7167</p>
+              <div
+                className={
+                  !isTabletOrMobile ? "desktopPhone" : "inactive absolute"
+                }
+              >
+                <Icon name="phoneWhite" alt="phone" width="75" height="50" />
+                <p>415.569.7167</p>
+              </div>
+              <div
+                className={
+                  isTabletOrMobile ? "mobilePhone" : "inactive absolute"
+                }
+              >
+                <Button className="button secondaryButton">
+                  <span>
+                    <img src={phone} alt="phone" />
+                  </span>
+                  Call Us
+                </Button>
+              </div>
             </div>
             <div className="contactEmail">
-              <Icon name="emailWhite" alt="email" width="75" height="50" />
-              <p>hello@kineticelectricsf.com</p>
+              <div
+                className={
+                  !isTabletOrMobile ? "desktopEmail" : "inactive absolute"
+                }
+              >
+                <Icon name="emailWhite" alt="email" width="75" height="50" />
+                <p>hello@kineticelectricsf.com</p>
+              </div>
+              <div
+                className={
+                  isTabletOrMobile ? "mobileEmail" : "inactive absolute"
+                }
+              >
+                <Button className="button secondaryButton">
+                  <span>
+                    <img src={email} alt="email" />
+                  </span>
+                  Email Us
+                </Button>
+              </div>
             </div>
           </div>
         </div>

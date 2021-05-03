@@ -1,5 +1,9 @@
 @import "../../sass/mixins/mixins";
 
+.absolute {
+  position: absolute;
+}
+
 .contactContainer {
   @include flex(column, flex-start, flex-start);
   @include dimensions(100%, auto);
@@ -7,28 +11,60 @@
     @include flex(row, flex-start, flex-start);
     @include dimensions(100%, auto);
     background-color: rgba(var(--mainBackgroundColor), 1);
+    @include for-size(phone) {
+      flex-direction: column;
+    }
     .contactInformationWrapper {
       @include flex(column, flex-start, center);
       @include dimensions(50%, 100%);
+      @include for-size(phone) {
+        width: 100%;
+      }
       .contactInformationContent {
+        @include for-size(phone) {
+          @include flex(column, center, center);
+        }
         margin: 10% 20%;
+        @include for-size(phone) {
+          margin: 0% 4% 0% 4%;
+        }
         p {
           color: var(--secondaryText);
+          margin: 7% 0%;
         }
         .contactPhoneNumber,
         .contactEmail {
           @include flex(row, flex-start, center);
           margin: 10% 0%;
-          p {
-            color: var(--mainText);
-            margin-left: 2%;
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: 1.5px;
-            font-family: "Gilroy-Bold";
+          @include for-size(phone){
+            margin: 4% 0%;
           }
-          svg {
-            margin: 0% 2%;
+          .desktopPhone, .desktopEmail {
+            @include flex(row, flex-start, center);
+            p {
+              color: var(--mainText);
+              margin-left: 2%;
+              font-size: 20px;
+              line-height: 24px;
+              letter-spacing: 1.5px;
+              font-family: "Gilroy-Bold";
+            }
+            svg {
+              margin: 0% 2%;
+            }
+          }
+          .mobilePhone, .mobileEmail {
+            button {
+              @include flex(row, center, center);
+              @include dimensions(150px, 47px);
+              span {
+                @include flex(row, center, center);
+                img {
+                  @include dimensions(18px, 20px);
+                  margin-right: 10px;
+                }
+              }
+            }
           }
         }
       }
@@ -38,8 +74,11 @@
       @include dimensions(50%, 100%);
       color: var(--mainText);
       margin-right: 5%;
+      @include for-size(phone) {
+        width: 100%;
+      }
       h3 {
-        letter-spacing: 0.20rem;
+        letter-spacing: 0.2rem;
         font-weight: 400;
         margin: 3% 0% 3% 0%;
       }
