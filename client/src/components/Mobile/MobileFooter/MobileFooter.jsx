@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../Button/Button";
 import "./MobileFooter.scss";
 import { instagram, podcast, yelp, email, phone } from "../../../assets/index";
 
