@@ -61,18 +61,18 @@ const MobileFooter = () => {
         </ul>
       </nav>
       <aside className="mobileAside">
-        <Button className="button secondaryButton flex">
+      <a className="button secondaryButton" href="tel:415-569-7167" aria-label="Phone Link">
           <span>
             <img src={phone} alt="phone" />
           </span>
           Call Us
-        </Button>
-        <Button className="button secondaryButton flex">
+        </a>
+        <a className="button secondaryButton" href="mailto:hello@kineticelectricsf.com" aria-label="Email Link">
           <span>
             <img src={email} alt="email" />
           </span>
           Email Us
-        </Button>
+        </a>
         <div>
           <p>Kinetic Lighting and Electric</p>
           <p>CA C10 License #838279</p>
