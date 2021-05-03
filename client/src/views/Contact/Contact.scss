@@ -5,7 +5,7 @@
   @include dimensions(100%, auto);
   .contactSection {
     @include flex(row, flex-start, flex-start);
-    @include dimensions(100%, 400px);
+    @include dimensions(100%, auto);
     background-color: rgba(var(--mainBackgroundColor), 1);
     .contactInformationWrapper {
       @include flex(column, flex-start, center);
@@ -15,7 +15,8 @@
         p {
           color: var(--secondaryText);
         }
-        .contactPhoneNumber, .contactEmail {
+        .contactPhoneNumber,
+        .contactEmail {
           @include flex(row, flex-start, center);
           margin: 10% 0%;
           p {
@@ -27,18 +28,48 @@
             font-family: "Gilroy-Bold";
           }
           svg {
-              margin: 0% 2%;
+            margin: 0% 2%;
           }
         }
       }
     }
     .contactFormWrapper {
-      @include flex(column, flex-start, flex-start);
+      @include flex(column, flex-start, center);
       @include dimensions(50%, 100%);
       color: var(--mainText);
+      margin-right: 5%;
       h3 {
-          letter-spacing: 0.25rem;
-          font-weight: 400;
+        letter-spacing: 0.20rem;
+        font-weight: 400;
+        margin: 3% 0% 3% 0%;
+      }
+      .contactFormContent {
+        .contactForm {
+          .buttonWrapper {
+            margin-top: 5%;
+            @include flex(row, flex-end, flex-start);
+          }
+          .emailInputWrapper,
+          .phoneInputWrapper,
+          .timeInputWrapper,
+          .messageInputWrapper {
+            @include flex(column, flex-start, flex-start);
+            margin-top: 3%;
+            label {
+              color: var(--secondaryText);
+              font-size: 14px;
+              line-height: 16.41px;
+            }
+            input {
+              @include dimensions(100%, 32px);
+              border-radius: 8px;
+            }
+            textarea {
+              @include dimensions(100%, 136px);
+              border-radius: 8px;
+            }
+          }
+        }
       }
     }
   }
