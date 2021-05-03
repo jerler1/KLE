@@ -1,10 +1,10 @@
 import React from "react";
 import "./Project.scss";
 
-const Project = ({name, shortDescription, mainPicture, settingImages, key}) => {
+const Project = ({name, shortDescription, mainPicture, onClick}) => {
   return (
     <div className="projectContainer">
-      <div className="project" onClick={settingImages} id={key} value={key}>
+      <div className="project" onClick={onClick}>
         <img src={mainPicture} alt="lovely kitchen" />
         <div>
           <h4>{name}</h4>
