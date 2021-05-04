@@ -9,12 +9,18 @@ import ImageGallery from "react-image-gallery";
 
 const Portfolio = () => {
   const [images, setImages] = useState(null);
-  useEffect(() => {
-    console.log("hi hi");
-  }, [images]);
+  // useEffect(() => {
+  //   console.log("hi hi");
+  // }, [images]);
 
-  const makeOnProjectClick = (card, e) => {
-    console.log(card.pictures);
+  const makeOnProjectClick = ({pictures}) => {
+    console.log("This is pictures", pictures);
+    const imageObject = {};
+    
+
+    // import(pictures).then((module) => {
+    //   console.log("This is the module: ", module);
+    // })
     // console.log(e.currentTarget);
   }
 
