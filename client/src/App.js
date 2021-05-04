@@ -6,6 +6,7 @@ import Home from "./views/Home/Home";
 import Services from "./views/Services/Services";
 import Portfolio from "./views/Portfolio/Portfolio";
 import Contact from "./views/Contact/Contact";
+import Partners from "./views/Partners/Partners";
 import NotFound from "./views/NotFound/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -33,6 +34,7 @@ function App() {
             <Route path="/services" component={Services} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact-us" component={Contact} />
+            <Route path="/partners" component={Partners} />
             <Route path="*" component={NotFound} />            
           </Switch>
         </main>
