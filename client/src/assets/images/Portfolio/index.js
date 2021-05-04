@@ -1,10 +1,13 @@
 function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => {
-    return images[item.replace("./", "")] = r(item);
-  });
-  return images;
+  return r.keys().map(r);
 }
+// function importAll(r) {
+//   let images = {};
+//   r.keys().map((item, index) => {
+//     return images[item.replace("./", "")] = r(item);
+//   });
+//   return images;
+// }
 
 export const portfolioPictures = [
   {
@@ -12,11 +15,9 @@ export const portfolioPictures = [
     name: "Elizabeth Street",
     shortDescription: "Short",
     mainPicture: require("./Elizabeth-Street/Elizabeth-1.jpg").default,
-    pictures: [
-      importAll(
-        require.context("./Elizabeth-Street", false, /\.(png|jpe?g|svg)$/)
-      ),
-    ],
+    pictures: importAll(
+      require.context("./Elizabeth-Street", false, /\.(png|jpe?g|svg)$/)
+    ),
   },
   {
     key: "506th",
