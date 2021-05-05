@@ -9,26 +9,22 @@ import ImageGallery from "react-image-gallery";
 
 const Portfolio = () => {
   const [images, setImages] = useState(null);
-  // useEffect(() => {
-  //   console.log("hi hi");
-  // }, [images]);
 
   const makeOnProjectClick = ({ pictures }) => {
     const arrayOfImages = pictures.map((picture) => {
       return { original: picture.default, thumbnail: picture.default };
     });
-    console.log("This is pictures", pictures.default);
     setImages(arrayOfImages);
-
-    // import(pictures).then((module) => {
-    //   console.log("This is the module: ", module);
-    // })
-    // console.log(e.currentTarget);
   };
 
-  // boolean for if gallery is being shown
-  // -- if false set images to null
-  // -- if null display the portfolio cards
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const closeGallery = () => {
+    setImages(null);
+  };
+
   return (
     <div className="portfolioContainer">
       <PageHeader
@@ -36,9 +32,9 @@ const Portfolio = () => {
         className="portfolio"
         absoluteURL="Portfolio-Whole"
       />
-      <section className={images ? "imageGallery" : "projectGrid"}>
+      <section className={images ? "imageGallery" : "projectGrid"} onMouseLeave={closeGallery}>
         {images ? (
-          <ImageGallery items={images} showPlayButton={false}/>
+          <ImageGallery items={images} showPlayButton={false} showIndex={true}/>
         ) : (
           portfolioPictures.map((card, index) => {
             return (
