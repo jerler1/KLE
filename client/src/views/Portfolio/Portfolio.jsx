@@ -6,6 +6,7 @@ import gloomyPicture from "../../assets/images/CFA/PortfolioCTA.png";
 import { portfolioPictures } from "../../assets/images/Portfolio/index";
 import Button from "../../components/Button/Button";
 import ImageGallery from "react-image-gallery";
+import GallerySidebar from "../../components/GallerySidebar/GallerySidebar";
 
 const Portfolio = () => {
   const [images, setImages] = useState(null);
@@ -38,12 +39,24 @@ const Portfolio = () => {
       >
         {images ? (
           <div className="imageGallery">
-            <div className="projectColumn"></div>
+            <div className="projectColumn">
+              {portfolioPictures.map((card, index) => {
+                return (
+                  <Project
+                    className="project"
+                    key={index}
+                    {...card}
+                    onClick={() => makeOnProjectClick(card)}
+                  />
+                );
+              })}
+            </div>
             <div className="imageGalleryDisplay">
               <ImageGallery
                 items={images}
                 showPlayButton={false}
                 showIndex={true}
+                showFullscreenButton={false}
               />
             </div>
           </div>

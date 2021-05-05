@@ -1,5 +1,13 @@
 @import "../../sass/mixins/mixins";
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
+// CSS for react-image .imageGallery
+.image-gallery-thumbnail {
+  width: 120px;
+}
+.image-gallery-thumbnail img {
+  width: auto;
+  height: 75px;
+}
 .portfolioContainer {
   @include dimensions(100%, auto);
   background-image: url("../../assets/images/Home/Background.png");
@@ -19,7 +27,23 @@
     background-color: rgba(var(--mainBackgroundColor), 1);
     padding: 3% 0%;
     .imageGallery {
+      @include dimensions(100%, 100%);
       @include flex(row, flex-start, flex-start);
+      .projectColumn {
+        @include dimensions(25%, 100%);
+        @include flex(column, flex-start, center);
+        @include for-size(phone) {
+          visibility: hidden;
+          position: absolute;
+          width: 0%;
+        }
+      }
+      .imageGalleryDisplay{
+        @include dimensions(75%, 100%);
+        @include for-size(phone){
+          width: 100%;
+        }
+      }
     }
   }
   .contactCFAContainer{
