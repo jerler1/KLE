@@ -33,17 +33,14 @@ const Portfolio = () => {
         className="portfolio"
         absoluteURL="Portfolio-Whole"
       />
-      <section
-        className={images ? "imageGalleryWrapper" : "projectGrid"}
-        onMouseLeave={closeGallery}
-      >
+      <section className={images ? "imageGalleryWrapper" : "projectGrid"}>
         {images ? (
-          <div className="imageGallery">
+          <div className="imageGallery" >
             <div className="projectColumn">
               {portfolioPictures.map((card, index) => {
                 return (
-                  <Project
-                    className="project"
+                  <GallerySidebar
+                    className="sidebarProject"
                     key={index}
                     {...card}
                     onClick={() => makeOnProjectClick(card)}
