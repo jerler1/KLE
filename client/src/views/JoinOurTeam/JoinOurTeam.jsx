@@ -33,7 +33,7 @@ const JoinOurTeam = () => {
     });
   };
 
-  const onSubmit = async (data, error) => {
+  const onSubmit = async (data) => {
     try {
       const templateParams = {
         email: data.email,

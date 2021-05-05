@@ -149,11 +149,21 @@ const Contact = () => {
               </div>
               <div className="phoneInputWrapper">
                 <label className="label">Phone</label>
-                <input className="input" type="tel" {...register("phone")} />
+                <input
+                  className="input"
+                  type="tel"
+                  placeholder="optional"
+                  {...register("phone")}
+                />
               </div>
               <div className="timeInputWrapper">
                 <label className="label">Best time to contact you</label>
-                <input className="input" type="text" {...register("time")} />
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="e.g. After work 5pm."
+                  {...register("time")}
+                />
               </div>
               <div className="messageInputWrapper">
                 <label className="label">Your Message</label>
