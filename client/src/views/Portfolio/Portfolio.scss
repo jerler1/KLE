@@ -15,6 +15,13 @@
       padding: 64px 28px 64px 20px;
     }
   }
+  .imageGalleryWrapper {
+    background-color: rgba(var(--mainBackgroundColor), 1);
+    padding: 3% 0%;
+    .imageGallery {
+      @include flex(row, flex-start, flex-start);
+    }
+  }
   .contactCFAContainer{
     @include dimensions(100%, 600px);
     @include flex(row, flex-start, flex-start);
