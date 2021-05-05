@@ -13,16 +13,18 @@ const Portfolio = () => {
   //   console.log("hi hi");
   // }, [images]);
 
-  const makeOnProjectClick = ({pictures}) => {
-    console.log("This is pictures", pictures);
-    const imageObject = {};
-    
+  const makeOnProjectClick = ({ pictures }) => {
+    const arrayOfImages = pictures.map((picture) => {
+      return { original: picture.default, thumbnail: picture.default };
+    });
+    console.log("This is pictures", pictures.default);
+    setImages(arrayOfImages);
 
     // import(pictures).then((module) => {
     //   console.log("This is the module: ", module);
     // })
     // console.log(e.currentTarget);
-  }
+  };
 
   // boolean for if gallery is being shown
   // -- if false set images to null
@@ -34,10 +36,20 @@ const Portfolio = () => {
         className="portfolio"
         absoluteURL="Portfolio-Whole"
       />
-      <section className={images ? "imageGallery" :"projectGrid"}>
-        {images ? <ImageGallery images={images}/> : portfolioPictures.map((card, index) => {
-          return <Project key={index} {...card} onClick={() => makeOnProjectClick(card)} />;
-        })}
+      <section className={images ? "imageGallery" : "projectGrid"}>
+        {images ? (
+          <ImageGallery items={images} showPlayButton={false}/>
+        ) : (
+          portfolioPictures.map((card, index) => {
+            return (
+              <Project
+                key={index}
+                {...card}
+                onClick={() => makeOnProjectClick(card)}
+              />
+            );
+          })
+        )}
       </section>
       <section className="contactCFAContainer">
         <div className="gloomyPicture">

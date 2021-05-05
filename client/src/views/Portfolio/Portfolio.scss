@@ -1,5 +1,5 @@
 @import "../../sass/mixins/mixins";
-
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 .portfolioContainer {
   @include dimensions(100%, auto);
   background-image: url("../../assets/images/Home/Background.png");
