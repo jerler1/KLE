@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { pic1, pic2, pic3 } from "../../assets/index";
 import Button from "../../components/Button/Button";
@@ -7,6 +7,10 @@ import "./Home.scss";
 
 const Home = () => {
   let history = useHistory();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="homeContainer">
@@ -26,7 +30,14 @@ const Home = () => {
               since 2004. Providing complete lighting design systems and
               installation to illuminate your dreams into a reality.
             </p>
-            <Button className="button primaryButton">Get a Quote</Button>
+            <Button
+              className="button primaryButton"
+              onClick={() => {
+                history.push("/contact-us");
+              }}
+            >
+              Get a Quote
+            </Button>
           </div>
         </aside>
       </section>
@@ -42,19 +53,19 @@ const Home = () => {
             <div className="bannerLeftAligned">
               <div className="kineticExperienceValues">
                 <span className="kineticExperienceIcon">
-                  <Icon name="chatbubbles" alt="chat bubbles" width="32"/>
+                  <Icon name="chatbubbles" alt="chat bubbles" width="32" />
                 </span>
                 <p className="bannerLeftAligned">Communication</p>
               </div>
               <div className="kineticExperienceValues">
                 <span className="kineticExperienceIcon">
-                  <Icon name="construct" alt="wrenches" width="32"/>
+                  <Icon name="construct" alt="wrenches" width="32" />
                 </span>
                 <p className="bannerLeftAligned">Integrity</p>
               </div>
               <div className="kineticExperienceValues">
                 <span className="kineticExperienceIcon">
-                  <Icon name="clock" alt="clock" width="32"/>
+                  <Icon name="clock" alt="clock" width="32" />
                 </span>
                 <p className="bannerLeftAligned">Accountability</p>
               </div>
@@ -72,7 +83,7 @@ const Home = () => {
         <aside className="homePictureThreeBanner">
           <h4 className="bannerHeader">
             <span>
-              <Icon name="bulb" alt="lightbulb" width="32"/>
+              <Icon name="bulb" alt="lightbulb" width="32" />
             </span>
             <header>What We Do</header>
           </h4>
@@ -93,9 +104,14 @@ const Home = () => {
             </svg>
           </div>
 
-          <Button className="button secondaryButton"             onClick={() => {
+          <Button
+            className="button secondaryButton"
+            onClick={() => {
               history.push("/portfolio");
-            }}>View Portfolio</Button>
+            }}
+          >
+            View Portfolio
+          </Button>
           <Button
             className="button primaryButton"
             onClick={() => {
