@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./CallForAction.scss";
+import Button from "../../components/Button/Button";
 import { partnersCFA, portfolioCFA, whoCFA } from "../../assets/index";
 
 const CallForAction = ({
@@ -11,13 +12,15 @@ const CallForAction = ({
 }) => {
   const [callForActionImage, setCallForActionImage] = useState(null);
   useEffect(() => {
-    pictureSource === "portfolio"
-      ? setCallForActionImage(portfolioCFA)
-      : pictureSource === "partners"
-      ? setCallForActionImage(partnersCFA)
-      : pictureSource === "who"
-      ? setCallForActionImage(whoCFA)
-      : null;
+    if (pictureSource === "portfolio") {
+      setCallForActionImage(portfolioCFA);
+    }
+    if (pictureSource === "partners") {
+      setCallForActionImage(partnersCFA);
+    }
+    if (pictureSource === "who") {
+      setCallForActionImage(whoCFA);
+    }
   }, [pictureSource]);
   return (
     <section className="contactCFAContainer">
