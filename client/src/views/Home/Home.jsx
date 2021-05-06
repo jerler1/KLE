@@ -70,7 +70,14 @@ const Home = () => {
                 <p className="bannerLeftAligned">Accountability</p>
               </div>
             </div>
-            <Button className="button secondaryButton">Learn More</Button>
+            <Button
+              className="button secondaryButton"
+              onClick={() => {
+                history.push("/who-we-are");
+              }}
+            >
+              Learn More
+            </Button>
           </div>
         </aside>
       </section>
