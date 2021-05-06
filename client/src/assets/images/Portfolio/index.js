@@ -34,7 +34,7 @@ export const portfolioPictures = [
     key: "Anselmo",
     name: "San Anselmo",
     shortDescription: "Short",
-    mainPicture: require("./San-Anselmo/Raymond_Kitch.png").default,
+    mainPicture: require("./San-Anselmo/San_Anselmo_Kitchen_Main.png").default,
     pictures: importAll(
       require.context("./San-Anselmo", false, /\.(png|jpe?g|svg)$/)
     ),
