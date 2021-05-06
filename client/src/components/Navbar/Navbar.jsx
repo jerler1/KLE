@@ -84,7 +84,7 @@ const Navbar = () => {
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/about">Who We Are</Link>
+                    <Link to="/who-we-are">Who We Are</Link>
                   </li>
                   <li
                     className={
