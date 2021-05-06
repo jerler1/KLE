@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import { email, phone } from "../../assets/index";
 import Icon from "../../components/Icon/Icon";
@@ -17,6 +17,10 @@ const JoinOurTeam = () => {
     handleSubmit,
     reset,
   } = useForm();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   init(process.env.REACT_APP_USER_ID);
 

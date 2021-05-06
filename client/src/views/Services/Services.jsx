@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import { servicesImages } from "../../assets/index";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import "./Services.scss";
 
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="servicesContainer">
       <PageHeader
