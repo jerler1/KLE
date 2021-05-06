@@ -4,7 +4,6 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import Project from "../../components/Project/Project";
 import CallForAction from "../../components/CallForAction/CallForAction";
 import { portfolioPictures } from "../../assets/images/Portfolio/index";
-import Button from "../../components/Button/Button";
 import ImageGallery from "react-image-gallery";
 import { useHistory } from "react-router-dom";
 import GallerySidebar from "../../components/GallerySidebar/GallerySidebar";
@@ -23,10 +22,6 @@ const Portfolio = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const closeGallery = () => {
-    setImages(null);
-  };
 
   const onClick = () => {
     history.push("/contact-us");
