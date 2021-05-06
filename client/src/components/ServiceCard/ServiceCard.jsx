@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "./ServiceCard.scss";
 
-const ServiceCard = ({ caption, shortDescription, image, text, alt }) => {
+const ServiceCard = ({ caption, image, text, alt }) => {
   const [isActive, setIsActive] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
 
@@ -26,7 +26,6 @@ const ServiceCard = ({ caption, shortDescription, image, text, alt }) => {
           isTabletOrMobile
             ? () => false
             : () => {
-                console.log("click");
                 setIsActive(false);
               }
         }
