@@ -46,49 +46,4 @@
       }
     }
   }
-  .contactCFAContainer{
-    @include dimensions(100%, 600px);
-    @include flex(row, flex-start, flex-start);
-    @include for-size(phone) {
-      flex-direction: column;
-      height: auto;
-    }
-    .gloomyPicture {
-      @include dimensions( 60%, 100%);
-      @include for-size(phone) {
-        width: 100%;
-      }
-      img {
-        @include dimensions(100%, 100%);
-        object-fit: cover;
-      }
-    }
-    .cfaTextWrapper {
-      @include dimensions(40%, 100%);
-      @include flex(column, center, flex-start);
-      @include for-size(phone){
-        width: 100%;
-      }
-      background-color: rgba(var(--mainForegroundColor), 1);
-      .cfaText {
-        @include dimensions(50%, 100%);
-        @include flex(column, center, flex-start);
-        margin-left: 12.9%;
-        @include for-size(phone){
-          margin: 5%;
-        }
-        p {
-          color: var(--mainText);
-          font-size: 48px;
-          line-height: 57.6px;
-          margin-bottom: 10%;
-          @include for-size(phone){
-            font-size: 24px;
-            margin-bottom: 10%;
-            line-height: 24px;
-          }
-        }
-      }
-    }
-  }
 }
