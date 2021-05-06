@@ -79,7 +79,7 @@ const Navbar = () => {
                 <ul>
                   <li
                     className={
-                      location.pathname === "/about"
+                      location.pathname === "/who-we-are"
                         ? "menu-link-active"
                         : "menu-link-inactive"
                     }
