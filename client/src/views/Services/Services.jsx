@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import { servicesImages } from "../../assets/index";
+import { useHistory } from "react-router-dom";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import "./Services.scss";
 
 const Services = () => {
+  let history = useHistory();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -30,7 +32,14 @@ const Services = () => {
               reach out.
             </p>
           </div>
-          <button className="button primaryButton">Get in Touch</button>
+          <button
+            className="button primaryButton"
+            onClick={() => {
+              history.push("/contact-us");
+            }}
+          >
+            Get in Touch
+          </button>
         </div>
       </section>
     </div>
