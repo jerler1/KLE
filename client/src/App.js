@@ -7,6 +7,7 @@ import Services from "./views/Services/Services";
 import Portfolio from "./views/Portfolio/Portfolio";
 import Contact from "./views/Contact/Contact";
 import Partners from "./views/Partners/Partners";
+import WhoWeAre from "./views/WhoWeAre/WhoWeAre";
 import JoinOurTeam from "./views/JoinOurTeam/JoinOurTeam";
 import NotFound from "./views/NotFound/NotFound";
 import Navbar from "./components/Navbar/Navbar";
@@ -37,6 +38,7 @@ function App() {
             <Route path="/contact-us" component={Contact} />
             <Route path="/partners" component={Partners} />
             <Route path="/join-our-team" component={JoinOurTeam} />
+            <Route path="/who-we-are" component={WhoWeAre} />
             <Route path="*" component={NotFound} />            
           </Switch>
         </main>
