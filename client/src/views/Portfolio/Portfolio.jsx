@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./Portfolio.scss";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Project from "../../components/Project/Project";
-import gloomyPicture from "../../assets/images/CFA/PortfolioCTA.png";
+import CallForAction from "../../components/CallForAction/CallForAction";
 import { portfolioPictures } from "../../assets/images/Portfolio/index";
 import Button from "../../components/Button/Button";
 import ImageGallery from "react-image-gallery";
+import { useHistory } from "react-router-dom";
 import GallerySidebar from "../../components/GallerySidebar/GallerySidebar";
 
 const Portfolio = () => {
   const [images, setImages] = useState(null);
+  let history = useHistory();
 
   const makeOnProjectClick = ({ pictures }) => {
     const arrayOfImages = pictures.map((picture) => {
@@ -26,6 +28,10 @@ const Portfolio = () => {
     setImages(null);
   };
 
+  const onClick = () => {
+    history.push("/contact-us");
+  };
+
   return (
     <div className="portfolioContainer">
       <PageHeader
@@ -35,7 +41,7 @@ const Portfolio = () => {
       />
       <section className={images ? "imageGalleryWrapper" : "projectGrid"}>
         {images ? (
-          <div className="imageGallery" >
+          <div className="imageGallery">
             <div className="projectColumn">
               {portfolioPictures.map((card, index) => {
                 return (
@@ -70,18 +76,13 @@ const Portfolio = () => {
           })
         )}
       </section>
-      <section className="contactCFAContainer">
-        <div className="gloomyPicture">
-          <img src={gloomyPicture} alt="gloomy kitchen" />
-        </div>
-        <div className="cfaTextWrapper">
-          <div className="cfaText">
-            <p>Ready to make your space beautiful?</p>
-            {/* todo: link button */}
-            <Button className="button primaryButton">Get in Touch</Button>
-          </div>
-        </div>
-      </section>
+      <CallForAction
+        alt="Gloomy Kitchen"
+        message="Ready to make your space beautiful?"
+        buttonMessage="Get in Touch"
+        pictureSource="portfolio"
+        onClick={onClick}
+      />
     </div>
   );
 };
