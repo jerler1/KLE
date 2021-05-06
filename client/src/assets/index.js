@@ -25,6 +25,11 @@ export const servicesHeader = require("./images/Header/Services-Whole.png")
 export const whoHeader = require("./images/Header/WhoWeAre-Whole.png").default;
 export const whyHeader = require("./images/Header/WhyUs-Whole.png").default;
 
+// CFA images
+export const partnersCFA = require("./images/CFA/Partners-CTA.png").default;
+export const portfolioCFA = require("./images/CFA/PortfolioCTA.png").default;
+export const whoCFA = require("./images/CFA/WhoWeAre-CTA-Cropped.png").default;
+
 // Services
 export const servicesImages = [
   {
