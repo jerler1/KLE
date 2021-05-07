@@ -31,7 +31,7 @@ export const portfolioCFA = require("./images/CFA/PortfolioCTA.png").default;
 export const whoCFA = require("./images/CFA/WhoWeAre-CTA-Cropped.png").default;
 
 // Who We Are images
-export const isabellaPicture = require("./images/WhoWeAre/IsabellaPic.jpg");
+export const isabellaPicture = require("./images/WhoWeAre/IsabellaPic.jpg").default;
 
 // Services
 export const servicesImages = [
