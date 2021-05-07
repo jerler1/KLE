@@ -12,6 +12,11 @@ import "./Contact.scss";
 const Contact = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
   const {
+    REACT_APP_USER_ID,
+    REACT_APP_SERVICE_ID,
+    REACT_APP_TEMPLATE_ID,
+  } = process.env;
+  const {
     register,
     formState: { errors },
     handleSubmit,
@@ -22,7 +27,7 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  init(process.env.REACT_APP_USER_ID);
+  init(REACT_APP_USER_ID);
 
   const toastifySuccess = () => {
     toast.success("Form sent!", {
@@ -37,7 +42,7 @@ const Contact = () => {
     });
   };
 
-  const onSubmit = async (data, error) => {
+  const onSubmit = async (data) => {
     try {
       const templateParams = {
         email: data.email,
@@ -45,16 +50,18 @@ const Contact = () => {
         time: data.time,
         message: data.message,
       };
-
-      await emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        templateParams
-      );
+      await emailjs
+        .send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, templateParams)
+        .then((result) => {
+          console.log(result.text);
+        })
+        .catch((error) => {
+          console.log("THERE IS AN ERROR", error);
+        });
       reset();
       toastifySuccess();
     } catch (error) {
-      console.log(error);
+      console.log("ERROR: ", error);
     }
   };
 
