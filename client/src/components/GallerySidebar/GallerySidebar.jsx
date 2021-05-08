@@ -7,7 +7,7 @@ const gallerySideBar = ({name, shortDescription, mainPicture, onClick, className
           <div className={className} onClick={onClick}>
             <img src={mainPicture} alt="lovely kitchen" />
             <div>
-              <h4>{name}</h4>
+              <p>{name}</p>
               {/* <p>{shortDescription}</p> */}
             </div>
           </div>
