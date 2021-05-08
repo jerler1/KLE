@@ -25,7 +25,7 @@
       }
       background-color: rgba(var(--mainForegroundColor), 1);
       .cfaText {
-        @include dimensions(60%, 100%);
+        @include dimensions(55%, 100%);
         @include flex(column, center, flex-start);
         margin-left: 12.9%;
         @media only screen and (max-width: 1400px) {
