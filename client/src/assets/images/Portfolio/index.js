@@ -4,48 +4,43 @@ function importAll(r) {
 
 export const portfolioPictures = [
   {
-    key: "Elizabeth",
-    name: "Elizabeth Street",
-    shortDescription: "Short",
-    mainPicture: require("./Elizabeth-Street/Elizabeth-1.jpg").default,
+    key: "Noe",
+    name: "Noe Valley",
+    mainPicture: require("./Noe-Valley/Elizabeth-1.jpg").default,
     pictures: importAll(
-      require.context("./Elizabeth-Street", false, /\.(png|jpe?g|svg)$/)
+      require.context("./Noe-Valley", false, /\.(png|jpe?g|svg)$/)
     ),
   },
   {
-    key: "506th",
-    name: "506th Street",
-    shortDescription: "Short",
-    mainPicture: require("./576th-Street/main.jpg").default,
+    key: "Diamond",
+    name: "Diamond Heights",
+    mainPicture: require("./Diamond-Heights/main.jpg").default,
     pictures: importAll(
-      require.context("./576th-Street", false, /\.(png|jpe?g|svg)$/)
+      require.context("./Diamond-Heights", false, /\.(png|jpe?g|svg)$/)
     ),
   },
   {
-    key: "Ellsworth",
-    name: "Ellsworth Street",
-    shortDescription: "Short",
-    mainPicture: require("./Ellsworth-Street/EllsworthDusksetX.jpg").default,
+    key: "Bernal",
+    name: "Bernal Heights",
+    mainPicture: require("./Bernal-Heights/EllsworthDusksetX.jpg").default,
     pictures: importAll(
-      require.context("./Ellsworth-Street", false, /\.(png|jpe?g|svg)$/)
+      require.context("./Bernal-Heights", false, /\.(png|jpe?g|svg)$/)
     ),
   },
   {
     key: "Anselmo",
     name: "San Anselmo",
-    shortDescription: "Short",
     mainPicture: require("./San-Anselmo/San_Anselmo_Kitchen_Main.png").default,
     pictures: importAll(
       require.context("./San-Anselmo", false, /\.(png|jpe?g|svg)$/)
     ),
   },
   {
-    key: "Shasta",
-    name: "Shasta",
-    shortDescription: "Short",
-    mainPicture: require("./Shasta/Bocci_HexTile.jpeg").default,
+    key: "Berkeley",
+    name: "Berkeley",
+    mainPicture: require("./Berkeley/Bocci_HexTile.jpeg").default,
     pictures: importAll(
-      require.context("./Shasta", false, /\.(png|jpe?g|svg)$/)
+      require.context("./Berkeley", false, /\.(png|jpe?g|svg)$/)
     ),
   },
 ];

@@ -1,0 +1,26 @@
+@import "../../sass/mixins/mixins";
+
+.whoWeAreContainer {
+    @include dimensions(100%, auto);
+    @include flex(column, flex-start, flex-start);
+    background-image: url("../../assets/images/Home/Background.png");
+    .meetTheBossWrapper {
+        @include dimensions(100%, 650px);
+        @include flex(row, flex-start, flex-start);
+        margin-top: 8%;
+        .meetImage{
+            @include dimensions(60%, 100%);
+            object-fit: contain;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+        .meetTheBossTextWrapper {
+            @include dimensions(40%, 100%);
+            @include flex(column, flex-start, center);
+            background-color: rgba(var(--mainBackgroundColor), 1);
+        }
+    }
+}
