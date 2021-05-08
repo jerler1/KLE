@@ -3,10 +3,20 @@
 // CSS for react-image .imageGallery
 .image-gallery-thumbnail {
   width: 120px;
+  margin: 0% 1% 0% 1%;
 }
 .image-gallery-thumbnail img {
   width: auto;
   height: 75px;
+}
+.image-gallery-left-nav, .image-gallery-right-nav {
+  color: var(--accent1);
+  &:hover {
+    color: var(--accent1);
+  }
+}
+.image-gallery-slides {
+  margin-bottom: 1%;
 }
 .portfolioContainer {
   @include dimensions(100%, auto);
