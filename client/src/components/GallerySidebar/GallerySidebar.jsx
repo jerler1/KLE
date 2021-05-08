@@ -1,7 +1,7 @@
 import React from 'react';
 import "./GallerySidebar.scss";
 
-const gallerySideBar = ({name, shortDescription, mainPicture, onClick, className}) => {
+const gallerySideBar = ({name, mainPicture, onClick, className}) => {
     return (
         <div className="sidebarProjectWrapper">
           <div className={className} onClick={onClick}>
