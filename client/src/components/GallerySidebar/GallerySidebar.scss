@@ -27,6 +27,7 @@
       display: flex;
       object-fit: cover;
       border-radius: 24px 2px;
+      cursor: pointer;
     }
     div {
       @include dimensions(100%, 20%);
