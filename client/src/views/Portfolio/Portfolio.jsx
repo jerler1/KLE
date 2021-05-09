@@ -10,13 +10,15 @@ import GallerySidebar from "../../components/GallerySidebar/GallerySidebar";
 
 const Portfolio = () => {
   const [images, setImages] = useState(null);
+  const [activeProject, setActiveProject] = useState(null);
   let history = useHistory();
 
-  const makeOnProjectClick = ({ pictures }) => {
+  const makeOnProjectClick = ({ pictures, name }) => {
     const arrayOfImages = pictures.map((picture) => {
       return { original: picture.default, thumbnail: picture.default };
     });
     setImages(arrayOfImages);
+    setActiveProject(name);
   };
 
   useEffect(() => {
@@ -37,25 +39,30 @@ const Portfolio = () => {
       <section className={images ? "imageGalleryWrapper" : "projectGrid"}>
         {images ? (
           <div className="imageGallery">
-            <div className="projectColumn">
-              {portfolioPictures.map((card, index) => {
-                return (
-                  <GallerySidebar
-                    className="sidebarProject"
-                    key={index}
-                    {...card}
-                    onClick={() => makeOnProjectClick(card)}
-                  />
-                );
-              })}
+            <div className="displayedProjectName">
+              <h4>{activeProject}</h4>
             </div>
-            <div className="imageGalleryDisplay">
-              <ImageGallery
-                items={images}
-                showPlayButton={false}
-                showIndex={true}
-                showFullscreenButton={false}
-              />
+            <div className="imageGalleryContent">
+              <div className="projectColumn">
+                {portfolioPictures.map((card, index) => {
+                  return (
+                    <GallerySidebar
+                      className="sidebarProject"
+                      key={index}
+                      {...card}
+                      onClick={() => makeOnProjectClick(card)}
+                    />
+                  );
+                })}
+              </div>
+              <div className="imageGalleryDisplay">
+                <ImageGallery
+                  items={images}
+                  showPlayButton={false}
+                  showIndex={true}
+                  showFullscreenButton={false}
+                />
+              </div>
             </div>
           </div>
         ) : (
