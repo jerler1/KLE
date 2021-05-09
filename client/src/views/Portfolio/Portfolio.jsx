@@ -6,6 +6,7 @@ import CallForAction from "../../components/CallForAction/CallForAction";
 import { portfolioPictures } from "../../assets/images/Portfolio/index";
 import ImageGallery from "react-image-gallery";
 import { useHistory } from "react-router-dom";
+import { arrowDown } from "../../assets/index";
 import GallerySidebar from "../../components/GallerySidebar/GallerySidebar";
 
 const Portfolio = () => {
@@ -19,6 +20,11 @@ const Portfolio = () => {
     });
     setImages(arrayOfImages);
     setActiveProject(name);
+  };
+
+  const closeGallery = () => {
+    setImages(null);
+    setActiveProject(null);
   };
 
   useEffect(() => {
@@ -40,6 +46,9 @@ const Portfolio = () => {
         {images ? (
           <div className="imageGallery">
             <div className="displayedProjectName">
+              <button onClick={closeGallery}>
+                <img src={arrowDown} alt="arrow pointing left" />
+              </button>
               <h4>{activeProject}</h4>
             </div>
             <div className="imageGalleryContent">
