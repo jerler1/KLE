@@ -7,15 +7,18 @@ import "./Services.scss";
 
 const Services = () => {
   let history = useHistory();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   return (
     <div className="servicesContainer">
       <PageHeader
         message="Services"
-        className="services"
         absoluteURL="Services-Whole"
+        alignment="bottomAligned"
+        gradientAlignment="gradientOverlayBottomRight"
       />
       <section className="servicesGrid">
         {servicesImages.map((service, index) => {

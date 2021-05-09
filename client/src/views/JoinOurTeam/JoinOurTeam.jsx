@@ -12,6 +12,11 @@ import "./JoinOurTeam.scss";
 const JoinOurTeam = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
   const {
+    REACT_APP_USER_ID,
+    REACT_APP_SERVICE_ID,
+    REACT_APP_TEMPLATE_ID,
+  } = process.env;
+  const {
     register,
     formState: { errors },
     handleSubmit,
@@ -22,7 +27,7 @@ const JoinOurTeam = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  init(process.env.REACT_APP_USER_ID);
+  init(REACT_APP_USER_ID);
 
   const toastifySuccess = () => {
     toast.success("Form sent!", {
@@ -45,22 +50,29 @@ const JoinOurTeam = () => {
         time: data.time,
         message: data.message,
       };
-
-      await emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        templateParams
-      );
+      await emailjs
+        .send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, templateParams)
+        .then((result) => {
+          console.log(result.text);
+        })
+        .catch((error) => {
+          console.log("THERE IS AN ERROR", error);
+        });
       reset();
       toastifySuccess();
     } catch (error) {
-      console.log(error);
+      console.log("ERROR: ", error);
     }
   };
 
   return (
     <div className="contactContainer">
-      <PageHeader message="Contact Us" absoluteURL="Contact-Whole" />
+      <PageHeader
+        message="Join Our Team"
+        absoluteURL="Team-Whole"
+        alignment="bottomAligned"
+        gradientAlignment="gradientOverlayBottomRight"
+      />
       <section className="contactSection">
         <div className="contactInformationWrapper">
           <div className="contactInformationContent">
@@ -153,11 +165,21 @@ const JoinOurTeam = () => {
               </div>
               <div className="phoneInputWrapper">
                 <label className="label">Phone</label>
-                <input className="input" type="tel" {...register("phone")} />
+                <input
+                  className="input"
+                  type="tel"
+                  placeholder="optional"
+                  {...register("phone")}
+                />
               </div>
               <div className="timeInputWrapper">
                 <label className="label">Best time to contact you</label>
-                <input className="input" type="text" {...register("time")} />
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="e.g. After work 5pm."
+                  {...register("time")}
+                />
               </div>
               <div className="messageInputWrapper">
                 <label className="label">Your Message</label>

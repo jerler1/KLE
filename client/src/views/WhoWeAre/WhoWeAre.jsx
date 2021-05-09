@@ -11,10 +11,16 @@ const WhoWeAre = () => {
   const onClick = () => {
     history.push("/contact-us");
   };
+  
   return (
     <div className="whoWeAreContainer">
       {/* TODO: Reverse the foreground. */}
-      <PageHeader message="Who We Are" absoluteURL="WhoWeAre-Whole" />
+      <PageHeader
+        message="Who We Are"
+        absoluteURL="WhoWeAre-Whole"
+        alignment="topAligned"
+        gradientAlignment="gradientOverlayTopLeft"
+      />
       <section className="meetTheBossWrapper">
         <div className="meetImage">
           <img src={isabellaPicture} alt="Picture of the boss. Isabella." />
@@ -36,12 +42,10 @@ const WhoWeAre = () => {
               expressing her creativity through locally harvested wooden
               sculptures.
             </p>
-            <hr/>
+            <hr />
             <div className="getToKnowPodcastWrapper">
-                <div className="getToKnow">
-
-                </div>
-                <button className="button primaryButton">Listen here</button>
+              <div className="getToKnow"></div>
+              <button className="button primaryButton">Listen here</button>
             </div>
           </div>
         </div>

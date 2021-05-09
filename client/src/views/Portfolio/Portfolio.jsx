@@ -39,8 +39,9 @@ const Portfolio = () => {
     <div className="portfolioContainer">
       <PageHeader
         message="Portfolio"
-        className="portfolio"
         absoluteURL="Portfolio-Whole"
+        alignment="bottomAligned"
+        gradientAlignment="gradientOverlayBottomRight"
       />
       <section className={images ? "imageGalleryWrapper" : "projectGrid"}>
         {images ? (

@@ -1,7 +1,7 @@
 import React from "react";
 import "./PageHeader.scss";
 
-const PageHeader = ({ message, absoluteURL }) => {
+const PageHeader = ({ message, absoluteURL, alignment, gradientAlignment }) => {
   return (
     <section className={`headerImage`}>
       <div className="imageContainer">
@@ -9,10 +9,10 @@ const PageHeader = ({ message, absoluteURL }) => {
           src={process.env.PUBLIC_URL + `/Header/${absoluteURL}.png`}
           alt="Well Lighted Design Space"
         />
-        <div className="gradientOverlay"></div>
+        <div className={gradientAlignment}></div>
       </div>
 
-      <header className="headerTitle">
+      <header className={`headerTitle ${alignment}`}>
         <h1>{message}</h1>
       </header>
     </section>

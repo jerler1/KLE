@@ -1,4 +1,20 @@
 @import "../../sass/mixins/mixins";
+.topAligned {
+  top: 35%;
+  left: 12.7%;
+  @include for-size(phone) {
+    top: 28%;
+    left: 4%;
+  }
+}
+.bottomAligned {
+  bottom: 35%;
+  right: 12.7%;
+  @include for-size(phone) {
+    bottom: 28%;
+    right: 4%;
+  }
+}
 .headerImage {
   @include dimensions(100%, 567.5px);
   @media only screen and (min-width: 1300px) {
@@ -11,11 +27,11 @@
       @include dimensions(100%, 100%);
       object-fit: cover;
     }
-    .gradientOverlay {
+    .gradientOverlayBottomRight {
       &:after {
         position: absolute;
-        top: 0;
-        left: 0;
+        bottom: 0;
+        right: 0;
         @include dimensions(100%, 100%);
         content: "";
         background: linear-gradient(
@@ -25,16 +41,24 @@
         );
       }
     }
+    .gradientOverlayTopLeft {
+      &:after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include dimensions(100%, 100%);
+        content: "";
+        background: linear-gradient(
+          to top left,
+          transparent 50%,
+          rgba(var(--mainForegroundColor), 0.8) 50%
+        );
+      }
+    }
   }
   .headerTitle {
     position: absolute;
-    bottom: 35%;
-    right: 12.7%;
     color: var(--mainText);
-    @include for-size(phone) {
-      bottom: 28%;
-      right: 4%;
-    }
     h1 {
       letter-spacing: 4px;
       font-weight: 400 !important;

@@ -67,7 +67,12 @@ const Contact = () => {
 
   return (
     <div className="contactContainer">
-      <PageHeader message="Contact Us" absoluteURL="Contact-Whole" />
+      <PageHeader
+        message="Contact Us"
+        absoluteURL="Contact-Whole"
+        alignment="bottomAligned"
+        gradientAlignment="gradientOverlayBottomRight"
+      />
       <section className="contactSection">
         <div className="contactInformationWrapper">
           <div className="contactInformationContent">
