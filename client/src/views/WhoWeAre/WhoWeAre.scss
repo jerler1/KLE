@@ -1,26 +1,95 @@
 @import "../../sass/mixins/mixins";
 
 .whoWeAreContainer {
-    @include dimensions(100%, auto);
-    @include flex(column, flex-start, flex-start);
-    background-image: url("../../assets/images/Home/Background.png");
-    .meetTheBossWrapper {
-        @include dimensions(100%, 650px);
-        @include flex(row, flex-start, flex-start);
-        margin-top: 8%;
-        .meetImage{
-            @include dimensions(60%, 100%);
-            object-fit: contain;
-            img {
-                width: 100%;
-                height: auto;
-                object-fit: contain;
-            }
-        }
-        .meetTheBossTextWrapper {
-            @include dimensions(40%, 100%);
-            @include flex(column, flex-start, center);
-            background-color: rgba(var(--mainBackgroundColor), 1);
-        }
+  @include dimensions(100%, auto);
+  @include flex(column, flex-start, flex-start);
+  background-image: url("../../assets/images/Home/Background.png");
+
+  .meetTheBossWrapper {
+    @include dimensions(100%, 650px);
+    @include flex(row, flex-start, flex-start);
+    margin-top: 8%;
+    background-color: rgba(var(--mainForegroundColor), 1);
+    .meetImage {
+      @include dimensions(60%, 100%);
+      object-fit: contain;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
+    .meetTheBossTextWrapper {
+      @include dimensions(40%, auto);
+      @include flex(column, flex-start, center);
+      color: var(--secondaryText);
+      .meetTheBossText {
+        @include flex(column, flex-start, flex-start);
+        margin: 5% 6% 2% 6%;
+        h3 {
+          font-weight: 400;
+          margin-bottom: 5%;
+          color: var(--mainText);
+        }
+        p {
+          font-size: 18px;
+          line-height: 22.5px;
+          letter-spacing: 0.34px;
+          white-space: pre-line;
+        }
+        hr {
+          width: 404px;
+          margin: 8% auto 6%;
+          border-color: var(--secondaryText);
+        }
+        .getToKnowPodcastWrapper {
+          @include dimensions(100%, 100%);
+          @include flex(row, flex-start, flex-start);
+          .getToKnow {
+            @include dimensions(60%, auto);
+            h4 {
+              margin-bottom: 2%;
+            }
+            p {
+              width: 90%;
+            }
+          }
+          .getToKnowButton {
+            @include flex(row, center, center);
+            margin: 3% 7%;
+          }
+        }
+      }
+    }
+  }
+  .questionsCallContainer {
+    @include dimensions(100%, 344px);
+    @include flex(column, center, flex-start);
+    position: relative;
+    .serviceQuestionsWrapper {
+      @include dimensions(60%, 144px);
+      @include flex(row, flex-start, center);
+      position: absolute;
+      right: 0;
+      top: auto;
+      bottom: auto;
+      background-color: rgba(var(--subForegroundColor), 1);
+      border-radius: 1px 0px 0px 16px;
+      .servicesCallToAction {
+        font-family: "Gilroy-Bold", Tahoma, Verdana, sans-serif;
+        margin: 0% 7%;
+        word-spacing: 0.7px;
+        span {
+          color: var(--mainText);
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 0.3px;
+          font-weight: 400;
+        }
+        p {
+            color: var(--secondaryText);
+        }
+      }
+    }
+  }
 }
