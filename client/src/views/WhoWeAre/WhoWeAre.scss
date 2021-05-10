@@ -10,6 +10,9 @@
     @include flex(row, flex-start, flex-start);
     margin-top: 8%;
     background-color: rgba(var(--mainForegroundColor), 1);
+    @include for-size(phone) {
+      flex-direction: column;
+    }
     .meetImage {
       @include dimensions(60%, 100%);
       object-fit: contain;
@@ -75,10 +78,25 @@
       bottom: auto;
       background-color: rgba(var(--subForegroundColor), 1);
       border-radius: 1px 0px 0px 16px;
+      @media only screen and (max-width: 1000px) {
+        width: 75%;
+      }
+      @include for-size(phone) {
+        width: 85%;
+        @include flex(column, center, flex-start);
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 95%;
+      }
       .servicesCallToAction {
         font-family: "Gilroy-Bold", Tahoma, Verdana, sans-serif;
         margin: 0% 7%;
         word-spacing: 0.7px;
+        @include for-size(phone){
+            margin: 0 0 20px 0;
+        }
         span {
           color: var(--mainText);
           font-size: 20px;
@@ -87,7 +105,7 @@
           font-weight: 400;
         }
         p {
-            color: var(--secondaryText);
+          color: var(--secondaryText);
         }
       }
     }
