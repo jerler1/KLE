@@ -10,12 +10,19 @@
     @include flex(row, flex-start, flex-start);
     margin-top: 8%;
     background-color: rgba(var(--mainForegroundColor), 1);
-    @include for-size(phone) {
+    @media only screen and (max-width: 1100px) {
       flex-direction: column;
+      height: auto;
     }
     .meetImage {
       @include dimensions(60%, 100%);
       object-fit: contain;
+      @media only screen and (max-width: 1500px) {
+        flex: 1;
+      }
+      @media only screen and (max-width: 1100px) {
+        width: 100%;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -26,6 +33,12 @@
       @include dimensions(40%, auto);
       @include flex(column, flex-start, center);
       color: var(--secondaryText);
+      @media only screen and (max-width: 1500px) {
+        flex: 2;
+      }
+      @media only screen and (max-width: 1100px) {
+        width: 100%;
+      }
       .meetTheBossText {
         @include flex(column, flex-start, flex-start);
         margin: 5% 6% 2% 6%;
@@ -33,6 +46,9 @@
           font-weight: 400;
           margin-bottom: 5%;
           color: var(--mainText);
+          @media only screen and (max-width: 625px) {
+            font-size: 32px;
+          }
         }
         p {
           font-size: 18px;
@@ -44,12 +60,21 @@
           width: 404px;
           margin: 8% auto 6%;
           border-color: var(--secondaryText);
+          @media only screen and (max-width: 500px) {
+            width: 250px;
+          }
         }
         .getToKnowPodcastWrapper {
-          @include dimensions(100%, 100%);
+          @include dimensions(100%, auto);
           @include flex(row, flex-start, flex-start);
+          @media only screen and (max-width: 600px) {
+            @include flex(column, flex-start, flex-start);
+          }
           .getToKnow {
             @include dimensions(60%, auto);
+            @media only screen and (max-width: 600px) {
+                width: 80%;
+              }
             h4 {
               margin-bottom: 2%;
             }
@@ -60,6 +85,9 @@
           .getToKnowButton {
             @include flex(row, center, center);
             margin: 3% 7%;
+            @media only screen and (max-width: 600px) {
+                margin: 3% 0%;
+              }
           }
         }
       }
@@ -94,8 +122,8 @@
         font-family: "Gilroy-Bold", Tahoma, Verdana, sans-serif;
         margin: 0% 7%;
         word-spacing: 0.7px;
-        @include for-size(phone){
-            margin: 0 0 20px 0;
+        @include for-size(phone) {
+          margin: 0 0 20px 0;
         }
         span {
           color: var(--mainText);
