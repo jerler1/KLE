@@ -48,6 +48,8 @@
                 color: var(--secondaryText);
                 @include for-size(phone) {
                     width: 100%;
+                    margin: 0;
+                    padding-left: 6%;
                 }
                 h3 {
                     margin: 2% 0%;
