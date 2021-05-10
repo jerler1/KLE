@@ -2,6 +2,9 @@
 .topAligned {
   top: 35%;
   left: 12.7%;
+  @media only screen and (max-width: 1250px) {
+    left: 7%;
+  }
   @include for-size(phone) {
     top: 28%;
     left: 4%;
@@ -62,14 +65,17 @@
     h1 {
       letter-spacing: 4px;
       font-weight: 400 !important;
-      @media only screen and (max-width: 950px) {
+      @media only screen and (max-width: 1025px) {
         font-size: 48px !important;
       }
-      @media only screen and (max-width: 500px) {
+      @media only screen and (max-width: 550px) {
         font-size: 36px !important;
       }
-      @media only screen and (max-width: 350px) {
+      @media only screen and (max-width: 425px) {
         font-size: 24px !important;
+      }
+      @media only screen and (max-width: 300px) {
+        font-size: 18px !important;
       }
     }
   }
