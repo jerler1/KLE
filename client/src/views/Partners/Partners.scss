@@ -1,0 +1,14 @@
+@import "../../sass/mixins/mixins";
+
+.partnersContainer {
+    @include dimensions(100%, auto);
+    @include flex(column, flex-start, flex-start);
+    background-image: url("../../assets/images/Home/Background.png");
+    .whoWeWorkWithWrapper, .bikeFriendsWrapper {
+        @include dimensions(100%, auto);
+        @include flex(column, flex-start, flex-start);
+        .whoWeWorkWithHeader, .bikeFriendsHeader {
+            color: var(--mainText);
+        }
+    }
+}
