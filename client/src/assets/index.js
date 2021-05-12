@@ -97,3 +97,58 @@ export const servicesImages = [
     alt: "Lighting Fixture",
   },
 ];
+
+// Partners
+export const partnerImages = [
+  {
+    name: "Axelson Builders",
+    caption: "General Contractor",
+    image: require("./images/Partners/axelson.webp").default,
+    alt: "Logo"
+  },
+  {
+    name: "MM Arch Design",
+    caption: "Maryam Monsef",
+    image: require("./images/Partners/MMarchdesign_logo.png").default,
+    alt: "Logo"
+  },
+  {
+    name: "Manual Labor",
+    caption: "Joseph Perez Green",
+    image: require("./images/Partners/ManualLaborLogo.png").default,
+    alt: "Logo"
+  },
+  {
+    name: "AT6 Design Build",
+    caption: "Jason Langkammerer",
+    image: require("./images/Partners/AT6.png").default,
+    alt: "Logo"
+  },
+  {
+    name: "Dogfork Lamps",
+    caption: "Light Fixture Design",
+    image: require("./images/Partners/dogfork.jpg").default,
+    alt: "Logo"
+  },
+  {
+    name: "Blue Truck Studio",
+    caption: "General Contractor",
+    image: require("./images/Partners/Blue-Truck-Ellsworth-project.png").default,
+    alt: "Logo"
+  },
+];
+
+export const bikeImages = [
+  {
+    name: "PAUL Components",
+    caption: "Bike Shop",
+    image: require("./images/Partners/paul.png").default,
+    alt: "Logo"
+  },
+  {
+    name: "Blue Collar Bicycle",
+    caption: "Bike Shop",
+    image: require("./images/Partners/bluecollar.jpg").default,
+    alt: "Logo"
+  },
+]
