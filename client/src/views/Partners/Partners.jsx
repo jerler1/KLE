@@ -22,18 +22,23 @@ const Partners = () => {
         gradientAlignment="gradientOverlayTopLeft"
       />
       <section className="whoWeWorkWithWrapper">
-        <div className="whoWeWorkWithHeader">
+        <div className="partnersHeader">
           <h4>We work with the best</h4>
         </div>
-        <div className="whoWeWorkWithGrid">
+        <div className="partnersGrid">
           {partnerImages.map((partner, index) => {
             return <PartnerViewCards {...partner} key={index} />;
           })}
         </div>
       </section>
       <section className="bikeFriendsWrapper">
-        <div className="bikeFriendsHeader">
+        <div className="partnersHeader">
           <h4>Bike Friends</h4>
+        </div>
+        <div className="partnersGrid">
+        {bikeImages.map((partner, index) => {
+            return <PartnerViewCards {...partner} key={index} />;
+          })}
         </div>
       </section>
       <CallForAction

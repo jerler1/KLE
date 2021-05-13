@@ -8,26 +8,43 @@
     @include dimensions(100%, auto);
     @include flex(column, flex-start, flex-start);
     background-color: rgba(var(--mainBackgroundColor), 1);
-    .whoWeWorkWithHeader {
-      h4 {
-        color: var(--mainText);
-        font-family: "Skia", Helvetica, sans-serif;
-        font-size: 48px;
-        line-height: 57.6px;
-        letter-spacing: 2px;
-        font-weight: 400;
+    padding: 5% 0%;
+
+  }
+  .bikeFriendsWrapper {
+    @include dimensions(100%, auto);
+    @include flex(column, flex-start, flex-start);
+    padding: 2% 0 6% 0;
+    .partnersGrid {
+      @include flex(row, center, center);
+    }
+  }
+  .partnersHeader {
+    @include dimensions(100%, auto);
+    h4 {
+      color: var(--mainText);
+      font-family: "Skia", Helvetica, sans-serif;
+      font-size: 48px;
+      line-height: 57.6px;
+      letter-spacing: 2px;
+      margin-left: 5%;
+      margin-bottom: 4%;
+      font-weight: 400;
+      @media only screen and (max-width: 650px) {
+        font-size: 2rem;
+      }
+      @media only screen and (max-width: 440px) {
+        font-size: 1.5rem;
       }
     }
-    .whoWeWorkWithGrid {
-      @include dimensions(100%, auto);
-      @include flex(row, flex-start, center);
-      flex-wrap: wrap;
-      // padding: 0px 99px 0px 99px;
-      // padding-bottom: 4%;
-      @include for-size(phone) {
-        @include flex(column, center, center);
-        padding: 0;
-      }
+  }
+  .partnersGrid {
+    @include dimensions(100%, auto);
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    @include for-size(phone) {
+      @include flex(column, center, center);
+      padding: 0;
     }
   }
 }
