@@ -26,7 +26,7 @@ const Partners = () => {
         <div className="whoWeWorkWithGrid"></div>
       </section>
       <section className="bikeFriendsWrapper">
-        <div className="bikeFriendsHeader">Bike Friends</div>
+        <div className="bikeFriendsHeader"><h4>Bike Friends</h4></div>
       </section>
       <CallForAction
         alt="Toasting of drinks."
