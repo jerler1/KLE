@@ -8,25 +8,29 @@
   }
   @media only screen and (max-width: 1250px) {
     flex-basis: 50%;
+    &:nth-child(n+3) {
+      padding-top: 3%;
+    }
   }
   @media only screen and (max-width: 905px) {
-    width: 100%;
-    height: 305px;
+    width: 90%;
+    height: auto;
+    flex-basis: 100%;
     object-fit: contain;
+    padding-top: 5%;
   }
   .partnerCard {
     @include dimensions(352px, 328px);
     position: relative;
     @media only screen and (max-width: 905px) {
-      width: 100%;
-      height: 305px;
+      width: 352px;
+      height: 328px;
     }
     img {
       @include dimensions(100%, 100%);
       display: flex;
       object-fit: cover;
       border-radius: 10px 1px;
-      cursor: pointer;
     }
     div {
       @include dimensions(100%, 20%);
@@ -41,12 +45,18 @@
       @media only screen and (max-width: 400px) {
         height: 25%;
       }
-      h4 {
+      .partnerName {
         color: var(--mainText);
+        font-family: "Gilroy-Bold", Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        line-height: 22.5px;
+        letter-spacing: 1.5px;
       }
       p {
         color: var(--secondaryText);
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 22.5px;
+        letter-spacing: 0.34px;
       }
     }
   }

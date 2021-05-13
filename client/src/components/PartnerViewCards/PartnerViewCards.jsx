@@ -7,7 +7,7 @@ const PartnerViewCards = ({name, image, caption}) => {
           <div className="partnerCard">
             <img src={image} alt="company logo" />
             <div>
-              <p>{name}</p>
+              <p className="partnerName">{name}</p>
               <p>{caption}</p>
             </div>
           </div>
