@@ -4,12 +4,11 @@
   @include dimensions(100%, auto);
   @include flex(column, flex-start, flex-start);
   background-image: url("../../assets/images/Home/Background.png");
-  .whoWeWorkWithWrapper,
-  .bikeFriendsWrapper {
+  .whoWeWorkWithWrapper {
     @include dimensions(100%, auto);
     @include flex(column, flex-start, flex-start);
-    .whoWeWorkWithHeader,
-    .bikeFriendsHeader {
+    background-color: rgba(var(--mainBackgroundColor), 1);
+    .whoWeWorkWithHeader {
       h4 {
         color: var(--mainText);
         font-family: "Skia", Helvetica, sans-serif;
@@ -17,6 +16,17 @@
         line-height: 57.6px;
         letter-spacing: 2px;
         font-weight: 400;
+      }
+    }
+    .whoWeWorkWithGrid {
+      @include dimensions(100%, auto);
+      @include flex(row, flex-start, center);
+      flex-wrap: wrap;
+      // padding: 0px 99px 0px 99px;
+      // padding-bottom: 4%;
+      @include for-size(phone) {
+        @include flex(column, center, center);
+        padding: 0;
       }
     }
   }

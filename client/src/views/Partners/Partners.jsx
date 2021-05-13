@@ -24,14 +24,17 @@ const Partners = () => {
       <section className="whoWeWorkWithWrapper">
         <div className="whoWeWorkWithHeader">
           <h4>We work with the best</h4>
-          {partnerImages.map((partner, index) => {
-          return <PartnerViewCards {...partner} key={index} />;
-        })}
         </div>
-        <div className="whoWeWorkWithGrid"></div>
+        <div className="whoWeWorkWithGrid">
+          {partnerImages.map((partner, index) => {
+            return <PartnerViewCards {...partner} key={index} />;
+          })}
+        </div>
       </section>
       <section className="bikeFriendsWrapper">
-        <div className="bikeFriendsHeader"><h4>Bike Friends</h4></div>
+        <div className="bikeFriendsHeader">
+          <h4>Bike Friends</h4>
+        </div>
       </section>
       <CallForAction
         alt="Toasting of drinks."
