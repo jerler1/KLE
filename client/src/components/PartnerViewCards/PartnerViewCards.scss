@@ -1,12 +1,11 @@
 @import "../../sass/mixins/mixins";
 .partnerWrapper {
-  @include dimensions(50%, 500px);
+  @include dimensions(50%, auto);
   @include flex(row, center, flex-start);
   flex-basis: 33.33%;
-  &:not(:first-child) {
-    padding-top: 9%;
+  &:nth-child(n+4) {
+    padding-top: 3%;
   }
-
   @media only screen and (max-width: 1250px) {
     flex-basis: 50%;
   }
@@ -16,7 +15,7 @@
     object-fit: contain;
   }
   .partnerCard {
-    @include dimensions(327px, 170px);
+    @include dimensions(352px, 328px);
     position: relative;
     @media only screen and (max-width: 905px) {
       width: 100%;
@@ -26,7 +25,7 @@
       @include dimensions(100%, 100%);
       display: flex;
       object-fit: cover;
-      border-radius: 24px 2px;
+      border-radius: 10px 1px;
       cursor: pointer;
     }
     div {
@@ -35,7 +34,7 @@
       position: absolute;
       bottom: 0;
       background-color: rgba(var(--subForegroundColor), 0.8);
-      border-bottom-right-radius: 24px;
+      border-bottom-right-radius: 10px;
       @include for-size(phone) {
         height: 20%;
       }
