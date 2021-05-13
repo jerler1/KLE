@@ -1,8 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import "./Partners.scss";
+import { partnerImages, bikeImages } from "../../assets/index";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import CallForAction from "../../components/CallForAction/CallForAction";
+import PartnerViewCards from "../../components/PartnerViewCards/PartnerViewCards";
 
 const Partners = () => {
   let history = useHistory();
@@ -22,6 +24,9 @@ const Partners = () => {
       <section className="whoWeWorkWithWrapper">
         <div className="whoWeWorkWithHeader">
           <h4>We work with the best</h4>
+          {partnerImages.map((partner, index) => {
+          return <PartnerViewCards {...partner} key={index} />;
+        })}
         </div>
         <div className="whoWeWorkWithGrid"></div>
       </section>
