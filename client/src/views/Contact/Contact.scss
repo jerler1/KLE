@@ -115,7 +115,9 @@
           .emailInputWrapper,
           .phoneInputWrapper,
           .timeInputWrapper,
-          .messageInputWrapper {
+          .messageInputWrapper,
+          .nameInputWrapper,
+          .attachmentWrapper {
             @include flex(column, flex-start, flex-start);
             margin-top: 3%;
             label {
