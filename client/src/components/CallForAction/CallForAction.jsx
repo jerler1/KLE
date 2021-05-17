@@ -6,6 +6,7 @@ import { partnersCFA, portfolioCFA, whoCFA } from "../../assets/index";
 const CallForAction = ({
   alt,
   message,
+  message2,
   buttonMessage,
   onClick,
   pictureSource,
@@ -30,6 +31,7 @@ const CallForAction = ({
       <div className="cfaTextWrapper">
         <div className="cfaText">
           <p>{message}</p>
+          <p>{message2}</p>
           <Button className="button primaryButton" onClick={onClick}>
             {buttonMessage}
           </Button>

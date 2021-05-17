@@ -1,66 +1,63 @@
 @import "../../sass/mixins/mixins";
 
-  .contactCFAContainer{
-    @include dimensions(100%, 600px);
-    @include flex(row, flex-start, flex-start);
+.contactCFAContainer {
+  @include dimensions(100%, 600px);
+  @include flex(row, flex-start, flex-start);
+  @include for-size(phone) {
+    flex-direction: column;
+    height: auto;
+  }
+  .CFAImage {
+    @include dimensions(60%, 100%);
     @include for-size(phone) {
-      flex-direction: column;
-      height: auto;
+      width: 100%;
     }
-    .CFAImage {
-      @include dimensions( 60%, 100%);
-      @include for-size(phone) {
-        width: 100%;
-      }
-      img {
-        @include dimensions(100%, 100%);
-        object-fit: cover;
-      }
+    img {
+      @include dimensions(100%, 100%);
+      object-fit: cover;
     }
-    .cfaTextWrapper {
-      @include dimensions(40%, 100%);
+  }
+  .cfaTextWrapper {
+    @include dimensions(100%, 100%);
+    @include flex(column, center, flex-start);
+    @include for-size(phone) {
+      width: 100%;
+    }
+    background-color: rgba(var(--mainForegroundColor), 1);
+    .cfaText {
+      @include dimensions(100%, 100%);
       @include flex(column, center, flex-start);
-      @include for-size(phone){
-        width: 100%;
+      padding-left: 12.9%;
+      @include for-size(phone) {
+        margin: 5%;
+        width: 60%;
+        padding-left: 0;
       }
-      background-color: rgba(var(--mainForegroundColor), 1);
-      .cfaText {
-        @include dimensions(55%, 100%);
-        @include flex(column, center, flex-start);
-        margin-left: 12.9%;
-        @media only screen and (max-width: 1400px) {
-          width: 75%;
+      @media only screen and (max-width: 425px) {
+        width: 55%;
+      }
+      @media only screen and (max-width: 310px) {
+        width: 65%;
+      }
+      p {
+        width: 100%;
+        color: var(--mainText);
+        font-size: 48px;
+        line-height: 57.6px;
+        @media only screen and (max-width: 1100px) {
+          font-size: 36px;
         }
-        @media only screen and (max-width: 1120px) {
-          width: 85%;
-        }        
-        @media only screen and (max-width: 1000px) {
-          width: 79%;
-        }        
-        @include for-size(phone){
-          margin: 5%;
-          width: 40%;
-        }
-        @media only screen and (max-width: 425px) {
-          width: 55%;
-        }  
-        @media only screen and (max-width: 310px) {
-          width: 65%;
-        }  
-        p {
-          color: var(--mainText);
-          font-size: 48px;
-          line-height: 57.6px;
-          margin-bottom: 10%;
-          @media only screen and (max-width: 1000px) {
-            font-size: 36px;
-          }  
-          @include for-size(phone){
-            font-size: 24px;
+        @include for-size(phone) {
+          font-size: 24px;
+          line-height: 24px;
+          &:not(:first-child) {
             margin-bottom: 10%;
-            line-height: 24px;
           }
+        }
+        &:not(:first-child) {
+          margin-bottom: 7%;
         }
       }
     }
   }
+}
