@@ -7,11 +7,8 @@ import "react-toastify/dist/ReactToastify.min.css";
 import "./JoinOurTeam.scss";
 
 const JoinOurTeam = () => {
-  const {
-    REACT_APP_USER_ID,
-    REACT_APP_SERVICE_ID,
-    REACT_APP_TEMPLATE_ID,
-  } = process.env;
+  const { REACT_APP_USER_ID, REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID } =
+    process.env;
   const {
     register,
     formState: { errors },
@@ -73,7 +70,11 @@ const JoinOurTeam = () => {
         <div className="contactInformationWrapper">
           <div className="contactInformationContent">
             <p>We’re always looking for people to help us shine.</p>
-            <p>Whether you’re a journeyman electrician or you’ve just graduated from school, if you have a desire to work hard, continue learning, and communicate openly, we want to work with you. </p>
+            <p>
+              Whether you’re a journeyman electrician or you’ve just graduated
+              from school, if you have a desire to work hard, continue learning,
+              and communicate openly, we want to work with you.{" "}
+            </p>
           </div>
         </div>
         <div className="contactFormWrapper">
@@ -109,7 +110,8 @@ const JoinOurTeam = () => {
                   placeholder="email@domain.com"
                   {...register("email", {
                     required: true,
-                    pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    pattern:
+                      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
                   })}
                 />
                 {errors.email && (
@@ -146,6 +148,10 @@ const JoinOurTeam = () => {
                 {errors.message && (
                   <span className="errorMessage">Please enter a message.</span>
                 )}
+              </div>
+              <div className="attachmentWrapper">
+                <label className="label">Attach Resume</label>
+                <input type="file" name="resumeAttachment"/>
               </div>
               <div className="buttonWrapper">
                 <button className="button primaryButton">Send</button>
