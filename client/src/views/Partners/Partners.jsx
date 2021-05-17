@@ -43,7 +43,8 @@ const Partners = () => {
       </section>
       <CallForAction
         alt="Toasting of drinks."
-        message="Looking to partner with us?"
+        message="Looking to"
+        message2="partner with us?"
         buttonMessage="Get in Touch"
         pictureSource="partners"
         onClick={onClick}
