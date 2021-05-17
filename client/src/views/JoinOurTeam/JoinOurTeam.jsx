@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
-import { email, phone } from "../../assets/index";
-import Icon from "../../components/Icon/Icon";
-import { useMediaQuery } from "react-responsive";
 import { useForm } from "react-hook-form";
 import emailjs, { init } from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
@@ -10,7 +7,6 @@ import "react-toastify/dist/ReactToastify.min.css";
 import "./JoinOurTeam.scss";
 
 const JoinOurTeam = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 800px)" });
   const {
     REACT_APP_USER_ID,
     REACT_APP_SERVICE_ID,
@@ -76,66 +72,8 @@ const JoinOurTeam = () => {
       <section className="contactSection">
         <div className="contactInformationWrapper">
           <div className="contactInformationContent">
-            <p>
-              Kinetic Lighting and Electric is based in Mill Valley, CA and
-              works in Marin, SF and the East Bay.
-            </p>
-            <div className="contactMobileBackground">
-              <div className="contactPhoneNumber">
-                <div
-                  className={
-                    !isTabletOrMobile ? "desktopPhone" : "inactive absolute"
-                  }
-                >
-                  <Icon name="phoneWhite" alt="phone" width="75" height="50" />
-                  <p>415.569.7167</p>
-                </div>
-                <div
-                  className={
-                    isTabletOrMobile ? "mobilePhone" : "inactive absolute"
-                  }
-                >
-                  <a
-                    className="button secondaryButton"
-                    href="tel:415-569-7167"
-                    aria-label="Phone Link"
-                  >
-                    <span>
-                      <img src={phone} alt="phone" />
-                    </span>
-                    Call Us
-                  </a>
-                  <p>415.569.7167</p>
-                </div>
-              </div>
-              <div className="contactEmail">
-                <div
-                  className={
-                    !isTabletOrMobile ? "desktopEmail" : "inactive absolute"
-                  }
-                >
-                  <Icon name="emailWhite" alt="email" width="75" height="50" />
-                  <p>hello@kineticelectricsf.com</p>
-                </div>
-                <div
-                  className={
-                    isTabletOrMobile ? "mobileEmail" : "inactive absolute"
-                  }
-                >
-                  <a
-                    className="button secondaryButton"
-                    href="mailto:hello@kineticelectricsf.com"
-                    aria-label="Email Link"
-                  >
-                    <span>
-                      <img src={email} alt="email" />
-                    </span>
-                    Email Us
-                  </a>
-                  <p>hello@kineticelectricsf.com</p>
-                </div>
-              </div>
-            </div>
+            <p>We’re always looking for people to help us shine.</p>
+            <p>Whether you’re a journeyman electrician or you’ve just graduated from school, if you have a desire to work hard, continue learning, and communicate openly, we want to work with you. </p>
           </div>
         </div>
         <div className="contactFormWrapper">
@@ -146,6 +84,23 @@ const JoinOurTeam = () => {
               onSubmit={handleSubmit(onSubmit)}
               noValidate
             >
+              <div className="nameInputWrapper">
+                <label className="label">Name</label>
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="janey electricalio"
+                  {...register("name", {
+                    required: true,
+                    pattern: /^[a-zA-Z]+$/,
+                  })}
+                />
+                {errors.name && (
+                  <span className="errorMessage">
+                    Please enter a valid name.
+                  </span>
+                )}
+              </div>
               <div className="emailInputWrapper">
                 <label className="label">Email</label>
                 <input
