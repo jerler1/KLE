@@ -35,12 +35,4 @@ export const portfolioPictures = [
       require.context("./San-Anselmo", false, /\.(png|jpe?g|svg)$/)
     ),
   },
-  {
-    key: "Berkeley",
-    name: "Berkeley",
-    mainPicture: require("./Berkeley/Bocci_HexTile.jpeg").default,
-    pictures: importAll(
-      require.context("./Berkeley", false, /\.(png|jpe?g|svg)$/)
-    ),
-  },
 ];
