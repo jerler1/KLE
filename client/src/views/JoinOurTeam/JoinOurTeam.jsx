@@ -38,10 +38,12 @@ const JoinOurTeam = () => {
   const onSubmit = async (data) => {
     try {
       const templateParams = {
+        name: data.name,
         email: data.email,
         phone: data.phone,
         time: data.time,
         message: data.message,
+        resume: data.resume,
       };
       await emailjs
         .send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, templateParams)
@@ -93,7 +95,7 @@ const JoinOurTeam = () => {
                   placeholder="janey electricalio"
                   {...register("name", {
                     required: true,
-                    pattern: /^[a-zA-Z]+$/,
+                    // pattern: /^[a-zA-Z]{2,}\\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\\s?([a-zA-Z]{1,})?/,
                   })}
                 />
                 {errors.name && (
@@ -151,7 +153,7 @@ const JoinOurTeam = () => {
               </div>
               <div className="attachmentWrapper">
                 <label className="label">Attach Resume</label>
-                <input type="file" name="resumeAttachment"/>
+                <input className="input" type="file" {...register("resume", { required: true })} />
               </div>
               <div className="buttonWrapper">
                 <button className="button primaryButton">Send</button>
