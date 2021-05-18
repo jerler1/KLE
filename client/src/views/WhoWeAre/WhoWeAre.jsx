@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./WhoWeAre.scss";
 import { isabellaPicture } from "../../assets/index";
@@ -11,6 +11,10 @@ const WhoWeAre = () => {
   const onClick = () => {
     history.push("/contact-us");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="whoWeAreContainer">
