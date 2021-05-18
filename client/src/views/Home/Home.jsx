@@ -114,10 +114,10 @@ const Home = () => {
           <Button
             className="button secondaryButton"
             onClick={() => {
-              history.push("/portfolio");
+              history.push("/projects");
             }}
           >
-            View Portfolio
+            View Projects
           </Button>
           <Button
             className="button primaryButton"

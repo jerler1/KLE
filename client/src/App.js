@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./views/Home/Home";
 import Services from "./views/Services/Services";
-import Portfolio from "./views/Portfolio/Portfolio";
+import Projects from "./views/Projects/Projects";
 import Contact from "./views/Contact/Contact";
 import Partners from "./views/Partners/Partners";
 import WhoWeAre from "./views/WhoWeAre/WhoWeAre";
@@ -34,7 +34,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/services" component={Services} />
-            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/projects" component={Projects} />
             <Route path="/contact-us" component={Contact} />
             <Route path="/partners" component={Partners} />
             <Route path="/join-our-team" component={JoinOurTeam} />

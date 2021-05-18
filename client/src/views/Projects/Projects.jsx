@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Portfolio.scss";
+import "./Projects.scss";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Project from "../../components/Project/Project";
 import CallForAction from "../../components/CallForAction/CallForAction";
@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 import { arrowDown } from "../../assets/index";
 import GallerySidebar from "../../components/GallerySidebar/GallerySidebar";
 
-const Portfolio = () => {
+const Projects = () => {
   const [images, setImages] = useState(null);
   const [activeProject, setActiveProject] = useState(null);
   let history = useHistory();
@@ -99,4 +99,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;

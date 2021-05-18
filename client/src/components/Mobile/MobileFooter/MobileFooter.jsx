@@ -12,7 +12,7 @@ const MobileFooter = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/projects">Projects</Link>
           </li>
           <li>
             <Link to="/about">About Us</Link>
