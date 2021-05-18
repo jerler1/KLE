@@ -45,36 +45,14 @@ const Navbar = () => {
               <div className="mobileNavLink">
                 <li
                   className={
-                    location.pathname === "/portfolio"
+                    location.pathname === "/projects"
                       ? "menu-navLink-active"
                       : "menu-navLink-inactive"
                   }
                 >
-                  <Link to="/portfolio">Portfolio</Link>
+                  <Link to="/projects">Projects</Link>
                 </li>
               </div>
-              {/* <DropdownMenu message="Our Work" menu="one">
-                <ul>
-                  <li
-                    className={
-                      location.pathname === "/why-us"
-                        ? "menu-link-active"
-                        : "menu-link-inactive"
-                    }
-                  >
-                    <Link to="/why-us">Why Us</Link>
-                  </li>
-                  <li
-                    className={
-                      location.pathname === "/portfolio"
-                        ? "menu-link-active"
-                        : "menu-link-inactive"
-                    }
-                  >
-                    <Link to="/portfolio">Portfolio</Link>
-                  </li>
-                </ul>
-              </DropdownMenu> */}
               <DropdownMenu message="About Us" menu="two">
                 <ul>
                   <li
@@ -117,28 +95,6 @@ const Navbar = () => {
                   <Link to="/partners">Partners</Link>
                 </li>
               </div>
-              {/* <DropdownMenu message="Resources" menu="three">
-                <ul>
-                  <li
-                    className={
-                      location.pathname === "/faq"
-                        ? "menu-link-active"
-                        : "menu-link-inactive"
-                    }
-                  >
-                    <Link to="/faq">FAQ</Link>
-                  </li>
-                  <li
-                    className={
-                      location.pathname === "/partners"
-                        ? "menu-link-active"
-                        : "menu-link-inactive"
-                    }
-                  >
-                    <Link to="/partners">Our Partners</Link>
-                  </li>
-                </ul>
-              </DropdownMenu> */}
             </ul>
           </section>
         </>
@@ -158,36 +114,14 @@ const Navbar = () => {
                 <div className="navLink">
                   <li
                     className={
-                      location.pathname === "/portfolio"
+                      location.pathname === "/projects"
                         ? "menu-navLink-active"
                         : "menu-navLink-inactive"
                     }
                   >
-                    <Link to="/portfolio">Portfolio</Link>
+                    <Link to="/projects">Projects</Link>
                   </li>
                 </div>
-                {/* <DropdownMenu message="Our Work" menu="one">
-                  <ul>
-                    <li
-                      className={
-                        location.pathname === "/why-us"
-                          ? "menu-link-active"
-                          : "menu-link-inactive"
-                      }
-                    >
-                      <Link to="/why-us">Why Us</Link>
-                    </li>
-                    <li
-                      className={
-                        location.pathname === "/portfolio"
-                          ? "menu-link-active"
-                          : "menu-link-inactive"
-                      }
-                    >
-                      <Link to="/portfolio">Portfolio</Link>
-                    </li>
-                  </ul>
-                </DropdownMenu> */}
                 <DropdownMenu message="About Us" menu="two">
                   <ul>
                     <li
@@ -230,28 +164,6 @@ const Navbar = () => {
                     <Link to="/partners">Partners</Link>
                   </li>
                 </div>
-                {/* <DropdownMenu message="Resources" menu="three">
-                  <ul>
-                    <li
-                      className={
-                        location.pathname === "/faq"
-                          ? "menu-link-active"
-                          : "menu-link-inactive"
-                      }
-                    >
-                      <Link to="/faq">FAQ</Link>
-                    </li>
-                    <li
-                      className={
-                        location.pathname === "/partners"
-                          ? "menu-link-active"
-                          : "menu-link-inactive"
-                      }
-                    >
-                      <Link to="/partners">Our Partners</Link>
-                    </li>
-                  </ul>
-                </DropdownMenu> */}
               </ul>
               <div className="contactUsButton">
                 <Button
