@@ -31,10 +31,6 @@ const Projects = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const onClick = () => {
-    history.push("/contact-us");
-  };
-
   return (
     <div className="portfolioContainer">
       <PageHeader
