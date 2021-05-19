@@ -151,9 +151,17 @@ const JoinOurTeam = () => {
                   <span className="errorMessage">Please enter a message.</span>
                 )}
               </div>
+
               <div className="attachmentWrapper">
                 <label className="label">Attach Resume</label>
-                <input className="input" type="file" {...register("resume", { required: true })} />
+                <label className="fileUpload button secondaryButton">
+                  <input
+                    className="hiddenInput"
+                    type="file"
+                    {...register("resume", { required: true })}
+                  />
+                  Choose File
+                </label>
               </div>
               <div className="buttonWrapper">
                 <button className="button primaryButton">Send</button>
