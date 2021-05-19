@@ -88,13 +88,6 @@ const Projects = () => {
           })
         )}
       </section>
-      <CallForAction
-        alt="Gloomy Kitchen"
-        message="Ready to make your space beautiful?"
-        buttonMessage="Get in Touch"
-        pictureSource="portfolio"
-        onClick={onClick}
-      />
     </div>
   );
 };

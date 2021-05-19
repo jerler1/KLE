@@ -4,19 +4,11 @@ function importAll(r) {
 
 export const portfolioPictures = [
   {
-    key: "Noe",
-    name: "Noe Valley",
-    mainPicture: require("./Noe-Valley/Elizabeth-1.jpg").default,
+    key: "Anselmo",
+    name: "San Anselmo",
+    mainPicture: require("./San-Anselmo/San_Anselmo_Kitchen_Main.png").default,
     pictures: importAll(
-      require.context("./Noe-Valley", false, /\.(png|jpe?g|svg)$/)
-    ),
-  },
-  {
-    key: "Diamond",
-    name: "Diamond Heights",
-    mainPicture: require("./Diamond-Heights/main.jpg").default,
-    pictures: importAll(
-      require.context("./Diamond-Heights", false, /\.(png|jpe?g|svg)$/)
+      require.context("./San-Anselmo", false, /\.(png|jpe?g|svg)$/)
     ),
   },
   {
@@ -28,11 +20,20 @@ export const portfolioPictures = [
     ),
   },
   {
-    key: "Anselmo",
-    name: "San Anselmo",
-    mainPicture: require("./San-Anselmo/San_Anselmo_Kitchen_Main.png").default,
+    key: "Diamond",
+    name: "Diamond Heights",
+    mainPicture: require("./Diamond-Heights/main.jpg").default,
     pictures: importAll(
-      require.context("./San-Anselmo", false, /\.(png|jpe?g|svg)$/)
+      require.context("./Diamond-Heights", false, /\.(png|jpe?g|svg)$/)
+    ),
+  },
+
+  {
+    key: "Noe",
+    name: "Noe Valley",
+    mainPicture: require("./Noe-Valley/Elizabeth-1.jpg").default,
+    pictures: importAll(
+      require.context("./Noe-Valley", false, /\.(png|jpe?g|svg)$/)
     ),
   },
 ];
