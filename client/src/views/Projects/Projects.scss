@@ -24,7 +24,7 @@
   background-image: url("../../assets/images/Home/Background.png");
   .projectGrid {
     @include dimensions(100%, auto);
-    @include flex(row, flex-start, flex-start);
+    @include flex(row, center, center);
     background-color: rgba(var(--mainBackgroundColor), 1);
     padding: 0px 99px 0px 99px;
     flex-wrap: wrap;
