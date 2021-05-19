@@ -23,12 +23,9 @@ const Home = () => {
         <aside className="homePictureOneBanner">
           <div className="homePictureOneContent">
             <h2 className="headline1">The dark ages are over.</h2>
-            <h3>We bring the light.</h3>
             <p className="homePictureOneBlurb">
               <span className="boldFont">Kinetic Lighting and Electric</span>{" "}
-              has been filling spaces with light and enhancing Bay Area homes
-              since 2004. Providing complete lighting design systems and
-              installation to illuminate your dreams into a reality.
+              has been filling spaces with light since 2004. 
             </p>
             <Button
               className="button primaryButton"
@@ -36,7 +33,7 @@ const Home = () => {
                 history.push("/contact-us");
               }}
             >
-              Get a Quote
+              Let's Collaborate
             </Button>
           </div>
         </aside>
