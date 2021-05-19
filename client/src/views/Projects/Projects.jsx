@@ -38,7 +38,7 @@ const Projects = () => {
   return (
     <div className="portfolioContainer">
       <PageHeader
-        message="Portfolio"
+        message="Projects"
         absoluteURL="Portfolio-Whole"
         alignment="bottomAligned"
         gradientAlignment="gradientOverlayBottomRight"
