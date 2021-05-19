@@ -1,3 +1,49 @@
+@import "../../sass/mixins/mixins";
+
+.joinUsInformationContent{
+    padding-left: 15%;
+    @include for-size(phone) {
+        padding-left: 10%;
+    }
+    .joinUsHeader{
+        font-family: 'Skia', Times, serif;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 57.6px;
+        letter-spacing: 0.6px;
+        color: var(--mainText);
+        margin: 3% 0%;
+        @media only screen and (max-width: 1450px) {
+            font-size: 40px;
+          }
+        @media only screen and (max-width: 1210px) {
+            font-size: 34px;
+            line-height: 40px;
+          }
+        @media only screen and (max-width: 1040px) {
+            font-size: 28px;
+            line-height: 32px;
+          }
+        @media only screen and (max-width: 870px) {
+            font-size: 24px;
+            line-height: 24px;
+          }
+        @include for-size(phone) {
+            width: 70%;
+            font-size: 24px;
+            line-height: 24px
+        }
+    }
+    .joinUsContent {
+        @include dimensions(80%, auto);
+        margin: 6% 0%;
+        color: var(--secondaryText);
+        font-size: 18px;
+        line-height: 22.5px;
+        letter-spacing: 0.34px;
+    }
+}
+
 .hiddenInput {
     display: none;
 }

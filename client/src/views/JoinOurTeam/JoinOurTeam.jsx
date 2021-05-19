@@ -70,9 +70,9 @@ const JoinOurTeam = () => {
       />
       <section className="contactSection">
         <div className="contactInformationWrapper">
-          <div className="contactInformationContent">
-            <p>We’re always looking for people to help us shine.</p>
-            <p>
+          <div className="joinUsInformationContent">
+            <p className="joinUsHeader">We’re always looking for people to help us shine.</p>
+            <p className="joinUsContent">
               Whether you’re a journeyman electrician or you’ve just graduated
               from school, if you have a desire to work hard, continue learning,
               and communicate openly, we want to work with you.{" "}
@@ -81,7 +81,6 @@ const JoinOurTeam = () => {
         </div>
         <div className="contactFormWrapper">
           <div className="contactFormContent">
-            <h3>Send us a message</h3>
             <form
               className="contactForm"
               onSubmit={handleSubmit(onSubmit)}
