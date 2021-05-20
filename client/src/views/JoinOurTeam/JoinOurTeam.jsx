@@ -63,7 +63,7 @@ const JoinOurTeam = () => {
   return (
     <div className="contactContainer">
       <PageHeader
-        message="Join Our Team"
+        message="Join Us"
         absoluteURL="Team-Whole"
         alignment="bottomAligned"
         gradientAlignment="gradientOverlayBottomRight"

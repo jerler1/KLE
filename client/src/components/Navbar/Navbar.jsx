@@ -80,7 +80,7 @@ const Navbar = () => {
                         : "menu-link-inactive"
                     }
                   >
-                    <Link to="/join-our-team">Join Our Team</Link>
+                    <Link to="/join-our-team">Join Us</Link>
                   </li>
                 </ul>
               </DropdownMenu>
@@ -149,7 +149,7 @@ const Navbar = () => {
                           : "menu-link-inactive"
                       }
                     >
-                      <Link to="/join-our-team">Join Our Team</Link>
+                      <Link to="/join-our-team">Join Us</Link>
                     </li>
                   </ul>
                 </DropdownMenu>
