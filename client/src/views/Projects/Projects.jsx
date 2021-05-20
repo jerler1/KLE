@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./Projects.scss";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Project from "../../components/Project/Project";
-import CallForAction from "../../components/CallForAction/CallForAction";
 import { portfolioPictures } from "../../assets/images/Portfolio/index";
 import ImageGallery from "react-image-gallery";
 import { useHistory } from "react-router-dom";
 import { arrowDown } from "../../assets/index";
 import GallerySidebar from "../../components/GallerySidebar/GallerySidebar";
+import { arrow } from "../../assets/index";
 
 const Projects = () => {
   const [images, setImages] = useState(null);
@@ -44,7 +44,7 @@ const Projects = () => {
           <div className="imageGallery">
             <div className="displayedProjectName">
               <button onClick={closeGallery}>
-                <img src={arrowDown} alt="arrow pointing left" />
+                <img src={arrow} alt="arrow pointing left" />
               </button>
               <h4>{activeProject}</h4>
             </div>

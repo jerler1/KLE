@@ -6,6 +6,7 @@ export const podcast = require("./icons/podcast.png").default;
 export const yelp = require("./icons/yelp.png").default;
 export const arrowDown = require("./icons/arrow-down.png").default;
 export const Logo = require("./icons/svg/Logo.svg").default;
+export const arrow = require("./icons/Arrow.png").default;
 
 // Images
 export const background = require("./images/Home/Background.png").default;
